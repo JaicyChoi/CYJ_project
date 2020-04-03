@@ -36,7 +36,7 @@ div#header_wrap{
     height: 114px;
     float: left;
     /* background: url("images/header_bg.gif") repeat-x; */
-    background: url("images/header_bg.gif");
+    background: url(images/header_bg.gif);
     background-size: 100% 114px;
 }
 div#header_inner{
