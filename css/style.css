@@ -1,3 +1,101 @@
-body{
-    background-color: cornflowerblue;
+/*Basic style*/
+/*Skip Menu settings*/
+ul.skipmenu_list li a{
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    position: absolute;
+    z-index: 999;
+}
+ul.skipmenu_list li a:focus{
+    width: 100%;
+    height: 25px;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(0, 0, 0, 0.7);
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+/*End of Skip Menu settings*/
+/*Hide <h> tag*/
+.hidden{
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    position: absolute;
+}
+/*End of Skip Menu settings*/
+/*End of basic style*/
+
+/*header settings*/
+div#header_wrap{
+    width: 100%;
+    height: 114px;
+    float: left;
+    background: url("/glamshell/images/header_bg.gif") repeat-x;
+}
+div#header_inner{
+    width: 980px;
+    height: 114px;
+    margin: 0 auto;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+h1#logo{
+    width: 127px;
+    height: 51px;
+    position: absolute;
+    left: 0px;
+    top: 47px;
+}
+ul#topmenu_list{
+    width: 162px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    line-height: 3px;
+    /* background-color: cornflowerblue; */
+}
+ul#topmenu_list li{
+    float: left;
+    margin-left: 10px;
+    background: url(/glamshell/images/top_menu_bar.gif) no-repeat 0px 0px;
+    text-indent: 10px;
+}
+ul#topmenu_list li:first-child{
+    margin-left: 0px;
+    text-indent: 0px;
+    background: none;
+}
+ul#topmenu_list li:last-child{
+    margin-right: 0px;
+}
+
+ul#mainmenu_list{
+    width: 495px;
+    height: 15px;
+    position: absolute;
+    left: 230px;
+    top: 70px;
+    /* background-color: cornflowerblue; */
+}
+ul#mainmenu_list li{
+    float: left;
+    margin-right: 50px;
+}
+ul#mainmenu_list li:last-child{
+    margin-right: 0px;
+}
+
+h2#bestmenu{
+    width: 129px;
+    height: 24px;
+    position: absolute;
+    right: 0px;
+    top: 67px;
 }

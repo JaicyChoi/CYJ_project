@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, mininum-scale=1.0, maximum-scale=2.0, user-scalable=no">
     <title>Glamshell</title>
-    <link rel="stylesheet" href="css/reset.css"><!--reset css가 먼저 위치-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/glamshell/css/reset.css"><!--reset css가 먼저 위치-->
+    <link rel="stylesheet" href="/glamshell/css/style.css">
 </head>
 <body>
-    <p>Hello world!</p>
+    <!--Skip Menu-->
+    <ul class="skipmenu_list">
+        <li><a href="#mainmenu_list">Move to menu</a></li>
+        <li><a href="#">Move to body</a></li>
+        <li><a href="#">Move to footer</a></li>
+    </ul>
+    <!--End of Skip Menu-->
+    <!--header-->
+    <div id="header_wrap">
+        <div id="header_inner">
+            <h1 id="logo"><a href="#"><img src="/glamshell/images/logo.gif" alt="glamshell"></a></h1><!--이미지 처리 방법(웹 접근성)-->
+            <h2 class="hidden">Top quick menu</h2>
+            <ul id="topmenu_list">
+                <li><a href="#"><img src="/glamshell/images/top_menu_01.gif" alt="login"></a></li>
+                <li><a href="#"><img src="/glamshell/images/top_menu_02.gif" alt="sign up"></a></li>
+                <li><a href="#"><img src="/glamshell/images/top_menu_03.gif" alt="search"></a></li>
+                <li><a href="#"><img src="/glamshell/images/top_menu_04.gif" alt="question and answer"></a></li>
+            </ul>
+            <h2 class="hidden">Main menu</h2>
+            <ul id="mainmenu_list">
+                <li><a href="#"><img src="/glamshell/images/main_menu_01.gif" alt="brand introduction"></a></li>
+                <li><a href="#"><img src="/glamshell/images/main_menu_02.gif" alt="collections"></a></li>
+                <li><a href="#"><img src="/glamshell/images/main_menu_03.gif" alt="store"></a></li>
+                <li><a href="#"><img src="/glamshell/images/main_menu_04.gif" alt="review"></a></li>
+                <li><a href="#"><img src="/glamshell/images/main_menu_05.gif" alt="customer service"></a></li>
+            </ul>
+            <h2 id="bestmenu"><a href="#"><img src="/glamshell/images/best_menu.gif" alt="weekly best products"></a></h2>
+        </div>
+    </div>
+    <!--End of header-->
 </body>
 </html>
