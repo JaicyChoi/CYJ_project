@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=2.0">
+    <title>Welcome Tobe</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="css/media_screen.css">
+    <link rel="stylesheet" href="css/sub_media_screen.css">
+    <script type='text/javascript'>
+        window.onload = function() {
+            for( let i = 0 ; i < 13 ; i++ )
+            {
+                let preview_list = document.createElement('li');
+                let preview_link = document.createElement('a');
+                let preview_list_text = document.createElement('span')
+
+                preview_list_text.innerHTML = 'Preview';
+                preview_list_text.classList.add('preview_text');
+                
+                document.getElementById('result_preview').appendChild(preview_list);
+                preview_list.appendChild(preview_link);
+                preview_link.setAttribute('href', '#');
+                preview_link.appendChild(preview_list_text);
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--Header-->
+    <header id="header_wrap">
+        <div id="header_inner">
+            <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1>
+            <nav id="main_menu">
+                <h2 class="hidden">메인 메뉴</h2>
+                <ul id="main_menu_list">
+                    <li>
+                        <a class="main_menu_title" href="/beer_search.html">내게 맞는 맥주 찾기</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">나만의 레시피 자랑</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">커뮤니티</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">함께 마셔요 BeTo</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">이벤트</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <nav id="mobile_menu">
+                <h2 id="mobile_menu_icon">
+                    <a href="#"><i class="fas fa-bars"><span class="hidden">Mobile menu</span></i></a>
+                </h2>
+            </nav> -->
+            <section id="login_menu">
+                <h2 class="hidden">로그인 메뉴</h2>
+                <ul id="login_menu_list">
+                    <li><a href="#">+ Add beer</a></li>
+                    <li id="my_page"><a href="#">My page</a></li>
+                </ul>
+            </section>
+            <!-- <section id="mobile_login">
+                <a href="#"><i class="fas fa-user"><span class="hidden">Mobile login</span></i></a>
+            </section> -->
+        </div>
+        <div id="main_menu_bg"></div>
+    </header>
+    <div id="blurEffect"></div>
+    <div id="main_menu_wrap"></div>
+    <!--End of header-->
+    <!--Sub visual-->
+    <div id="sub_visual">
+        <div id="brightness"></div>
+        <div id="sub_visual_typo"><p>내게 맞는 맥주 찾기</p></div>
+    </div>
+    <!--End of sub visual-->
+    <!--Contents1-->
+    <div id="contents1_wrap">
+        <div id="contents1_bg"></div>
+        <section id="contents1_inner">
+            <h2 class="contents_title">Most Popular Beer</h2>
+            <div id="most_popular_beer">
+                <ul id="most_popular_beer_list">
+                    <li>
+                        <a href="#">
+                            <span class="most_popular_beer_abv">4.7%</span>
+                            <img class="most_popular_beer_country" src="images/contury/Germany.png" alt="독일">
+                            <img class="most_popular_beer_preview" src="images/beer/Gaffels_SonnenHopfen.png" alt="가펠 소넨호펜">
+                            <p class="most_popular_beer_title">가펠 소넨호펜</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="most_popular_beer_abv">4.9%</span>
+                            <img class="most_popular_beer_country" src="images/contury/japan.png" alt="일본">
+                            <img class="most_popular_beer_preview" src="images/beer/Sapporo_draft.png" alt="가펠 소넨호펜">
+                            <p class="most_popular_beer_title">삿포로 드래프트</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="most_popular_beer_abv">4.7%</span>
+                            <img class="most_popular_beer_country" src="images/contury/terkey.png" alt="터키">
+                            <img class="most_popular_beer_preview" src="images/beer/Efes_Pilsener.png" alt="가펠 소넨호펜">
+                            <p class="most_popular_beer_title">에페스 필스너</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="most_popular_beer_abv">4.7%</span>
+                            <img class="most_popular_beer_country" src="images/contury/belgie.jpg" alt="벨기에">
+                            <img class="most_popular_beer_preview" src="images/beer/Jacobins_Rouge.png" alt="가펠 소넨호펜">
+                            <p class="most_popular_beer_title">자코뱅 루즈</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="most_popular_beer_abv">4.7%</span>
+                            <img class="most_popular_beer_country" src="images/contury/usa.png" alt="미국">
+                            <img class="most_popular_beer_preview" src="images/beer/Hoppy_Daze_IPA.png" alt="가펠 소넨호펜">
+                            <p class="most_popular_beer_title">홉피 데이즈 IPA</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#"><img id="prev" src="images/icon/prev_arrow.png"></a>
+                <a href="#"><img id="next" src="images/icon/next_arrow.png"></a>
+            </div>
+        </section>
+    </div>
+    <!--End of contents1-->
+    <!--Contents2-->
+    <div id="contents2_wrap">
+        <section id="search_option_wrap">
+            <h2 class="hidden">검색 옵션</h2>
+            <div id="search_option">
+                <ul id="search_option_list">
+                    <li>
+                        <span class="option_title">맛/향</span>
+                        <ul class="checkbox_list">
+                            <li>
+                                <input id="sweet" type="checkbox" name="sweet_flavor">
+                                <label for="sweet">달달한 맛</label>
+                            </li>
+                            <li>
+                                <input id="bitter" type="checkbox" name="bitter_flavor">
+                                <label for="bitter">쌉쌀한 맛</label>
+                            </li>
+                            <li>
+                                <input id="savory" type="checkbox" name="savory_flavor">
+                                <label for="savory">구수한 맛</label>
+                            </li>
+                            <li>
+                                <input id="sour" type="checkbox" name="sour_flavor">
+                                <label for="sour">시큼한 맛</label>
+                            </li>
+                            <li>
+                                <input id="fruit" type="checkbox" name="fruit_flavor">
+                                <label for="fruit">과일향</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="option_title">궁합 음식</span>
+                        <ul class="checkbox_list">
+                            <li>
+                                <input id="korean" type="checkbox" name="korean_food">
+                                <label for="korean">한식</label>
+                            </li>
+                            <li>
+                                <input id="japanese" type="checkbox" name="japanese_food">
+                                <label for="japanese">일식</label>
+                            </li>
+                            <li>
+                                <input id="chinese" type="checkbox" name="chinese_food">
+                                <label for="chinese">중식</label>
+                            </li>
+                            <li>
+                                <input id="western" type="checkbox" name="western_food">
+                                <label for="western">양식</label>
+                            </li>
+                            <li>
+                                <input id="fusion" type="checkbox" name="fusion_food">
+                                <label for="fusion">퓨전</label>
+                            </li>
+                            <li>
+                                <input id="etc" type="checkbox" name="etc_food">
+                                <label for="etc">기타</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="option_title">성별</span>
+                        <ul class="checkbox_list">
+                            <li>
+                                <input id="male" type="checkbox" name="gender_male">
+                                <label for="male">남성</label>
+                            </li>
+                            <li>
+                                <input id="female" type="checkbox" name="gender_female">
+                                <label for="female">여성</label>
+                            </li>
+                            <li>
+                                <input id="both" type="checkbox" name="gender_both">
+                                <label for="both">모두</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="option_title">국내/수입</span>
+                        <ul class="checkbox_list">
+                            <li>
+                                <input id="domestic" type="checkbox" name="domestic_beer">
+                                <label for="domestic">국내</label>
+                            </li>
+                            <li>
+                                <input id="imported" type="checkbox" name="imported_beer">
+                                <label for="imported">수입</label>
+                            </li>
+                            <li>
+                                <input id="all" type="checkbox" name="all_beer">
+                                <label for="all">모두</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="option_title">가격대</span>
+                        <ul class="checkbox_list">
+                            <li>
+                                <input class="price" type="text" name="lowest_price">
+                                <span>원 부터</span>
+                                <input class="price" type="text" name="highest_price">
+                                <span>원 까지</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button>Search</button>
+            </div>
+        </section>
+        <section id="search_result">
+            <h2 class="hidden">검색 결과</h2>
+            <ul id="view_option">
+                <li><a href="#">최근 등록 순</a></li>
+                <li><a href="#">최다 리뷰 순</a></li>
+                <li><a href="#">즐겨찾기 순</a></li>
+                <li><a href="#">가격 순</a></li>
+                <li><a href="#">낮은 가격 순</a></li>
+            </ul>
+            <ul id="category">
+                <li><a href="#"><p id="view_all">View All<p></a></li>
+                    <a href="#"><p class="category_title">맛/향</p></a>
+                    <ul class="category_detail">
+                        <li><a href="#">달달한 맛</a></li>
+                        <li><a href="#">쌉쌀한 맛</a></li>
+                        <li><a href="#">구수한 맛</a></li>
+                        <li><a href="#">시큼한 맛</a></li>
+                        <li><a href="#">과일향</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><p class="category_title">궁합 음식</p></a>
+                    <ul class="category_detail">
+                        <li><a href="#">한식</a></li>
+                        <li><a href="#">일식</a></li>
+                        <li><a href="#">중식</a></li>
+                        <li><a href="#">양식</a></li>
+                        <li><a href="#">퓨전</a></li>
+                        <li><a href="#">기타</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><p class="category_title">성별</p></a>
+                    <ul class="category_detail">
+                        <li><a href="#">남성</a></li>
+                        <li><a href="#">여성</a></li>
+                        <li><a href="#">모두</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><p class="category_title">국가</p></a>
+                    <ul class="category_detail">
+                        <li><a href="#">국내</a></li>
+                        <li><a href="#">수입</a></li>
+                        <li><a href="#">모두</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="result_preview_wrap">
+                <ul id="result_preview">
+                    <li>
+                        <a href="#">
+                            <span class="result_preview_abv">4.9%</span>
+                            <img class="result_preview_country" src="images/contury/usa.png" alt="미국">
+                            <img class="result_preview_beer" src="images/beer/Anchor_Steam_Beer.png" alt="앵커 스팀 비어">
+                            <p class="result_preview_title">앵커 스팀 비어</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="result_preview_abv">5.0%</span>
+                            <img class="result_preview_country" src="images/contury/japan.png" alt="일본">
+                            <img class="result_preview_beer" src="images/beer/Coedo_Shikkoku.png" alt="코에도 시코쿠">
+                            <p class="result_preview_title">코에도 시코쿠</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="result_preview_abv">5.0%</span>
+                            <img class="result_preview_country" src="images/contury/uk.png" alt="영국">
+                            <img class="result_preview_beer" src="images/beer/Fullers_Golden_Pride.png" alt="풀러스 골든 프라이드">
+                            <p class="result_preview_title">풀러스 골든 프라이드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="result_preview_abv">7.9%</span>
+                            <img class="result_preview_country" src="images/contury/usa.png" alt="미국">
+                            <img class="result_preview_beer" src="images/beer/Sierra_Nevada_Torpedo.png" alt="시에라 네바라 토페도">
+                            <p class="result_preview_title">시에라 네바라 토페도</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pilsner_urquell.html">
+                            <span class="result_preview_abv">4.2%</span>
+                            <img class="result_preview_country" src="images/contury/czech.png" alt="체코">
+                            <img class="result_preview_beer" src="images/beer/Pilsner_Urquell.png" alt="필스너 우르켈">
+                            <p class="result_preview_title">필스너 우르켈</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--End of contents2-->
+    <!--Footer-->
+    <div id="footer_wrap">
+        <footer id="footer_inner">
+            <nav id="footer_menu">
+                <h2 class="hidden">하단 메뉴</h2>
+                <ul id="footer_menu_list">
+                    <a href="#"><li>회사소개</li></a>
+                    <a href="#"><li>이용약관</li></a>
+                    <a href="#"><li>개인정보처리방침</li></a>
+                    <a href="#"><li>Today's beer 정책</li></a>
+                    <a href="#"><li>고객센터</li></a>
+                </ul>
+            </nav>
+            <img id="footer_logo" src="images/logo.png" alt="Tobe">
+            <section id="customer_guide">
+                <h2 class="hidden">고객 안내 사항</h2>
+                <p id="guide" class="guide_text">Tobe 이용 중 궁금하신 점이 있으신가요?</br>메일 또는 플러스친구 `Tobe`로 연락해주세요.</br>최선을 다해 도와드리겠습니다.</p>
+                <p id="contect" class="guide_text">고객센터 (주 5일, 오전 10시 ~ 저녁 7시까지)</br>
+                카카오톡 ToBe</br>
+                대표번호 1234-5678</br>
+                메일 support@tobe.kr</br>
+                제휴문의 biz@tobe.kr</br>
+                </p>
+            </section>
+            <div id="app_icons">
+                <section id="get_app">
+                    <h2 class="footer_title">Get the ToBe App</h2>
+                    <a href="#">
+                        <div id="app_store">
+                            <img class="app_icon" src="images/icon/app_store.png" alt="앱 스토어 바로가기">
+                            <p class="download">Download on</p>
+                            <p class="store_name">App Store</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="google_play_store">
+                            <img class="app_icon" src="images/icon/google_play_store.png" alt="구글 플레이 스토어 바로가기">
+                            <p class="download">Download on</p>
+                            <p class="store_name">Google play Store</p>
+                        </div>
+                    </a>
+                </section>
+                <section id="social">
+                    <h2 class="footer_title">Follow Us</h2>
+                    <div id="social_icons">
+                        <a href="#"><img src="images/icon/kakaotalk.png" alt="카카오톡 바로가기"></a>
+                        <a href="#"><img src="images/icon/facebook.png" alt=" 페이스북 바로가기"></a>
+                        <a href="#"><img src="images/icon/instagram.png" alt="인스타그램 바로가기"></a>
+                        <a href="#"><img src="images/icon/twitter.png" alt="트위터 바로가기"></a>
+                    </div>
+                </section>
+            </div>
+            <p id="copyright">Copyright © 2020 Today’s Beer All right reserved.</p>
+        </footer>
+    </div>
+    <!--End of footer-->
+    <script src="/js/common.js"></script>
+</body>
+</html>

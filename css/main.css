@@ -1,0 +1,625 @@
+/* Main visual*/
+@font-face { font-family: 'Cafe24Oneprettynight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+div#main_visual {
+    width: 100%;
+    top: 0px;
+    left: 0px;
+/* height: 480px; */
+    position: relative;
+    overflow: hidden;
+/*float: left; */
+}
+ul#main_visual_list {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+ul#main_visual_list li{
+    min-width: 100%;
+    position: relative;
+}
+ul#main_visual_list li:nth-child(2){
+    background-color: #0d0e0b;
+}
+ul#main_visual_list li:nth-child(3){
+    background-color: #231f20;
+}
+ul#main_visual_list li:nth-child(4){
+    background-color: #d9693d;
+}
+ul#main_visual_list li:nth-child(5){
+    background-color: #f9f5a1;
+}
+ul#main_visual_list li:nth-child(6){
+    background-color: white;
+}
+ul#main_visual_list img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+/*  width: 1200px; */
+    display: block;
+}
+div#visual_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    display: flex;
+}
+#next_btn, #prev_btn {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 45px;
+    border: none;
+    width: 55px;
+    height: 55px;
+    line-height: 45px;
+    color: white;
+    border-radius: 50%;
+}
+#next_btn:focus, #prev_btn:focus {
+    outline: none;
+}
+div#search_bar_wrap{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.1);
+    float: left;
+}
+section#search_bar{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /* background-color: rgb(0, 102, 255, 0.5); */
+}
+section#search_bar p{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    float: left;
+    font-weight: 300;
+    width: 400px;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+}
+section#search_bar input{
+    width: 38%;
+    height: 50px;
+    background-color: #45433E;
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    transform: translateY(-50%);
+    border: 0px;
+    border-radius: 10px;
+    font-size: 1.125em;
+    color: #FFB000;
+    text-indent: 25px;
+}
+section#search_bar button{
+    width: 9%;
+    height: 50px;
+    background-color: #FFB000;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    border: 0px;
+    font-size: 1.125em;
+}
+section#search_bar button:hover{
+    cursor: pointer;
+}
+/* End of main visual*/
+/*Contents*/
+div#contents_wrap{
+    width: 100%;
+    position: relative;
+/*     top: 1064px; */
+    top: 0px;
+    left: 0px;
+/*     background-color: rgb(233, 30, 99, 0.5); */
+    color: white;
+    float: left;
+}
+div#contents1_wrap{
+    position: relative;
+    width: 100%;
+    float: left;
+/*     background-color: rgba(682, 130, 255, 1); */
+}
+section#contents1_inner{
+    width: 1200px;
+/*     min-height: 584px; */
+    height: 584px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+/*     background-color: blue; */
+}
+div#contents1_wrapping_box{
+    width: 93.33%;
+/*     height: 350px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    float: left;
+/*     background-color: red; */
+}
+/* section#new_beer_arrivals{
+    width: 430px;
+    height: 352px;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+section#new_beer_arrivals{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    float: left;
+/*     background-color: rgba(255, 255, 255, 0.5); */
+}
+.contents_preview{
+    width: 218px;
+    height: 300px;
+    position: relative;
+    left: 30px;
+    bottom: 0px;
+    background-color: #45433E;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    margin-top: 20px;
+    float: left;
+}
+div.contents_preview span#contents_preview_abv{
+    font-size: 0.875em;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-weight: 300;
+/*     background-color: blue; */
+}
+div.contents_preview img#contents_preview_country{
+    width: 22.93%;
+    height: 10%x;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+}
+div.contents_preview img#contents_preview_beer{
+    width: 81.19%;
+    height: 80.66%;
+    top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div.contents_preview p#contents_preview_beer_title{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+/*     background-color: blueviolet; */
+}
+ul#new_beer_list{
+    position: absolute;
+    width: 190px;
+    height: 300px;
+    bottom: 0px;
+    right: 30px;
+/*     background-color: rgb(100, 149, 237, 0.5); */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ul#new_beer_list a:hover{
+    color: #FFB000;
+}
+section#magazine{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+/*     background-color: rgba(255, 255, 255, 0.3); */
+    float: left;
+}
+p#magazine_text{
+    width: 46%;
+    position: relative;
+    float: right;
+    top: 20px;
+    right: 30px;
+    line-height: 1.563em;
+    text-align: justify;
+    opacity: 0.8;
+/*     background-color: rgba(32, 123, 43, 0.5); */
+}
+p#magazine_text:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+p#view_detail{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    font-size: 0.875em;
+    font-weight: 300;
+}
+p#view_detail:after{
+    content: " ▶";
+    position: relative;
+}
+div#contents2_wrap{
+    position: relative;
+    width: 100%;
+    height: 768px;
+    float: left;
+/*     background-color: rgba(255, 255, 255, 0.5); */
+}
+div#contents2_bg{
+    width: 100%;
+    position: relative;
+    top: 155px;
+    height: 543px;
+    background-color: #FFB000;
+    z-index: -1;
+}
+section#contents2_inner{
+    width: 1200px;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 768px;
+    position: absolute;
+/*     background-color: rgb(255, 0, 0, 0.3); */
+}
+div#contents2_wrapping_box{
+    width: 880px;
+    height: 590px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+/*     background-color: rgb(185, 0, 185, 0.5); */
+}
+div#contents2_wrapping_box h2{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+/*     background-color: salmon; */
+}
+ul#beer_preview{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 150px;
+    height: 550px;
+/*     background-color: rgb(106, 90, 205, 0.5); */
+}
+ul#beer_preview li{
+    /* left: 0px; */
+    text-align: center;
+/*     background-color: red; */
+}
+ul#beer_preview li:nth-child(2), ul#beer_preview li:nth-child(3), ul#beer_preview li:nth-child(4){
+    display: none;
+}
+ul#beer_description{
+    position: absolute;
+    width: 73.86%;
+    height: 35.59%;
+    top: 110px;
+    right: 0px;
+    color: black;
+/*     background-color: rgb(0, 128, 128, 0.5); */
+}
+p#beer_description_title{
+    font-weight: 500;
+    font-size: 1.75em;
+/*     background-color: blue; */
+    margin-bottom: 30px;
+}
+p#beer_description_title span{
+    font-size: 12px;
+}
+img#beer_description_country{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    box-sizing: border-box;
+}
+p.beer_description_text{
+    font-size: 0.875em;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 24px;
+    line-height: 1.15em;
+}
+p.beer_description_text:last-child{
+    margin-bottom: 0px;
+}
+span.bold{
+    font-weight: 500;
+}
+ul#beer_description li:nth-child(2), ul#beer_description li:nth-child(3), ul#beer_description li:nth-child(4){
+    display: none;
+}
+ul#beer_select{
+    width: 73.86%;
+    height: 42.37%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+/*     background-color: rgba(0, 0, 0, 0.3); */
+}
+ul#beer_select li{
+    width: 136px;
+    height: 250px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #45433E;
+}
+ul#beer_select li img{
+    width: 55px;
+    height: 205px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: teal; */
+}
+ul#beer_select li:nth-child(2), ul#beer_select li:nth-child(3), ul#beer_select li:nth-child(4){
+    background: none;
+}
+ul#beer_select li:hover{
+    background-color: #45433E;
+}
+div#contents3_wrap{
+    width: 100%;
+    height: 900px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    float: left;
+    margin: 95px 0px;
+/*     background-color: rgba(45, 124, 255, 0.5); */
+}
+section#contents3_inner{
+    width: 1200px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+/*     background-color: rgba(255, 255, 0, 0.5); */
+}
+div#contents3_wrapping_box{
+    position: absolute;
+/*     margin-top: 95px; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1120px;
+/*     height: 800px; */
+/*     background-color: rgb(0, 128, 128, 0.5); */
+
+}
+div.preview_box{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    margin-bottom: 15px;
+    font-size: 0.75em;
+/*     background-color: red; */
+}
+section#weekly_best_reviewer{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    float: left;
+    left: 0px;
+    top: 0px;
+    margin-bottom: 95px;
+    text-align: center;
+/*     background-color: rgb(255, 99, 71, 0.3); */
+}
+img.review_preview{
+    width: 100%;
+/*     height: 50%; */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+}
+p.user_count{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease; 
+}
+span.view_count{
+    position: relative;
+    top: 47%;
+    padding-left: 25px;
+    margin-right: 15px;
+/*     background-color: blue; */
+}
+span.view_count:before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0px;
+/* display: block; */
+    width: 100%;
+    height: 100%;
+    background: url(/images/icon/view_count.png) no-repeat;
+}
+span.recommend_count{
+    position: relative;
+    top: 47%;
+    padding-left: 20px;
+/*     background-color: green; */
+}
+span.recommend_count:before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0px;
+/* display: block; */
+    width: 100%;
+    height: 100%;
+    background: url(/images/icon/best_recommend.png) no-repeat;
+}
+span.preview_subtitle{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 18px;
+    text-align: center;
+    font-size: 1.2em;
+/*     background-color: red; */
+}
+p.user_count:hover{
+    opacity: 1;
+}
+h2.contents3_title{
+    margin-bottom: 22px;
+}
+p.review_text{
+    margin: 0 auto;
+    width: 85%;
+    text-align: justify;
+    font-weight: 300;
+    opacity: 0.8;
+    line-height: 1.3em;
+/*     background-color: tomato; */
+}
+p.review_text:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+section#weekly_best_recipe{
+    width: 50%;
+    height: 50%;
+/*     position: absolute; */
+    float: left;
+/*     right: 0px;
+    top: 0px; */
+    text-align: center;
+    margin-bottom: 95px;
+/*     background-color: rgb(255, 99, 71, 0.4); */
+}
+section#hottest_pub_store{
+    width: 50%;
+    height: 50%;
+/*     position: absolute; */
+    float: left;
+/*     left: 0px;
+    bottom: 0px; */
+    text-align: center;
+    margin-bottom: 95px;
+/*     background-color: rgb(255, 99, 71, 0.5); */
+}
+section#view_latest_event{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 50%;
+/*     position: absolute; */
+    float: left;
+/*     right: 0px;
+    bottom: 0px; */
+    text-align: center;
+/*     margin-bottom: 150px; */;
+/*     background-color: rgb(255, 99, 71, 0.6); */
+}
+section#view_latest_event h2{
+    margin-bottom: 17px;
+}
+p#view_more{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: right;
+    font-size: 0.875em;
+    width: 95%;
+    margin-bottom: 5px;
+    z-index: -1;
+/*     background-color: red; */
+}
+p#view_more:after{
+    content: " ▶";
+    position: relative;
+}
+div.event_preview_box{
+    position: relative;
+    float: left;
+    width: 48%;
+    height: 25%;
+    margin: 4px;
+/*     background-color: red; */
+}
+.event_preview{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+/*     margin: 5px; */
+}
+p.event_text{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: all 0.3s ease; 
+}
+span.preview_text{
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25em;
+    font-weight: 500;
+/*     background-color: blue; */
+}
+p.event_text:hover{
+   opacity: 1;
+}
+/* End of contents*/

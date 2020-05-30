@@ -1,0 +1,429 @@
+/*Sub visual*/
+div#sub_visual{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url(/images/sub_visual.png) no-repeat center 0px;
+    background-size: cover;
+    float: left;
+    margin-bottom: 60px;
+/*     z-index: -1; */
+    /* filter: brightness(70%);  */
+}
+div#brightness{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+div#sub_visual_typo{
+    width: 1200px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.62em;
+}
+div#sub_visual_typo p{
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+    color: white;
+    font-weight: 400;
+}
+/*End of sub visual*/
+/*Contents*/
+div#contents1_wrap{
+    width: 100%;
+    height: 390px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    float: left;
+/*     background-color: rgb(64, 224, 208, 0.3); */
+}
+div#contents1_bg{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: 20px;
+/*     background-color: rgba(0, 255, 0, 0.3); */
+    background-color: #FFB000;
+}
+section#contents1_inner{
+    width: 1200px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+/*     background-color: rgba(244,244,10, 0.3); */
+}
+div#most_popular_beer{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+/*     background-color: rgba(233, 12, 34, 0.5); */
+}
+ul#most_popular_beer_list{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ul#most_popular_beer_list li{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 20%;
+    height: 100%;
+    color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+/*     background-color: #0000ff47; */
+}
+ul#most_popular_beer_list li:last-child{
+    border: 0px;
+}
+/* ul#most_popular_beer_list li:hover{
+    cursor:pointer;
+} */
+ul#most_popular_beer_list li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+span.most_popular_beer_abv{
+    font-size: 0.875em;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-weight: 300;
+/*     background-color: blue; */
+}
+img.most_popular_beer_country{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+}
+img.most_popular_beer_preview{
+    width: 55px;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -53%);
+}
+p.most_popular_beer_title{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: black;
+/*     background-color: blueviolet; */
+}
+img#prev{
+    width: 20px;
+    height: 32px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+/*     background-color: white; */
+}
+img#next{
+    width: 20px;
+    height: 32px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+/*     background-color: white; */
+}
+div#contents2_wrap{
+    width: 100%;
+    float: left;
+    positon: relative;
+    left: 0px;
+    top: 0px;
+/*     background-color: blue; */
+}
+section#search_option_wrap{
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 350px;
+/*     background-color: rgba(255,125,0, 0.35); */
+}
+div#search_option{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 66.66%;
+    height: 68.57%;
+    border: 1px solid #FFB000;
+}
+ul#search_option_list{
+    position: absolute;
+/*     left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    left: 50%;
+    top: 48%;
+    transform:translate(-50%, -50%);
+    width: 73.1%;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+/*     background-color: rgba(255, 0, 0, 0.3); */
+}
+ul#search_option_list li{
+/*     background-color: red; */
+}
+span.option_title{
+    font-weight: 400;
+    width: 73px;
+    text-align: right;
+    margin-right: 6%;
+    color: white;
+/*     background-color: rgba(0, 0, 255, 0.7); */
+    float: left;
+    line-height: 1.3em;
+/*     position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+ul.checkbox_list{
+    font-size: 0.75em;
+    color: white;
+    height: 100%;
+/*     background-color: rgba(255, 255, 125, 0.7); */
+}
+ul.checkbox_list li{
+    float: left;
+}
+ul.checkbox_list li input[type="checkbox"]{
+/*     width:1px; 
+    height:1px; 
+    padding:0; 
+    border:0 none; 
+    margin:0; 
+    position:absolute; 
+    left:0; 
+    top:0; 
+    overflow:hidden;
+    clip:rect(0 0 0 0); */
+    display:none;
+}
+ul.checkbox_list li label{
+    height: 12px;
+    padding: 0 25px;
+    display: block;
+    position: relative;
+    top: 3px;
+    margin-bottom: 5px;
+    background:url(/images/icon/checkbox.png) no-repeat 0 0; 
+/*     background-color: green; */
+}
+ul.checkbox_list li input[type="checkbox"]:checked + label{
+    background-position: 0 -13px;
+}
+input.price{
+    width : 30%;
+    height: 18px;
+    background-color: #45433E;
+    border: none;
+    color: white;
+}
+ul.checkbox_list span{
+    margin-right: 20px;
+}
+div#search_option button{
+    position: absolute;
+    bottom: 13px;
+    right: 16px;
+    width: 15%;
+    height: 12.5%;
+    background-color: #FFB000;
+    border: none;
+    font-size: 0.875em;
+    color: black;
+}
+div#search_option button:hover{
+    cursor: pointer;
+}
+ul#search_option_list li:last-child li{
+    width: 350px;
+/*     background-color: green; */
+}
+section#search_result{
+    width: 1200px;
+    min-height: 500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    margin-top: 20px;
+/*     background-color: rgba(255,255,125, 0.5); */
+}
+ul#view_option{
+    position: relative;
+    width: 50%;
+    left: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.875em;
+/*     background-color: blue;     */
+}
+p#view_all{
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+p#view_all:hover{
+    color: #FFB000;
+}
+ul#view_option li{
+    line-height: 0.875em;
+    position: relative;
+    left: 0px;
+    top: 0px;
+/*     background-color: red; */
+}
+ul#view_option li:after{
+    content: "|";
+    position: absolute;
+    bottom: 1px;
+    font-size: 0.75em;
+    margin-left: 35px;
+}
+ul#view_option li:last-child:after{
+    content: "";
+    padding-left: 0px;
+}
+ul#category{
+    position: relative;
+    top: 30px;
+    left: 4%;
+    width: 130px;
+/*     height: 300px; */
+/*     background-color: orange; */
+    float: left;
+    margin-right: 6.3%;
+}
+ul#category:first-child{
+    font-weight: 500;
+}
+p.category_title{
+/*     background-color: red; */
+    margin-top: 15px;
+    margin-bottom: 11px;
+}
+p.category_title:hover{
+    color: #FFB000;
+}
+ul.category_detail{
+    text-indent: 15px;
+    font-size: 0.875em;
+/*     background-color: skyblue; */
+}
+ul.category_detail li{
+    margin-bottom: 10px;
+/*     background-color: blue; */
+}
+ul.category_detail li a:hover{
+    color: #FFB000;
+}
+div#result_preview_wrap{
+    position: relative;
+    top: 30px;
+/*     height: 300px; */
+    width: 950px;
+    float: left;
+    margin-bottom: 120px;
+/*     background-color: rgba(255, 255, 255, 0.5); */
+}
+ul#result_preview{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+/*     background-color: rgb(100, 149, 237, 0.3); */
+}
+ul#result_preview li{
+    width: 20%;
+    height: 256px;
+    position: relative;
+/*     background-color: rgba(0, 0, 0, 0.5); */
+    border: 1px solid #383838;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: -1px;
+    margin-left: -1px;
+}
+ul#result_preview li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+ul#result_preview li:hover{
+    background-color: rgba(255,255,255,0.15);
+}
+span.result_preview_abv{
+    font-size: 0.875em;
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    font-weight: 300;
+/*     background-color: blue; */
+}
+img.result_preview_country{
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+}
+img.result_preview_beer{
+    width: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+p.result_preview_title{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.875em;
+/*     background-color: blueviolet; */
+}
+span.preview_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3em;
+    opacity: 0.3;
+/*     background-color:red; */
+}
+/*End of contents*/

@@ -1,0 +1,172 @@
+body{
+    /*     overflow: hidden; */
+    }
+    .hidden{
+        width: 1px;
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        position: absolute;
+    }
+    .contents_title{
+        color: white;
+        font-size: 1.5em;
+        position: relative;
+        float:left;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+/*         background-color: #008000c2; */
+    }
+    header{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+    }
+    section#header_top{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 70px;
+        background-color: #FFB000;
+    }
+    h1#logo{
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80px;
+        height: 43px;
+    }
+    p#user_icon{
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 27px;
+        height: 29px;
+    }
+    p#user_icon img{
+        width: 100%;
+    }
+    p#user_icon:after{
+        content: "●";
+        position: absolute;
+        top: -5px;
+        right: 0px;
+        color: red;
+        font-size: 0.8em;
+    }
+    input#search_box{
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 55%;
+        height: 35px;
+        font-size: 0.875em;
+        color: #FFB000;
+        text-indent: 15px;
+        border-radius: 7px;
+        border: none;
+        background-color: #45433E;
+    }
+    nav#main_menu{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        color: white;
+        letter-spacing: -0.03em;
+        width: 100%;
+        height: 35px;
+        background-color: rgb(19, 19, 19);
+    }
+    ul#main_menu_list{
+        position: relative;
+        top: 50%;
+        height: 100%;
+        line-height: 35px;
+        transform: translateY(-50%);
+        font-size: 0.75em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    footer{
+        position: relative;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        float: left;
+        color: white;
+        height: 200px;
+        background-color: rgb(19, 19, 19);
+    }
+    h2.footer_title{
+        font-size: 0.75em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    ul#footer_menu{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+        top: 5px;
+        right: 0px;
+        font-size: 0.56em;
+/*         background-color: blue; */
+    }
+    section#customer_guide{
+        position: relative;
+        float: left;
+        font-size: 0.65em;
+        line-height: 2em;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+/*         background-color: #0080007a; */
+    }
+    section#get_app{
+        position: absolute;
+        top: 43px;
+        right: 20px;
+        width: 135px;
+/*         background-color: red; */
+    }
+    img#app_store{
+        width: 35px;
+        margin: 0px 20px;
+/*         background-color: blue; */
+    }
+    img#google_play_store{
+        width: 35px;
+/*         background-color: black; */
+    }
+    section#social{
+        position: absolute;
+        float: left;
+        width: 135px;
+        right: 20px;
+        bottom: 15px;
+/*         background-color: red; */
+    }
+    div#social_icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+/*         background-color: blue; */
+    }
+    div#social_icons img{
+        width: 30px;
+    }
+    p#copyright{
+        position: absolute;
+        float: left;
+        bottom: 0px;
+        font-size: 0.56em;
+/*         background-color: green; */
+    }
