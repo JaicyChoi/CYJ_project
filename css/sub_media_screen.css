@@ -8,9 +8,9 @@
     }
 }
 @media screen and (max-width: 980px){
-    div#sub_visual{
+/*     div#sub_visual{
         height: 400px;
-    }
+    } */
     section#contents1_inner, section#search_option_wrap{
         width: 100%;
         height: 100%;

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="css/media_screen.css">
+    <script src="/js/data.js"></script>
 </head>
 <body>
      <!--Quick menu-->
@@ -123,10 +124,10 @@
                         <h2 class="contents_title">NEW BEER ARRIVALS</h2>
                         <!-- <a href="#"> -->
                         <div class="contents_preview">
-                            <span id="contents_preview_abv">5.1%</span>
-                            <img id="contents_preview_country" src="images/contury/Germany.png" alt="독일">
-                            <img id="contents_preview_beer" src="images/beer/Weihenstephan_Original.png" alt="바이헨슈테파너 오리지날">
-                            <p id="contents_preview_beer_title">바이헨슈테파너 오리지날</p>
+                            <span id="new_beer_arrivals_abv">5.1%</span>
+                            <img id="new_beer_arrivals_country" src="images/contury/Germany.png" alt="독일">
+                            <img id="new_beer_arrivals_beer" src="images/beer/Weihenstephan_Original.png" alt="바이헨슈테파너 오리지날">
+                            <p id="new_beer_arrivals_title">바이헨슈테파너 오리지날</p>
                         </div>
                         <!-- </a> -->
                         <ul id="new_beer_list" class="contents_text">
@@ -158,51 +159,20 @@
             <section id="contents2_inner">
                 <div id="contents2_wrapping_box">
                     <h2 class="contents_title">Editor’s Pick! Beer of the Month</h2>
-                    <ul id="beer_preview">
-                        <li><img src="images/beer/Gaffels_SonnenHopfen.png" alt="가펠 소넨호펜"></li>
-                        <li><img src="images/beer/Efes_Pilsener.png" alt="에페스 필스너"></li>
-                        <li><img src="images/beer/Jacobins_Rouge.png" alt="자코뱅 루즈"></li>
-                        <li><img src="images/beer/Hoppy_Daze_IPA.png" alt="홉피 데이즈 IPA"></li>
-                    </ul>
-                    <ul id="beer_description">
-                        <li>
-                            <p id="beer_description_title">Gafeels SonnonHofen <span class="beer_description_title_kor">| 가펠 소넨호펜</span></p>
-                            <img id="beer_description_country" src="images/contury/Germany.png" alt="독일">
-                            <p class="beer_description_text">ABV <span class="bold">4.7%</span></p>
-                            <p class="beer_description_text"">맥주 스타일 <span class="bold">쾰쉬</span></p>
-                            <p class="beer_description_text">맛/향 <span class="bold">소나무와 레몬향</span></p>
-                            <p class="beer_description_text">숲의 기운이 가득 느껴치는 향으로, 과일같은 달콤한 기운이 감도는 홉 향이 특징. 감귤처럼 달콤하면서도 레몬처럼 새콤하다. 부드럽고 마시기 좋은 맥주.</p>
-                        </li>
-                        <li>
-                            <p id="beer_description_title">Gafeels SonnonHofen <span class="beer_description_title_kor">| 가펠 소넨호펜</span></p>
-                            <img id="beer_description_country" src="images/contury/Germany.png" alt="독일">
-                            <p class="beer_description_text">ABV <span class="bold">4.7%</span></p>
-                            <p class="beer_description_text"">맥주 스타일 <span class="bold">쾰쉬</span></p>
-                            <p class="beer_description_text">맛/향 <span class="bold">소나무와 레몬향</span></p>
-                            <p class="beer_description_text">숲의 기운이 가득 느껴치는 향으로, 과일같은 달콤한 기운이 감도는 홉 향이 특징. 감귤처럼 달콤하면서도 레몬처럼 새콤하다. 부드럽고 마시기 좋은 맥주.</p>
-                        </li>
-                        <li>
-                            <p id="beer_description_title">Gafeels SonnonHofen <span class="beer_description_title_kor">| 가펠 소넨호펜</span></p>
-                            <img id="beer_description_country" src="images/contury/Germany.png" alt="독일">
-                            <p class="beer_description_text">ABV <span class="bold">4.7%</span></p>
-                            <p class="beer_description_text"">맥주 스타일 <span class="bold">쾰쉬</span></p>
-                            <p class="beer_description_text">맛/향 <span class="bold">소나무와 레몬향</span></p>
-                            <p class="beer_description_text">숲의 기운이 가득 느껴치는 향으로, 과일같은 달콤한 기운이 감도는 홉 향이 특징. 감귤처럼 달콤하면서도 레몬처럼 새콤하다. 부드럽고 마시기 좋은 맥주.</p>
-                        </li>
-                        <li>
-                            <p id="beer_description_title">Gafeels SonnonHofen <span class="beer_description_title_kor">| 가펠 소넨호펜</span></p>
-                            <img id="beer_description_country" src="images/contury/Germany.png" alt="독일">
-                            <p class="beer_description_text">ABV <span class="bold">4.7%</span></p>
-                            <p class="beer_description_text"">맥주 스타일 <span class="bold">쾰쉬</span></p>
-                            <p class="beer_description_text">맛/향 <span class="bold">소나무와 레몬향</span></p>
-                            <p class="beer_description_text">숲의 기운이 가득 느껴치는 향으로, 과일같은 달콤한 기운이 감도는 홉 향이 특징. 감귤처럼 달콤하면서도 레몬처럼 새콤하다. 부드럽고 마시기 좋은 맥주.</p>
-                        </li>
-                    </ul>
+                    <img id="beer_preview" src="" alt="">
+                    <div id="beer_description">
+                        <p id="beer_description_title"></p>
+                        <img id="beer_description_country" src="" alt="">
+                        <p id="beer_description_abv"></p>
+                        <p id="beer_description_style"></p>
+                        <p id="beer_description_flavor"></p>
+                        <p id="beer_description_text"></p>
+                    </div>
                     <ul id="beer_select">
-                        <li><a href="#"><img src="images/beer/Gaffels_SonnenHopfen.png" alt="가펠 소넨호펜"></a></li>
-                        <li><a href="#"><img src="images/beer/Efes_Pilsener.png" alt="에페스 필스너"></a></li>
-                        <li><a href="#"><img src="images/beer/Jacobins_Rouge.png" alt="자코뱅 루즈"></a></li>
-                        <li><a href="#"><img src="images/beer/Hoppy_Daze_IPA.png" alt="홉피 데이즈 IPA"></a></li>
+                        <li class="selected_beer mouseover"><img src="images/beer/Gaffels_SonnenHopfen.png" alt="가펠 소넨호펜"></li>
+                        <li class="selected_beer"><img src="images/beer/Efes_Pilsener.png" alt="에페스 필스너"></li>
+                        <li class="selected_beer"><img src="images/beer/Jacobins_Rouge.png" alt="자코뱅 루즈"></li>
+                        <li class="selected_beer"><img src="images/beer/Hoppy_Daze_IPA.png" alt="홉피 데이즈 IPA"></li>
                     </ul>
                 </div>
             </section>
@@ -351,7 +321,8 @@
         </footer>
     </div>
     <!--End of footer-->
-    <script src="/js/main.js"></script>
     <script src="/js/common.js"></script>
+    <script src="/js/main_visual.js"></script>
+    <script src="/js/main_contents.js"></script>
 </body>
 </html>
