@@ -116,7 +116,7 @@ div#slide ul li{
     height: 100%;
 }
 div#slide ul li:nth-child(1){
-    background: url(/images/style_bg.png) no-repeat;
+    background: url(../images/style_bg.png) no-repeat;
     background-size: cover;
     position: relative;
     /* background-color: rgb(255, 206, 50); */
@@ -220,7 +220,7 @@ p#style:before{
     width: 100%;
     height: 100%;
     left: 0px;
-    background : url(/images/icon/style.png) no-repeat;
+    background : url(../images/icon/style.png) no-repeat;
 }
 p#taste:before{
     content: "";
@@ -228,7 +228,7 @@ p#taste:before{
     left: 0px;
     width: 100%;
     height: 100%;
-    background : url(/images/icon/taste.png) no-repeat;
+    background : url(../images/icon/taste.png) no-repeat;
 }
 p#country:before{
     content: "";
@@ -236,7 +236,7 @@ p#country:before{
     left: 0px;
     width: 100%;
     height: 100%;
-    background : url(/images/icon/country.png) no-repeat;
+    background : url(../images/icon/country.png) no-repeat;
 }
 p#price:before{
     content: "";
@@ -244,7 +244,7 @@ p#price:before{
     left: 0px;
     width: 100%;
     height: 100%;
-    background : url(/images/icon/price.png) no-repeat;
+    background : url(../images/icon/price.png) no-repeat;
 }
 p.beer_detail_text{
     text-align: center;
@@ -597,7 +597,7 @@ span.view_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/view_count.png) no-repeat;
+    background: url(../images/icon/view_count.png) no-repeat;
 }
 span.recommend_count{
     position: relative;
@@ -613,7 +613,7 @@ span.recommend_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/best_recommend.png) no-repeat;
+    background: url(../images/icon/best_recommend.png) no-repeat;
 }
 p.user_count:hover{
     opacity: 1;
@@ -783,7 +783,7 @@ div#my_profile_img{
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
-    background: url(/images/my_profile.png) no-repeat;
+    background: url(../images/my_profile.png) no-repeat;
     float: left;
     margin-right: 1.5%;
 }
@@ -837,21 +837,21 @@ div.profile_img{
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
-    background: url(/images/user_profile1.jpg) no-repeat;
+    background: url(../images/user_profile1.jpg) no-repeat;
     margin-right: 1.5%;
     float: left;
 }
 ul#beer_comment li:nth-child(2) div{
-    background: url(/images/user_profile2.jpg) no-repeat;
+    background: url(../images/user_profile2.jpg) no-repeat;
 }
 ul#beer_comment li:nth-child(3) div{
-    background: url(/images/user_profile3.jpg) no-repeat;
+    background: url(../images/user_profile3.jpg) no-repeat;
 }
 ul#beer_comment li:nth-child(4) div{
-    background: url(/images/user_profile4.jpg) no-repeat;
+    background: url(../images/user_profile4.jpg) no-repeat;
 }
 ul#beer_comment li:nth-child(5) div{
-    background: url(/images/user_profile5.jpg) no-repeat;
+    background: url(../images/user_profile5.jpg) no-repeat;
 }
 ul#beer_comment li:last-child{
     margin-bottom: 0px;
@@ -881,7 +881,7 @@ span.recommend:before{
     height: 13px;
     top: 2px;
     left: 2px;
-    background: url(/images/icon/recommend.png) no-repeat;
+    background: url(../images/icon/recommend.png) no-repeat;
 }
 span.recommend:before:hover{
     cursor: pointer;

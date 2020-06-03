@@ -5,7 +5,7 @@ div#sub_visual{
     position: relative;
     top: 0px;
     left: 0px;
-    background: url(/images/sub_visual.png) no-repeat center 0px;
+    background: url(../images/sub_visual.png) no-repeat center 0px;
     background-size: cover;
     float: left;
     margin-bottom: 60px;
@@ -237,7 +237,7 @@ ul.checkbox_list li label{
     position: relative;
     top: 3px;
     margin-bottom: 5px;
-    background:url(/images/icon/checkbox.png) no-repeat 0 0; 
+    background:url(../images/icon/checkbox.png) no-repeat 0 0; 
 /*     background-color: green; */
 }
 ul.checkbox_list li input[type="checkbox"]:checked + label{

@@ -481,7 +481,7 @@ span.view_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/view_count.png) no-repeat;
+    background: url(../images/icon/view_count.png) no-repeat;
 }
 span.recommend_count{
     position: relative;
@@ -497,7 +497,7 @@ span.recommend_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/best_recommend.png) no-repeat;
+    background: url(../images/icon/best_recommend.png) no-repeat;
 }
 span.preview_title{
     position: absolute;
