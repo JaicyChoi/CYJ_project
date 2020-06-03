@@ -39,7 +39,7 @@ ul.skip_menu li a:focus{
 /* Header */
 header#header_wrap{
     width: 100%;
-    height: 222px;
+    height: 162px;
     position: relative;
     top: 0px;
     left: 0px;
@@ -49,12 +49,13 @@ header#header_wrap{
 div#header_inner{
     width: 1200px;
     height: 100%;
-    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
     position: relative;
     top: 0px;
-    left: 0px;
 /*     background-color: rgba(255, 255, 255, 0.5); */
     z-index: 2;
+    float: left;
 }
 /* div#blurEffect{
     position: absolute;
@@ -89,16 +90,20 @@ div#main_menu_wrap{
     float: left;
     z-index: 1;
     background-color: rgb(25, 25, 25);
+    /* transition: .2s ease-out; */
+/*     background-color: red; */
 }
 nav#main_menu{
     width: 100%;
 /*     min-width: 750px; */
+    position: relative;
+    top: 162px;
     height: 60px;
-    position: absolute;
-    bottom: 0px;
 /*     background-color: blue; */
     font-size: 1.125em;
     font-weight: 300;
+    float: left;
+    /* transition: .2s ease-out; */
 }
 ul#main_menu_list{
     /* float: left; */
@@ -111,16 +116,17 @@ ul#main_menu_list{
     height: 100%;
     transform: translateY(-50%);
 }
+ul#main_menu_list>li{
+    width: 20%;
+/*     border: 1px solid white; */
+}
 a.main_menu_title{
     display: block;
     line-height: 60px;
     text-align: center;
     height: 60px;
-/*     width: 170px; */
-/*     background-color: blue; */
-}
-a.main_menu_title:hover{
-    color: #FFB000;
+    color: white;
+/*     background-color: green; */
 }
 ul.submenu_list{
     position: relative;
@@ -133,34 +139,39 @@ ul.submenu_list{
     display: none;
 /*     background-color: red; */
 }
+ul.submenu_list li{
+    transition: all 0.2s ease-in;
+}
 ul.submenu_list li:hover{
+    transform: scale(1.1);
     color: rgb(255, 255, 255, 1);
 }
 div#main_menu_bg{
+    position: relative;
+    height: 300px;
+    top: 222px;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+    display: none;
+}
+/* div#main_menu_bg{
     position: relative;
     top: -60px;
     height: 300px;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 1;
     display: none;
-}
-/* nav#mobile_menu{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    display: none;
-}
-h2#mobile_menu_icon a{
-    color: white;
-}
-i.fa-bars{
-    text-indent: 25px;
-    font-size: 3em;
 } */
+div#main_menu_bg_highlight{
+    position:absolute;
+    top: 222px;
+    left: 0px;
+    width: 20%;
+    height: 5px;
+    z-index: -1;
+    display: none;
+    background-color: #ffb000;
+}
 section#login_menu{
     width: 150px;
     height: 14px;
@@ -170,18 +181,6 @@ section#login_menu{
     font-size: 0.875em;
     font-weight: 300;
 }
-/* section#mobile_login{
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 25px;
-    top: 20px;
-    text-align: center;
-    display: none;
-}
-i.fa-user{
-    font-size: 2em;
-} */
 ul#login_menu_list{
     display: flex;
     flex-direction: row;

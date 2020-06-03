@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="css/media_screen.css">
     <script src="/js/data.js"></script>
 </head>
@@ -71,11 +70,7 @@
                     </li>
                 </ul>
             </nav>
-            <!-- <nav id="mobile_menu">
-                <h2 id="mobile_menu_icon">
-                    <a href="#"><i class="fas fa-bars"><span class="hidden">Mobile menu</span></i></a>
-                </h2>
-            </nav> -->
+            <div id="main_menu_bg_highlight"></div>
             <section id="login_menu">
                 <h2 class="hidden">로그인 메뉴</h2>
                 <ul id="login_menu_list">
@@ -83,9 +78,6 @@
                     <li id="my_page"><a href="#">My page</a></li>
                 </ul>
             </section>
-            <!-- <section id="mobile_login">
-                <a href="#"><i class="fas fa-user"><span class="hidden">Mobile login</span></i></a>
-            </section> -->
         </div>
         <div id="main_menu_bg"></div>
     </header>
@@ -94,13 +86,7 @@
     <!--End of header-->
     <!--Main visual-->
     <div id="main_visual">
-        <ul id="main_visual_list">
-          <li class="slide"><img src="images/main_visual1.png" alt="" /></li>
-          <li class="slide"><img src="images/main_visual2.png" alt="" /></li>
-          <li class="slide"><img src="images/main_visual3.png" alt="" /></li>
-          <li class="slide"><img src="images/main_visual4.png" alt="" /></li>
-          <li class="slide"><img src="images/main_visual5.png" alt="" /></li>
-        </ul>
+        <ul id="main_visual_list"></ul>
         <div id="visual_button">
           <button id="prev_btn"><i class="fas fa-chevron-left"></i></button>
           <button id="next_btn"><i class="fas fa-chevron-right"></i></button>
@@ -122,32 +108,14 @@
                 <div id="contents1_wrapping_box">
                     <section id="new_beer_arrivals">
                         <h2 class="contents_title">NEW BEER ARRIVALS</h2>
-                        <!-- <a href="#"> -->
-                        <div class="contents_preview">
-                            <span id="new_beer_arrivals_abv">5.1%</span>
-                            <img id="new_beer_arrivals_country" src="images/contury/Germany.png" alt="독일">
-                            <img id="new_beer_arrivals_beer" src="images/beer/Weihenstephan_Original.png" alt="바이헨슈테파너 오리지날">
-                            <p id="new_beer_arrivals_title">바이헨슈테파너 오리지날</p>
-                        </div>
-                        <!-- </a> -->
-                        <ul id="new_beer_list" class="contents_text">
-                            <li><a href="#">맘마! 미아 피자 비어</a></li>
-                            <li><a href="#">크로넨버그 1664 블랑</a></li>
-                            <li><a href="#">쾨스트리쳐 슈바르츠비어</a></li>
-                            <li><a href="#">비트부르거 프리미엄 필스</a></li>
-                            <li><a href="#">바이헨슈테파너 오리지날</a></li>
-                            <li><a href="#">에스트레야 담 이네딧</a></li>
-                            <li><a href="#">기네스 드래프트</a></li>
-                        </ul>
+                        <div id="new_beer_preview" class="contents_preview"></div>
+                        <ul id="new_beer_list" class="contents_text"></ul>
                     </section>
                     <section id="magazine">
                         <h2 class="contents_title">Magazine: About Rager</h2>
                         <a href="#">
-                            <img class="contents_preview" src="images/magazine.png" alt="매거진: 라거에 대하여">
-                            <p id="magazine_text" class="contents_text">
-                                발효방식에따라 크게 세 가지로 구분하는 맥주의 갈래 중 하나. 에일(상면발효), 람빅(자연발효), 라거(하면발효)이다. 일반적으로 섭씨 7~13 도에서 발효되며, 발효기간은 약 2~4 주. 이후
-                                오랜 숙성기간을 거쳐 에일과는 다르게 맑아지는게 특징이다. 7~13 도는 늦가을 ~ 초봄이 아니면 실온에서 발효가 어려워 중세~근대 유럽에서는 동굴, 지하실등에 저장해서 발효했다고 한다…
-                            </p>
+                            <img class="contents_preview" id="magazine_preview" src="images/magazine.png">
+                            <p id="magazine_text" class="contents_text"></p>
                             <p id="view_detail">view detail</p>
                         </a>
                     </section>
@@ -159,21 +127,9 @@
             <section id="contents2_inner">
                 <div id="contents2_wrapping_box">
                     <h2 class="contents_title">Editor’s Pick! Beer of the Month</h2>
-                    <img id="beer_preview" src="" alt="">
-                    <div id="beer_description">
-                        <p id="beer_description_title"></p>
-                        <img id="beer_description_country" src="" alt="">
-                        <p id="beer_description_abv"></p>
-                        <p id="beer_description_style"></p>
-                        <p id="beer_description_flavor"></p>
-                        <p id="beer_description_text"></p>
-                    </div>
-                    <ul id="beer_select">
-                        <li class="selected_beer mouseover"><img src="images/beer/Gaffels_SonnenHopfen.png" alt="가펠 소넨호펜"></li>
-                        <li class="selected_beer"><img src="images/beer/Efes_Pilsener.png" alt="에페스 필스너"></li>
-                        <li class="selected_beer"><img src="images/beer/Jacobins_Rouge.png" alt="자코뱅 루즈"></li>
-                        <li class="selected_beer"><img src="images/beer/Hoppy_Daze_IPA.png" alt="홉피 데이즈 IPA"></li>
-                    </ul>
+                    <img id="beer_preview">
+                    <div id="beer_description"></div>
+                    <ul id="beer_select"></ul>
                 </div>
             </section>
         </div>
@@ -184,79 +140,29 @@
                         <a href="#">
                             <h2 class="contents_title contents3_title">Weekly Best Reviewer</h2>
                             <div class="preview_box">
-                                <img class="review_preview" src="images/weekly_best_review.png" alt="벨스 스페셜 더블 크림 스타우트 리뷰">
-                                <p class="user_count">
-                                    <span class="view_count">6213</span><span class="recommend_count">157</span>
-                                    <span class="preview_subtitle">벨스 스페셜 더블 크림 스타우트</span>
-                                </p>
+                                <img class="review_preview" id="best_review_img" src="images/weekly_best_review.png">
                             </div>
-                            <p class="review_text">깜장 맥주 마시기 좋은 계절이라 저는 요즘 아주 신이 납니다. 벨스의 여러 스페셜 라인업 중에서 오늘 마실
-                            'Special Double Cream Stout'는 8월 부터 이듬해 2월 까지 마실 수 있는 스타우트입니다. 깜장 맥주 마시기 좋은 계절이라 저는 요즘 아주...</p>
                         </a>
                     </section>
                     <section id="weekly_best_recipe">
                         <a href="#">
                             <h2 class="contents_title contents3_title">Weekly Best Recipe</h2>
                             <div class="preview_box">
-                                <img class ="review_preview" src="images/weekly_best_recipe.png" alt="몬테크리스토 샌드위치 레시피">
-                                <p class="user_count">
-                                    <span class="view_count">6213</span><span class="recommend_count">157</span>
-                                    <span class="preview_subtitle">몬테크리스토 샌드위치</span>
-                                </p>
+                                <img class ="review_preview" src="images/weekly_best_recipe.png">
                             </div>
-                            <p class="review_text">샌드위치 2탄 어쩌면 이 샌드위치는 조금 더복잡한 과정이지만 비슷해서 올려드려요..
-                            왜 이름이 몬테크리스토이냐구요? 두얼굴의 샌드위치거든요 샌드위치지만 샌드위치가 아닌것처럼 어쩜 고로께인것 처럼 분장을 해서 그렇게 이름이 붙여진것..</p>
                         </a>
                     </section>
                     <section id="hottest_pub_store">
                         <a href="#">
                             <h2 class="contents_title contents3_title">Hottest Pub / Store</h2>
                             <div class="preview_box">
-                                <img class="review_preview" src="images/hottest_pub.png" alt="The 8low 리뷰">
-                                <p class="user_count">
-                                    <span class="view_count">6213</span><span class="recommend_count">157</span>
-                                    <span class="preview_subtitle">THE 8LOW</span>
-                                </p>
+                                <img class="review_preview" src="images/hottest_pub.png">
                             </div>
-                            <p class="review_text">안녕하세요 !! 수유동에서 가장 맛있는 수제맥주집 'THE 8LOW'입니다. 수유동에 수제맥주집이 흔치 않은데
-                            사일구 카페거리에 위치한 분위기 좋은 브런치카페&펍 이구요!! 요즘 대세는 피맥! 파맥! 직접 소스도 만들어 굽는 수제피자와 다양..</p>
                         </a>
                     </section>
                     <section id="view_latest_event">
                         <h2 class="contents_title contents3_title">View Latest Event</h2>
                         <div id="view_latest_event_box">
-                            <a href="#">
-                                <div class="event_preview_box">
-                                    <img class="event_preview" src="images/event1.png" alt="Craft Zone 이벤트">
-                                    <p class="event_text">
-                                        <span class="preview_text">지금 Craft Zone 방문하면 페일 에일 1잔이 무료!</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="event_preview_box">
-                                    <img class="event_preview" src="images/event2.png" alt="부엉이키친 이벤트">
-                                    <p class="event_text">
-                                        <span class="preview_text">지금 Craft Zone 방문하면 페일 에일 2잔이 무료!</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="event_preview_box">
-                                    <img class="event_preview" src="images/event3.png" alt="Upright 시음회">
-                                    <p class="event_text">
-                                        <span class="preview_text">지금 Craft Zone 방문하면 페일 에일 3잔이 무료!</span>
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="event_preview_box">
-                                    <img class="event_preview" src="images/event4.png" alt="신촌맥주축제">
-                                    <p class="event_text">
-                                        <span class="preview_text">지금 Craft Zone 방문하면 페일 에일 4잔이 무료!</span>
-                                    </p>
-                                </div>
-                            </a>
                             <a href="#""><p id="view_more">View more</p></a>
                         </div>
                     </section>

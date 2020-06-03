@@ -10,9 +10,9 @@ div#header_wrap{
 div#beer_detail_wrap{
     width: 100%;
     position: relative;
-    top: 222px;
+    top: 60px;
     color: white;
-    z-index: 1;
+    z-index: -1;
     margin-bottom: 300px;
 /*     background-color: rgb(62, 62, 255, 0.3); */
 }
