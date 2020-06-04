@@ -25,7 +25,7 @@ let DATA = {
             abv: '5.0%',
             country: 'france',
             country_alt: '프랑스',
-            beer: 'Weihenstephan_Original',
+            beer: 'Kronenberg 1664 Blanc',
             beer_alt: '크로넨버그 1164 블랑',
             title: '크로넨버그 1164 블랑'
         },
@@ -144,5 +144,116 @@ let DATA = {
         '이달의 맥주 BEST 10',
         '이달의 맥주 축제',
         '무료 샘플 신청하기'
+    ],
+    Most_Popular_Beer: [
+        {
+            abv: '4.7%',
+            country: 'germany',
+            country_alt: '독일',
+            beer: 'Gaffels_SonnenHopfen',
+            beer_alt: '맘마 미아 피자 비어',
+            title: '가펠 소넨호펜'
+        },
+        {
+            abv: '4.9%',
+            country: 'japan',
+            country_alt: '일본',
+            beer: 'Sapporo_draft',
+            beer_alt: '삿포로 드래프트',
+            title: '삿포로 드래프트'
+        },
+        {
+            abv: '4.7%',
+            country: 'terkey',
+            country_alt: '터키',
+            beer: 'Efes_Pilsener',
+            beer_alt: '에페스 필스터',
+            title: '에페스 필스너'
+        },
+        {
+            abv: '4.7%',
+            country: 'belgie',
+            country_alt: '벨기에',
+            beer: 'Jacobins_Rouge',
+            beer_alt: '자코뱅 루즈',
+            title: '자코뱅 루즈'
+        },
+        {
+            abv: '4.7%',
+            country: 'usa',
+            country_alt: '미국',
+            beer: 'Hoppy_Daze_IPA',
+            beer_alt: '홉피 데이즈 IPA',
+            title: '홉피 데이즈 IPA'
+        },
+        {
+            abv: '5.0%',
+            country: 'usa',
+            country_alt: '프랑스',
+            beer: 'Kronenberg 1664 Blanc',
+            beer_alt: '크로넨버그 1164 블랑',
+            title: '크로넨버그 1164 블랑'
+        },
+        {
+            abv: '4.8%',
+            country: 'germany',
+            country_alt: '독일',
+            beer: 'Bitburger_Premium_Pils',
+            beer_alt: '비트부르거 프리미엄 필스',
+            title: '비트부르거 프리미엄 필스'
+        },
+    ],
+    Search_Result: [
+        {
+            abv: '4.9%',
+            country: 'usa',
+            country_alt: '미국',
+            beer: 'Anchor_Steam_Beer',
+            beer_alt: '앵커 스팀 비어',
+            title: '앵커 스팀 비어',
+            href: '#'
+        },
+        {
+            abv: '5.0%',
+            country: 'japan',
+            country_alt: '일본',
+            beer: 'Coedo_Shikkoku',
+            beer_alt: '코에도 시코쿠',
+            title: '코에도 시코쿠',
+            href: '#'
+        },
+        {
+            abv: '5.0%',
+            country: 'uk',
+            country_alt: '영국',
+            beer: 'Fullers_Golden_Pride',
+            beer_alt: '풀러스 골든 프라이드',
+            title: '풀러스 골든 프라이드',
+            href: '#'
+        },
+        {
+            abv: '7.9%',
+            country: 'usa',
+            country_alt: '미국',
+            beer: 'Sierra_Nevada_Torpedo',
+            beer_alt: '시에라 네바라 토페도',
+            title: '시에라 네바라 토페도',
+            href: '#'
+        },
+        {
+            abv: '4.2%',
+            country: 'czech',
+            country_alt: '체코',
+            beer: 'Pilsner_Urquell',
+            beer_alt: '필스너 우르켈',
+            title: '필스너 우르켈',
+            href: 'pilsner_urquell.html'
+        }
+    ],
+    Beer_Detail_Description: [
+         '맥주 스타일 : 보헤미안 필스너<br>ABV%(알코올 농도) : 4.2%',
+         '향 : 초원의 풀냄새(홉)<br>맛 : 쌉싸름한 맛<br>특징 : 청량감과 깊은 맥아의 맛',
+         '제조국 : 체코<br>제조사 : Plzensky Prazdroj(SABMiller)<br>수입사 : 밀러브루잉코리아',
+         '가격대 : (500ml 기준) 2,500 - 3,000원<br>구매처 : 홈플러스, 이마트, 롯데마트'
     ]
 };

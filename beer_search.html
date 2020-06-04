@@ -12,24 +12,7 @@
     <link rel="stylesheet" href="css/sub.css">
     <link rel="stylesheet" href="css/media_screen.css">
     <link rel="stylesheet" href="css/sub_media_screen.css">
-    <script type='text/javascript'>
-        window.onload = function() {
-            for( let i = 0 ; i < 13 ; i++ )
-            {
-                let preview_list = document.createElement('li');
-                let preview_link = document.createElement('a');
-                let preview_list_text = document.createElement('span')
-
-                preview_list_text.innerHTML = 'Preview';
-                preview_list_text.classList.add('preview_text');
-                
-                document.getElementById('result_preview').appendChild(preview_list);
-                preview_list.appendChild(preview_link);
-                preview_link.setAttribute('href', '#');
-                preview_link.appendChild(preview_list_text);
-            }
-        }
-    </script>
+    <script src="js/data.js"></script>
 </head>
 <body>
     <!--Header-->
@@ -107,50 +90,9 @@
         <section id="contents1_inner">
             <h2 class="contents_title">Most Popular Beer</h2>
             <div id="most_popular_beer">
-                <ul id="most_popular_beer_list">
-                    <li>
-                        <a href="#">
-                            <span class="most_popular_beer_abv">4.7%</span>
-                            <img class="most_popular_beer_country" src="images/country/germany.png" alt="독일">
-                            <img class="most_popular_beer_preview" src="images/beer/Gaffels_SonnenHopfen.png" alt="가펠 소넨호펜">
-                            <p class="most_popular_beer_title">가펠 소넨호펜</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="most_popular_beer_abv">4.9%</span>
-                            <img class="most_popular_beer_country" src="images/country/japan.png" alt="일본">
-                            <img class="most_popular_beer_preview" src="images/beer/Sapporo_draft.png" alt="가펠 소넨호펜">
-                            <p class="most_popular_beer_title">삿포로 드래프트</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="most_popular_beer_abv">4.7%</span>
-                            <img class="most_popular_beer_country" src="images/country/terkey.png" alt="터키">
-                            <img class="most_popular_beer_preview" src="images/beer/Efes_Pilsener.png" alt="가펠 소넨호펜">
-                            <p class="most_popular_beer_title">에페스 필스너</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="most_popular_beer_abv">4.7%</span>
-                            <img class="most_popular_beer_country" src="images/country/belgie.png" alt="벨기에">
-                            <img class="most_popular_beer_preview" src="images/beer/Jacobins_Rouge.png" alt="가펠 소넨호펜">
-                            <p class="most_popular_beer_title">자코뱅 루즈</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="most_popular_beer_abv">4.7%</span>
-                            <img class="most_popular_beer_country" src="images/country/usa.png" alt="미국">
-                            <img class="most_popular_beer_preview" src="images/beer/Hoppy_Daze_IPA.png" alt="가펠 소넨호펜">
-                            <p class="most_popular_beer_title">홉피 데이즈 IPA</p>
-                        </a>
-                    </li>
-                </ul>
-                <a href="#"><img id="prev" src="images/icon/prev_arrow.png"></a>
-                <a href="#"><img id="next" src="images/icon/next_arrow.png"></a>
+                <ul id="most_popular_beer_list"></ul>
+                <button id="beer_prev"><i class="fas fa-chevron-left"></i></button>
+                <button id="beer_next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
     </div>
@@ -274,8 +216,9 @@
                 <li><a href="#">낮은 가격 순</a></li>
             </ul>
             <ul id="category">
-                <li><a href="#"><p id="view_all">View All<p></a></li>
-                    <a href="#"><p class="category_title">맛/향</p></a>
+                <a href="#"><p id="view_all">View All<p></a></li>
+                <li>
+                    <p class="category_title">맛/향</p>
                     <ul class="category_detail">
                         <li><a href="#">달달한 맛</a></li>
                         <li><a href="#">쌉쌀한 맛</a></li>
@@ -285,7 +228,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><p class="category_title">궁합 음식</p></a>
+                    <p class="category_title">궁합 음식</p>
                     <ul class="category_detail">
                         <li><a href="#">한식</a></li>
                         <li><a href="#">일식</a></li>
@@ -296,7 +239,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><p class="category_title">성별</p></a>
+                    <p class="category_title">성별</p>
                     <ul class="category_detail">
                         <li><a href="#">남성</a></li>
                         <li><a href="#">여성</a></li>
@@ -304,7 +247,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><p class="category_title">국가</p></a>
+                    <p class="category_title">국가</p>
                     <ul class="category_detail">
                         <li><a href="#">국내</a></li>
                         <li><a href="#">수입</a></li>
@@ -313,48 +256,7 @@
                 </li>
             </ul>
             <div id="result_preview_wrap">
-                <ul id="result_preview">
-                    <li>
-                        <a href="#">
-                            <span class="result_preview_abv">4.9%</span>
-                            <img class="result_preview_country" src="images/country/usa.png" alt="미국">
-                            <img class="result_preview_beer" src="images/beer/Anchor_Steam_Beer.png" alt="앵커 스팀 비어">
-                            <p class="result_preview_title">앵커 스팀 비어</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="result_preview_abv">5.0%</span>
-                            <img class="result_preview_country" src="images/country/japan.png" alt="일본">
-                            <img class="result_preview_beer" src="images/beer/Coedo_Shikkoku.png" alt="코에도 시코쿠">
-                            <p class="result_preview_title">코에도 시코쿠</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="result_preview_abv">5.0%</span>
-                            <img class="result_preview_country" src="images/country/uk.png" alt="영국">
-                            <img class="result_preview_beer" src="images/beer/Fullers_Golden_Pride.png" alt="풀러스 골든 프라이드">
-                            <p class="result_preview_title">풀러스 골든 프라이드</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="result_preview_abv">7.9%</span>
-                            <img class="result_preview_country" src="images/country/usa.png" alt="미국">
-                            <img class="result_preview_beer" src="images/beer/Sierra_Nevada_Torpedo.png" alt="시에라 네바라 토페도">
-                            <p class="result_preview_title">시에라 네바라 토페도</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pilsner_urquell.html">
-                            <span class="result_preview_abv">4.2%</span>
-                            <img class="result_preview_country" src="images/country/czech.png" alt="체코">
-                            <img class="result_preview_beer" src="images/beer/Pilsner_Urquell.png" alt="필스너 우르켈">
-                            <p class="result_preview_title">필스너 우르켈</p>
-                        </a>
-                    </li>
-                </ul>
+                <ul id="result_preview"></ul>
             </div>
         </section>
     </div>
@@ -416,5 +318,6 @@
     </div>
     <!--End of footer-->
     <script src="js/common.js"></script>
+    <script src="js/sub_contents.js"></script>
 </body>
 </html>

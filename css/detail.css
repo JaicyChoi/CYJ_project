@@ -12,7 +12,7 @@ div#beer_detail_wrap{
     position: relative;
     top: 60px;
     color: white;
-    z-index: -1;
+    z-index: 0;
     margin-bottom: 300px;
 /*     background-color: rgb(62, 62, 255, 0.3); */
 }
@@ -163,16 +163,10 @@ input#beer_country:checked~ul{
 input#beer_price:checked~ul{
     margin-left: -300%;
 }
-input#beer_style:checked~p#beer_label>label:nth-child(1){
-    background-color: white;
-}
-input#beer_taste:checked~p#beer_label>label:nth-child(2){
-    background-color: white;
-}
-input#beer_country:checked~p#beer_label>label:nth-child(3){
-    background-color: white;
-}
-input#beer_price:checked~p#beer_label>label:nth-child(4){
+input#beer_style:checked~p#beer_label>label:nth-child(1), 
+input#beer_taste:checked~p#beer_label>label:nth-child(2), 
+input#beer_taste:checked~p#beer_label>label:nth-child(3), 
+input#beer_taste:checked~p#beer_label>label:nth-child(4){
     background-color: white;
 }
 p.beer_detail_title{
