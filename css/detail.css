@@ -10,9 +10,9 @@ div#header_wrap{
 div#beer_detail_wrap{
     width: 100%;
     position: relative;
-    top: 222px;
+    top: 60px;
     color: white;
-    z-index: 1;
+    z-index: 0;
     margin-bottom: 300px;
 /*     background-color: rgb(62, 62, 255, 0.3); */
 }
@@ -116,7 +116,7 @@ div#slide ul li{
     height: 100%;
 }
 div#slide ul li:nth-child(1){
-    background: url(/images/style_bg.png) no-repeat;
+    background: url(../images/style_bg.png) no-repeat;
     background-size: cover;
     position: relative;
     /* background-color: rgb(255, 206, 50); */
@@ -163,16 +163,10 @@ input#beer_country:checked~ul{
 input#beer_price:checked~ul{
     margin-left: -300%;
 }
-input#beer_style:checked~p#beer_label>label:nth-child(1){
-    background-color: white;
-}
-input#beer_taste:checked~p#beer_label>label:nth-child(2){
-    background-color: white;
-}
-input#beer_country:checked~p#beer_label>label:nth-child(3){
-    background-color: white;
-}
-input#beer_price:checked~p#beer_label>label:nth-child(4){
+input#beer_style:checked~p#beer_label>label:nth-child(1), 
+input#beer_taste:checked~p#beer_label>label:nth-child(2), 
+input#beer_taste:checked~p#beer_label>label:nth-child(3), 
+input#beer_taste:checked~p#beer_label>label:nth-child(4){
     background-color: white;
 }
 p.beer_detail_title{
@@ -220,7 +214,7 @@ p#style:before{
     width: 100%;
     height: 100%;
     left: 0px;
-    background : url(/images/icon/style.png) no-repeat;
+    background : url(../images/icon/style.png) no-repeat;
 }
 p#taste:before{
     content: "";
@@ -228,7 +222,7 @@ p#taste:before{
     left: 0px;
     width: 100%;
     height: 100%;
-    background : url(/images/icon/taste.png) no-repeat;
+    background : url(../images/icon/taste.png) no-repeat;
 }
 p#country:before{
     content: "";
@@ -236,7 +230,7 @@ p#country:before{
     left: 0px;
     width: 100%;
     height: 100%;
-    background : url(/images/icon/country.png) no-repeat;
+    background : url(../images/icon/country.png) no-repeat;
 }
 p#price:before{
     content: "";
@@ -244,7 +238,7 @@ p#price:before{
     left: 0px;
     width: 100%;
     height: 100%;
-    background : url(/images/icon/price.png) no-repeat;
+    background : url(../images/icon/price.png) no-repeat;
 }
 p.beer_detail_text{
     text-align: center;
@@ -366,6 +360,7 @@ ul#match_recipe li{
     top: 0px;
     left: 0px;
     margin-right: 10px;
+    cursor: pointer;
 }
 ul#match_recipe li:last-child{
     margin-right: 0px;
@@ -381,8 +376,8 @@ div.match_recipe_preview{
     width: 100%;
     height: 100%;
     transition: all 0.3s ease;
-    color: black;
-    background-color: rgba(0,0,0,0);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.35);
 }
 div.match_recipe_preview p{
     position: absolute;
@@ -393,10 +388,10 @@ div.match_recipe_preview p{
     font-weight: 700;
 /*     background-color: blue; */
 }
-div.match_recipe_preview:hover{
+/* div.match_recipe_preview:hover{
     background-color: rgba(0, 0, 0, 0.35);
     color: white;
-}
+} */
 div#user_review_wrap{
     position: relative;
     top: 0px;
@@ -580,7 +575,7 @@ p.user_count{
     background-color: rgb(0, 0, 0, 0.4);
     text-align: center;
     transition: all 0.3s ease;
-    opacity: 0;
+    opacity: 1;
 }
 span.view_count{
     position: relative;
@@ -597,7 +592,7 @@ span.view_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/view_count.png) no-repeat;
+    background: url(../images/icon/view_count.png) no-repeat;
 }
 span.recommend_count{
     position: relative;
@@ -613,10 +608,7 @@ span.recommend_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/best_recommend.png) no-repeat;
-}
-p.user_count:hover{
-    opacity: 1;
+    background: url(../images/icon/best_recommend.png) no-repeat;
 }
 p.best_review_text{
     font-size: 0.875em;
@@ -627,10 +619,6 @@ p.best_review_text{
     margin-top: 10px;
      text-align: justify;
 /*     background-color: skyblue; */
-}
-p.best_review_text:hover{
-    text-decoration: underline;
-    opacity: 1;
 }
 section#detail_review{
     position: relative;
@@ -693,7 +681,6 @@ div.detail_review_text{
     float: right;
     position: relative;
     width: 49.5%;
-    opacity: 0.8; 
 /*     background-color: cornflowerblue; */
 }
 p.id{
@@ -702,6 +689,7 @@ p.id{
     text-align: right;
     font-style: oblique;
     margin-bottom: 1.25em;
+    color: #FFB000;
 /*     background-color: black; */
 }
 p.grade{
@@ -715,13 +703,8 @@ p.user_text{
     position: absolute;
     margin-top: 10px;
     text-align: justify;
+    opacity: 0.8; 
 /*     background-color: #278609 */
-}
-div.detail_review_text:hover{
-    opacity: 1;
-}
-p.user_text:hover{
-    text-decoration: underline;
 }
 ul.page_number{
     width: 100px;
@@ -783,7 +766,7 @@ div#my_profile_img{
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
-    background: url(/images/my_profile.png) no-repeat;
+    background: url(../images/my_profile.png) no-repeat;
     float: left;
     margin-right: 1.5%;
 }
@@ -837,21 +820,8 @@ div.profile_img{
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
-    background: url(/images/user_profile1.jpg) no-repeat;
     margin-right: 1.5%;
     float: left;
-}
-ul#beer_comment li:nth-child(2) div{
-    background: url(/images/user_profile2.jpg) no-repeat;
-}
-ul#beer_comment li:nth-child(3) div{
-    background: url(/images/user_profile3.jpg) no-repeat;
-}
-ul#beer_comment li:nth-child(4) div{
-    background: url(/images/user_profile4.jpg) no-repeat;
-}
-ul#beer_comment li:nth-child(5) div{
-    background: url(/images/user_profile5.jpg) no-repeat;
 }
 ul#beer_comment li:last-child{
     margin-bottom: 0px;
@@ -881,7 +851,8 @@ span.recommend:before{
     height: 13px;
     top: 2px;
     left: 2px;
-    background: url(/images/icon/recommend.png) no-repeat;
+    background: url(../images/icon/recommend.png) no-repeat;
+    cursor: pointer;
 }
 span.recommend:before:hover{
     cursor: pointer;

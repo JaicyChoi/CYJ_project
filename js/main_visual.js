@@ -1,75 +1,83 @@
-const slideContainer = document.querySelector('#main_visual');
-const slide = document.querySelector('#main_visual_list');
+const main_visual = document.querySelector('#main_visual');
+const main_visual_list = document.querySelector('#main_visual_list');
 const visual_button = document.querySelector('#visual_button');
-const nextBtn = document.getElementById('next_btn');
-const prevBtn = document.getElementById('prev_btn');
+const next_btn = document.getElementById('next_btn');
+const prev_btn = document.getElementById('prev_btn');
+const main_visual_img = DATA.Main_Visual;
 const interval = 2000;
+
+for( let i = 0 ; i <= main_visual_img.length - 1; i++ )
+{
+    let main_visual_li = document.createElement('li');
+    let main_visual_li_img = document.createElement('img');
+
+    main_visual_li.classList.add('slide');
+    main_visual_li_img.src = 'images/main_visual' + ( i + 1 ) + '.png';
+    main_visual_li_img.alt = main_visual_img[i];
+    main_visual_li.appendChild(main_visual_li_img);
+    main_visual_list.appendChild(main_visual_li);
+}
 
 let slides = document.querySelectorAll('.slide');
 let index = 1;
-let slideId;
+let slide_id;
 
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[slides.length - 1].cloneNode(true);
+const first_clone = slides[0].cloneNode(true);
+const last_clone = slides[slides.length - 1].cloneNode(true);
 
-firstClone.id = 'first-clone';
-lastClone.id = 'last-clone';
+first_clone.id = 'first_clone';
+last_clone.id = 'last_clone';
 
-slide.append(firstClone);
-slide.prepend(lastClone);
+main_visual_list.append(first_clone);
+main_visual_list.prepend(last_clone);
+main_visual_list.style.transform = `translateX(${-100 * index}%)`;
 
-// const slideWidth = slides[index].clientWidth;
-
-slide.style.transform = `translateX(${-100 * index}%)`;
-
-// console.log(slides);
-
-const startSlide = () => {
-  slideId = setInterval(() => {
-    moveToNextSlide();
+const start_slide = () => {
+  slide_id = setInterval(() => {
+    move_next();
   }, interval);
   visual_button.style.cssText = 'opacity:0; transition: .5s ease-out;'
 };
 
-const getSlides = () => document.querySelectorAll('.slide');
+const get_slide = () => document.querySelectorAll('.slide');
 
-slide.addEventListener('transitionend', () => {
-  slides = getSlides();
-  if (slides[index].id === firstClone.id) {
-    slide.style.transition = 'none';
+main_visual_list.addEventListener('transitionend', () => {
+  slides = get_slide();
+  if (slides[index].id === first_clone.id) {
+    main_visual_list.style.transition = 'none';
     index = 1;
-    slide.style.transform = `translateX(${-100 * index}%)`;
+    main_visual_list.style.transform = `translateX(${-100 * index}%)`;
   }
 
-  if (slides[index].id === lastClone.id) {
-    slide.style.transition = 'none';
+  if (slides[index].id === last_clone.id) {
+    main_visual_list.style.transition = 'none';
     index = slides.length - 2;
-    slide.style.transform = `translateX(${-100 * index}%)`;
+    main_visual_list.style.transform = `translateX(${-100 * index}%)`;
   }
 });
 
-const moveToNextSlide = () => {
-  slides = getSlides();
+const move_next = () => {
+  slides = get_slide();
   if (index >= slides.length - 1) return;
   index++;
-  slide.style.transition = '.7s ease-out';
-  slide.style.transform = `translateX(${-100 * index}%`;
+  main_visual_list.style.transition = '.7s ease-out';
+  main_visual_list.style.transform = `translateX(${-100 * index}%`;
 };
 
-const moveToPreviousSlide = () => {
+const move_prev = () => {
   if (index <= 0) return;
   index--;
-  slide.style.transition = '.7s ease-out';
-  slide.style.transform = `translateX(${-100 * index}%)`;
+  main_visual_list.style.transition = '.7s ease-out';
+  main_visual_list.style.transform = `translateX(${-100 * index}%)`;
 };
 
-slideContainer.addEventListener('mouseenter', () => {
-  clearInterval(slideId);
+main_visual.addEventListener('mouseenter', () => {
+  clearInterval(slide_id);
   visual_button.style.cssText = 'opacity:1; transition: .5s ease-in;'
 });
 
-slideContainer.addEventListener('mouseleave', startSlide);
-nextBtn.addEventListener('click', moveToNextSlide);
-prevBtn.addEventListener('click', moveToPreviousSlide);
+main_visual.addEventListener('mouseleave', start_slide);
+next_btn.addEventListener('click', move_next);
+prev_btn.addEventListener('click', move_prev);
 
-startSlide();
+start_slide();

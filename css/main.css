@@ -1,10 +1,9 @@
 /* Main visual*/
-@font-face { font-family: 'Cafe24Oneprettynight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff'); font-weight: normal; font-style: normal; }
-
 div#main_visual {
     width: 100%;
     top: 0px;
     left: 0px;
+    margin-top: 60px;
 /* height: 480px; */
     position: relative;
     overflow: hidden;
@@ -386,13 +385,13 @@ ul#beer_select{
     bottom: 0px;
 /*     background-color: rgba(0, 0, 0, 0.3); */
 }
-li.selected_beer{
+ul#beer_select li{
     width: 136px;
     height: 250px;
     text-align: center;
     border-radius: 15px;
 }
-li.selected_beer img{
+ul#beer_select li img{
     width: 55px;
     height: 205px;
     position: relative;
@@ -400,9 +399,6 @@ li.selected_beer img{
     transform: translateY(-50%);
     /* background-color: teal; */
 }
-/* ul#beer_select li:nth-child(2), ul#beer_select li:nth-child(3), ul#beer_select li:nth-child(4){
-    background: none;
-} */
 .mouseover{
     background-color: #45433E;
 }
@@ -468,8 +464,7 @@ p.user_count{
     height: 100%;
     background-color: rgb(0, 0, 0, 0.4);
     text-align: center;
-    opacity: 0;
-    transition: all 0.3s ease; 
+    display: none;
 }
 span.view_count{
     position: relative;
@@ -486,7 +481,7 @@ span.view_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/view_count.png) no-repeat;
+    background: url(../images/icon/view_count.png) no-repeat;
 }
 span.recommend_count{
     position: relative;
@@ -502,9 +497,9 @@ span.recommend_count:before{
 /* display: block; */
     width: 100%;
     height: 100%;
-    background: url(/images/icon/best_recommend.png) no-repeat;
+    background: url(../images/icon/best_recommend.png) no-repeat;
 }
-span.preview_subtitle{
+span.preview_title{
     position: absolute;
     width: 100%;
     left: 0px;
@@ -512,9 +507,6 @@ span.preview_subtitle{
     text-align: center;
     font-size: 1.2em;
 /*     background-color: red; */
-}
-p.user_count:hover{
-    opacity: 1;
 }
 h2.contents3_title{
     margin-bottom: 22px;
@@ -527,10 +519,6 @@ p.review_text{
     opacity: 0.8;
     line-height: 1.3em;
 /*     background-color: tomato; */
-}
-p.review_text:hover{
-    opacity: 1;
-    text-decoration: underline;
 }
 section#weekly_best_recipe{
     width: 50%;
@@ -592,23 +580,19 @@ div.event_preview_box{
     width: 48%;
     height: 25%;
     margin: 4px;
+    overflow: hidden;
 /*     background-color: red; */
+}
+.event_preview:hover{
+    transform: scale(1.05);
 }
 .event_preview{
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out; 
 /*     margin: 5px; */
-}
-p.event_text{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    transition: all 0.3s ease; 
 }
 span.preview_text{
     position: relative;
@@ -619,8 +603,5 @@ span.preview_text{
     font-size: 1.25em;
     font-weight: 500;
 /*     background-color: blue; */
-}
-p.event_text:hover{
-   opacity: 1;
 }
 /* End of contents*/

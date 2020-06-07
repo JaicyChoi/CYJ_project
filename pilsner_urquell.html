@@ -12,27 +12,59 @@
     <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/media_screen.css">
     <link rel="stylesheet" href="css/detail_media_screen.css">
+    <script src="js/data.js"></script>
 </head>
 <body>
-    <!--Header-->
-    <div id="header_wrap">
-        <header id="header_inner">
+     <!--Header-->
+     <header id="header_wrap">
+        <div id="header_inner">
             <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1>
             <nav id="main_menu">
                 <h2 class="hidden">메인 메뉴</h2>
                 <ul id="main_menu_list">
-                    <li><a href="beer_search.html">내게 맞는 맥주 찾기</a></li>
-                    <li><a href="#">나만의 레시피 자랑</a></li>
-                    <li><a href="#">커뮤니티</a></li>
-                    <li><a href="#">함께 마셔요 BeTo</a></li>
-                    <li><a href="#">이벤트</a></li>
+                    <li>
+                        <a class="main_menu_title" href="beer_search.html">내게 맞는 맥주 찾기</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">나만의 레시피 자랑</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">커뮤니티</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">함께 마셔요 BeTo</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="main_menu_title" href="#">이벤트</a>
+                        <ul class="submenu_list">
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <nav id="mobile_menu">
-                <h2 id="mobile_menu_icon">
-                    <a href="#"><i class="fas fa-bars"><span class="hidden">Mobile menu</span></i></a>
-                </h2>
-            </nav>
+            <div id="main_menu_bg_highlight"></div>
             <section id="login_menu">
                 <h2 class="hidden">로그인 메뉴</h2>
                 <ul id="login_menu_list">
@@ -40,14 +72,12 @@
                     <li id="my_page"><a href="#">My page</a></li>
                 </ul>
             </section>
-            <section id="mobile_login">
-                <a href="#"><i class="fas fa-user"><span class="hidden">Mobile login</span></i></a>
-            </section>
-        </header>
-    </div>
+        </div>
+        <div id="main_menu_bg"></div>
+    </header>
     <div id="blurEffect"></div>
     <div id="main_menu_wrap"></div>
-    <!--End of Header-->
+    <!--End of header-->
     <!--Contents-->
     <div id="beer_detail_wrap">
         <section id="beer_detail_inner">
@@ -68,23 +98,11 @@
                     <input type="radio" name="beer_detail" id="beer_taste">
                     <input type="radio" name="beer_detail" id="beer_country">
                     <input type="radio" name="beer_detail" id="beer_price">
-                    <ul>
-                        <li>
-                            <p class="beer_detail_title" id="style">Style</p>
-                            <p class="beer_detail_text">맥주 스타일 : 보헤미안 필스너<br>ABV%(알코올 농도) : 4.2%</p>
-                        </li>
-                        <li>
-                            <p class="beer_detail_title" id="taste">Taste</p>
-                            <p class="beer_detail_text">향 : 초원의 풀냄새(홉)<br>맛 : 쌉싸름한 맛<br>특징 : 청량감과 깊은 맥아의 맛</p>
-                        </li>
-                        <li>
-                            <p class="beer_detail_title" id="country">Country</p>
-                            <p class="beer_detail_text">제조국 : 체코<br>제조사 : Plzensky Prazdroj(SABMiller)<br>수입사 : 밀러브루잉코리아</p>
-                        </li>
-                        <li>
-                            <p class="beer_detail_title" id="price">Price</p>
-                            <p class="beer_detail_text">가격대 : (500ml 기준) 2,500 - 3,000원<br>구매처 : 홈플러스, 이마트, 롯데마트</p>
-                        </li>
+                    <ul id="slide_list">
+                        <li><p class="beer_detail_title" id="style">Style</p></li>
+                        <li><p class="beer_detail_title" id="taste">Taste</p></li>
+                        <li><p class="beer_detail_title" id="country">Country</p></li>
+                        <li><p class="beer_detail_title" id="price">Price</p></li>
                     </ul>
                     <p id="beer_label">
                         <label for="beer_style"></label>
@@ -101,47 +119,17 @@
                 <div id="more_info_wrapping_box">
                     <div class="single_box" id="glass">
                         <p class="more_info_title">전용잔</p>
-                        <img src="/images/icon/pint.png" alt="파인트">
-                        <p class="more_info_text">파인트</p>
                     </div>
                     <div class="single_box" id="temperature">
                         <p class="more_info_title">적정 온도</p>
-                        <img src="/images/icon/temperature.png" alt="9도에서 12도">
-                        <p class="more_info_text">9 - 12℃</p>
                     </div>
                     <div id="multi_box">
                         <p class="more_info_title">어울리는 음식</p>
-                        <ul id="match_food">
-                            <li>
-                                <img src="/images/icon/pizza.png" alt="피자">
-                                <p class="more_info_text">피자</p>
-                            </li>
-                            <li>
-                                <img src="/images/icon/steak.png" alt="스테이크">
-                                <p class="more_info_text">스테이크</p>
-                            </li>
-                            <li>
-                                <img src="/images/icon/tteokbbokki.png" alt="떡볶이">
-                                <p class="more_info_text">떡볶이</p>
-                            </li>
-                        </ul>
+                        <ul id="match_food"></ul>
                     </div>
                     <div id="recipe_box">
                         <p class="more_info_title">이 요리와 찰떡궁합이에요!</p>
-                        <ul id="match_recipe">
-                            <li>
-                                <img src="/images/fish_cake.png" alt="빨간 어묵">
-                                <a href="#"><div class="match_recipe_preview"><p>빨간 어묵</p></div></a>
-                            </li>
-                            <li>
-                                <img src="/images/corn_cheese.png" alt="베이컨 갈릭 콘치즈">
-                                <a href="#"><div class="match_recipe_preview"><p>베이컨 갈릭 콘치즈</p></div></a>
-                            </li>
-                            <li>
-                                <img src="/images/corn_pizza.png" alt="옥수수 피자">
-                                <a href="#"><div class="match_recipe_preview"><p>옥수수 피자</p></div></a>
-                            </li>
-                        </ul>
+                        <ul id="match_recipe"></ul>
                     </div>
                 </div>
             </section>
@@ -152,19 +140,9 @@
                 <h2 class="contents_title">이용자 리뷰</h2>
                 <div id="user_review_inner">
                     <div id="user_review_inner_box">
-                        <div id="average">
-                            <p class="subtitle">평균 평점</p>
-                            <img src="/images/icon/grade.png" alt="별점 : 4점">
-                            <p class="subtitle_text" id="average_text"><span class="highlight">4.0 </span>/ 5.0</p>
-                        </div>
-                        <div id="count">
-                            <p class="subtitle">이 맥주를 마셔 본 사람</p>
-                            <p class="subtitle_text" id="count_text"><span class="highlight">127</span> 명</p>
-                        </div>
-                        <div id="graph">
-                            <p class="subtitle">이런 맛 / 향이 나요</p>
-                            <img src="/images/icon/graph.png" alt="그래프">
-                        </div>
+                        <div id="average"><p class="subtitle">평균 평점</p></div>
+                        <div id="count"><p class="subtitle">이 맥주를 마셔 본 사람</p></div>
+                        <div id="graph"><p class="subtitle">이런 맛 / 향이 나요</p></div>
                     </div>
                 </div>
             </section>
@@ -173,96 +151,13 @@
             <section id="best_review">
                 <h2 class="review_title">포토 / 상세 리뷰</h2>
                 <h3 id="best_review_subtitle"><span id="bold">베스트 리뷰&nbsp;</span>&nbsp;&nbsp;최다 추천을 받은 리뷰 Top 3</h3>
-                <ul id="best_review_top3">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <img src="/images/best_review1.png" alt="베스트 리뷰1">
-                                <p class="user_count">
-                                    <span class="view_count">6213</span><span class="recommend_count">157</span>
-                                </p>
-                            </div>
-                            <p class="best_review_text">최근 들어 본의 아니게 논란의 중심에 선 맥주가 있다.
-                            평소 맥주에 관심 있는 삶을 살다 보니 많은 지인들이 내게 묻는다.
-                            '필스너 우르켈은 왜 일본 맥주냐'고. 필스너 우르켈은 체코에서 가...</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <img src="/images/best_review2.png" alt="베스트 리뷰2">
-                                <p class="user_count">
-                                    <span class="view_count">4973</span><span class="recommend_count">141</span>
-                                </p>
-                            </div>
-                            <p class="best_review_text">저번에 병맥주로 먹었던 필스너 우르켈이다! 지금은 밀러 회사의 소유지만...
-                            아무튼 이 맥주를 좋아하는 사람도 많고 맛있는 맥주로 유명하다!!!
-                            이 맥주는 병맥주보다는 캔맥주...</p>
-                       </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <img src="/images/best_review3.png" alt="베스트 리뷰3">
-                                <p class="user_count">
-                                    <span class="view_count">3579</span><span class="recommend_count">101</span>
-                                </p>
-                            </div>
-                            <p class="best_review_text">체코를 대표하는 맥주는 플젠 지방의 '필스너 우르켈'과 체스키부데요비치의
-                            '부드바르'라고 할 수 있는데요, 그 중에서도 필스너 우르켈은 국내로도 차츰 수입되어
-                            매니아들 사이에선 인기...</p>
-                        </a>
-                    </li>
-                </ul>
+                <ul id="best_review_top3"></ul>
             </section>
             <section id="detail_review">
                 <h3 id="detail_review_subtitle">상세리뷰 총 12건</h3>
                 <a href="#"><p class="review_view_option"><span class="view_option">최신순&nbsp;&nbsp;</span>&nbsp;&nbsp;추천순</p></a>
-                <ul id="detail_review_list">
-                    <li>
-                        <a href="#">
-                            <img src="images/detail_review1.png" alt="상세 리뷰1">
-                            <div class="detail_review_text">
-                                <p class="id">Unterschied</p>
-                                <p class="grade">★★★★★</p>
-                                <p class="user_text">처음 마시고 "이 풀냄새와 쓴 맛은 뭐냐? 맥주 잘못 샀다."했는데 다시 사서 마시게 되는 맥주.
-                                이젠 마트 행사 때마다 매번 챙길 정도로 좋아하게 되었다. 특유의 쌉쌀함...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <img src="images/detail_review2.png" alt="상세 리뷰2">
-                        <div class="detail_review_text">
-                            <p class="id">바보새</p>
-                            <p class="grade">★★★★☆</p>
-                            <p class="user_text">적당한 쌉쌀함과 적당한 홉향과 적당한 청량감이 좋은 필스너이고, 주위에도 추천하기 좋다고 생각하지만
-                            쿰쿰한 냄새와 다소 독특한 향으로 처음 접하는 사람은...</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="images/detail_review3.png" alt="상세 리뷰3">
-                        <div class="detail_review_text">
-                            <p class="id">이크루</p>
-                            <p class="grade">★★★★★</p>
-                            <p class="user_text">전용잔이 예쁘고(구하기도 쉽고!), 맛도 좋고, 가격도 탁월하다. 구하기도 쉽다.
-                            행사하면 언제나 집어오게 되는 맥주인데 어째서인지 주위에 필스너를 좋아하는 사람...</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="images/detail_review4.png" alt="상세 리뷰4">
-                        <div class="detail_review_text">
-                            <p class="id">펍원장</p>
-                            <p class="grade">★★★☆☆</p>
-                            <p class="user_text">늦은 퇴근길 허기진 배를 채우고자 국밥집을 들렀습니다.
-                            밥을 먹고 나왔는데 헤드라이트를 겨놓은 채 차가 방치되어 밧데리가 방전되어버렸네요ㅠㅠ 보험회사에 전...</p>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="page_number">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
+                <ul id="detail_review_list"></ul>
+                <ul class="page_number"></ul>
                 <button id="write_review">리뷰 더하기</button>
             </section>
             <section id="comment">
@@ -273,48 +168,8 @@
                     <input type="text" placeholder="나만의 시음평을 남겨주세요. (최대 100자)">
                     <button>Comment</button>
                 </div>
-                <ul id="beer_comment">
-                    <li>
-                        <div class="profile_img"></div>
-                        <span class="user_comment">최고의 맥주</span>
-                        <span class="nickname">by.충사마</span>
-                        <span class="recommend">324</span>
-                        <span class="date">2020-03-01 16:48:03</span>
-                    </li>
-                    <li>
-                        <div class="profile_img"></div>
-                        <span class="user_comment">향이 정말 기가 막힘</span>
-                        <span class="nickname">by.로띠로띠</span>
-                        <span class="recommend">127</span>
-                        <span class="date">2020-02-28 02:51:00</span>
-                    </li>
-                    <li>
-                        <div class="profile_img"></div>
-                        <span class="user_comment">필스너를 아는 사람이라면 친구가 될 수 있을 것 같다</span>
-                        <span class="nickname">by.nepro</span>
-                        <span class="recommend">41</span>
-                        <span class="date">2020-03-07 19:05:32</span>
-                    </li>
-                    <li>
-                        <div class="profile_img"></div>
-                        <span class="user_comment">편의점 맥주 중 베스트</span>
-                        <span class="nickname">by.르봉복</span>
-                        <span class="recommend">324</span>
-                        <span class="date">2020-30-01 16:48:03</span>
-                    </li>
-                    <li>
-                        <div class="profile_img"></div>
-                        <span class="user_comment">진리</span>
-                        <span class="nickname">by.미고자라드</span>
-                        <span class="recommend">32</span>
-                        <span class="date">2020-03-17 23:46:21</span>
-                    </li>
-                </ul>
-                <ul class="page_number">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
+                <ul id="beer_comment"></ul>
+                <ul class="page_number"></ul>
             </section>
         </div>
     </div>
@@ -375,3 +230,7 @@
         </footer>
     </div>
     <!--End of footer-->
+    </body>
+    <script src="js/common.js"></script>
+    <script src="js/detail.js"></script>
+</html>
