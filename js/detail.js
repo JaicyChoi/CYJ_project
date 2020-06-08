@@ -7,6 +7,8 @@ for( let i = 0 ; i < Beer_Detail_Description.length ; i++ ){
 
     beer_detail_text.innerHTML = Beer_Detail_Description[i];
     beer_detail_text.classList.add('beer_detail_text');
+    slide_list[i].style.cssText = 'background: url(../images/' + slide_list[i].childNodes[0].id + 
+        '_bg.png) no-repeat; background-size: cover; position: relative;';
     slide_list[i].appendChild(beer_detail_text);
 }
 
@@ -90,7 +92,7 @@ const count = document.querySelector('#count');
 const graph = document.querySelector('#graph');
 const Average_Grade = DATA.Average_Grade[0];
 const Drink_Count = DATA.Drink_Count[0];
-const Flavor_Graph = DATA.Flavor_Graph[0];
+const Flavor_Graph = DATA.Flavor_Graph;
 
 let grade = document.createElement('img');
 let average_text = document.createElement('p');
@@ -122,10 +124,24 @@ count_highlight.innerHTML = Drink_Count;
 count_text.prepend(count_highlight);
 count.appendChild(count_text);
 
-let graph_img = document.createElement('img');
-graph_img.src = 'images/icon/' + Flavor_Graph + '.png';
+const status_graph = document.querySelector('#status_graph');
+let flavor_type = ['달달', '쌉쌀', '구수', '시큼', '과일향'];
 
-graph.appendChild(graph_img);
+for( let i = 0 ; i < Flavor_Graph.length; i++ ){
+    let li = document.createElement('li');
+    let flavor = document.createElement('span');
+    let status = document.createElement('span');
+
+    flavor.classList.add('flavor');
+    status.classList.add('status');
+
+    flavor.innerHTML = flavor_type[i];
+    status.style.width = Flavor_Graph[i] + '%';
+
+    li.appendChild(flavor);
+    li.appendChild(status);
+    status_graph.appendChild(li);
+}
 
 //best_review
 const best_review_top3 = document.querySelector('#best_review_top3');

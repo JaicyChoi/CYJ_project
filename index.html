@@ -12,8 +12,18 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media_screen.css">
     <script src="js/data.js"></script>
+    <script>
+        // let ratio = window.devicePixelRatio;
+        // if ( ratio > 1 )
+        //     window.location.href = 'm/index.html';
+        let mobilePhones = new Array('iphone', 'ipod', 'ipad', 'android', 'blackberry', 'windows ce','nokia', 'webos', 'opera mini', 'sonyericsson', 'opera mobi', 'iemobile');
+        for ( let i = 0 ; i < mobilePhones.length ; i++ )
+            if ( uAgent.indexOf(mobilePhones[i]) != -1 )
+                location.href="m/index.html";
+    </script>
 </head>
 <body>
+    <div id="wrap">
      <!--Quick menu-->
     <ul class="skip_menu">
         <li><a href="#">메뉴 이동</a></li>
@@ -230,5 +240,6 @@
     <script src="js/common.js"></script>
     <script src="js/main_visual.js"></script>
     <script src="js/main_contents.js"></script>
+    </div>
 </body>
 </html>

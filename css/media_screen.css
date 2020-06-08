@@ -1,6 +1,8 @@
 @media screen and (max-width: 1200px){
     body{
         font-size: 15px;
+        max-width: 1200px;
+        min-width: 768px;
     }
     div#main_visual, div#header_inner, div#main_menu_bg, section#search_bar, footer#footer_inner{
         width: 100%;
@@ -71,9 +73,9 @@
         height: 2000px;
     }
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
     p#magazine_text{
-        width: 49%;
+        width: 50%;
     }
     div#app_icons{
         width: 230px;
@@ -149,15 +151,11 @@
         margin: 5px;
     } */
 }
-@media screen and (max-width: 480px){
+/* @media screen and (max-width: 480px){
     div#new_beer_arrivals_inner, div#magazine_inner{
         width: 95%;
         height: 100%;
     }
-/*     .event_preview{
-        width: 45%;
-        margin: 2px;
-    } */
 }
 @media screen and (max-width: 320px){
     body{
@@ -173,4 +171,4 @@
      div#search_bar_wrap{
         height: 110px;
     }
-}
+} */

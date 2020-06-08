@@ -314,7 +314,7 @@ let DATA = {
         }
     ],
     Drink_Count: [ '127' ],
-    Flavor_Graph: [ 'graph' ],
+    Flavor_Graph: [ 10, 75, 30, 55, 20 ],
     Best_Review: [
         {
             img_alt: '베스트 리뷰1',
