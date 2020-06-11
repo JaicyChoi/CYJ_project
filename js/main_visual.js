@@ -6,8 +6,7 @@ const prev_btn = document.getElementById('prev_btn');
 const main_visual_img = DATA.Main_Visual;
 const interval = 2000;
 
-for( let i = 0 ; i <= main_visual_img.length - 1; i++ )
-{
+for( let i = 0 ; i <= main_visual_img.length - 1; i++ ){
     let main_visual_li = document.createElement('li');
     let main_visual_li_img = document.createElement('img');
 

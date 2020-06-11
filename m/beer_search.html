@@ -10,73 +10,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub.css">
-    <script type='text/javascript'>
-        window.onload = function() {
-            for( let i = 0 ; i < 13 ; i++ )
-            {
-                let preview_list = document.createElement('li');
-                let preview_link = document.createElement('a');
-                let preview_list_text = document.createElement('span')
-
-                preview_list_text.innerHTML = 'Preview';
-                preview_list_text.classList.add('preview_text');
-                
-                document.getElementById('result_preview').appendChild(preview_list);
-                preview_list.appendChild(preview_link);
-                preview_link.setAttribute('href', '#');
-                preview_link.appendChild(preview_list_text);
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="js/m_data.js"></script>
 </head>
 <body>
     <!--header-->
     <header>
         <section id="header_top">
-            <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1>
-            <input id="search_box" type="text" placeholder="Search">
-            <p id="user_icon"><img src="images/icon/user_icon.png" alt="사용자 메뉴 아이콘"></p>
+            <ul id="header_top_list">
+                <li><h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1></li>
+                <li><input id="search_box" type="text" placeholder="Search"></li>
+                <li><p id="user_icon"><img src="images/icon/user_icon.png" alt="사용자 메뉴 아이콘"></p></li>
+            </ul>
         </section>
-        <nav id="main_menu">
+        <nav id="main_menu" class="swiper-container">
             <h2 class="hidden">메인 메뉴</h2>
-            <ul id="main_menu_list">
-                <li>내게 맞는 맥주 찾기</li>
-                <li>나만의 레시피 자랑</li>
-                <li>커뮤니티</li>
-                <li>함께 마셔요 BeTo</li>
-                <li>이벤트</li>
+            <ul id="main_menu_list" class="swiper-wrapper">
+                <li class="swiper-slide"><a href="beer_search.html">내게 맞는 맥주 찾기</a></li>
+                <li class="swiper-slide">나만의 레시피 자랑</li>
+                <li class="swiper-slide">커뮤니티</li>
+                <li class="swiper-slide">함께 마셔요 BeTo</li>
+                <li class="swiper-slide">이벤트</li>
             </ul>
         </nav>
     </header>
     <!--End of header-->
-    <section id="most_popular_beers">
+    <section id="most_popular_beers" class="swiper-container">
         <h2 class="contents_title">Most Popular Beers</h2>
-        <ul id="most_popular_beers_list">
-            <li class="most_popular_beers_preview">
+        <ul id="most_popular_beers_list" class="swiper-wrapper">
+            <li class="most_popular_beers_preview swiper-slide">
                 <span id="most_popular_beers_abv">4.7%</span>
                 <img id="most_popular_beers_country" src="images/country/germany.png" alt="독일">
                 <img id="beer_img" src="images/beer/Gaffels_SonnenHopfen.png" alt="가펠 소넨호펜">
                 <p id="most_popular_beers_title">가펠 소넨호펜</p>
             </li>
-            <li class="most_popular_beers_preview">
+            <li class="most_popular_beers_preview swiper-slide">
                 <span id="most_popular_beers_abv">4.9%</span>
                 <img id="most_popular_beers_country" src="images/country/japan.png" alt="일본">
                 <img id="beer_img" src="images/beer/Sapporo_draft.png" alt="삿포로 드래프트">
                 <p id="most_popular_beers_title">삿포로 드래프트</p>
             </li>
-            <li class="most_popular_beers_preview">
+            <li class="most_popular_beers_preview swiper-slide">
                 <span id="most_popular_beers_abv">5.0%</span>
                 <img id="most_popular_beers_country" src="images/country/turkey.png" alt="터키">
                 <img id="beer_img" src="images/beer/Efes_Pilsener.png" alt="에페스 필스너">
                 <p id="most_popular_beers_title">에페스 필스너</p>
             </li>
-            <li class="most_popular_beers_preview">
+            <li class="most_popular_beers_preview swiper-slide">
                 <span id="most_popular_beers_abv">5.5%</span>
                 <img id="most_popular_beers_country" src="images/country/Belgium.png" alt="독일">
                 <img id="beer_img" src="images/beer/Jacobins_Rouge.png" alt="자코뱅 루즈">
                 <p id="most_popular_beers_title">자코뱅 루즈</p>
             </li>
-            <li class="most_popular_beers_preview">
+            <li class="most_popular_beers_preview swiper-slide">
                 <span id="most_popular_beers_abv">7.5%</span>
                 <img id="most_popular_beers_country" src="images/country/usa.png" alt="미국">
                 <img id="beer_img" src="images/beer/Hoppy_Daze_IPA.png" alt="홉피 데이즈 IPA">
@@ -228,5 +214,8 @@
         <p id="copyright">Copyright © 2020 Today’s Beer All right reserved.</p>
     </footer>
     <!--End of footer-->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src='js/sub.js'></script>
 </body>
 </html>

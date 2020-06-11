@@ -240,14 +240,22 @@ p#recipe{
     width: 100%;
 /*     background-color: green; */
 }
-ul#match_recipe{
+#match_recipe_wrapper{
+    width: 100%;
     position: relative;
     float: left;
-    width: 100;
+    scroll-behavior: smooth;
+    /* background-color: red; */
+    overflow: hidden;
+}
+ul#match_recipe{
+    position: relative;
+/*     float: left; */
+    min-width: 100%;
     left: 0;
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
+/*     margin-bottom: 30px; */
 /*     background-color: blue; */
 }
 ul#match_recipe li{
@@ -285,6 +293,7 @@ button#more_recipe_btn{
     border-radius: 5px;
     height: 45px;
     width: 65%;
+    margin-top: 30px;
 }
 span#more_recipe_text{
     color: white;
@@ -318,12 +327,13 @@ ul#user_review_summery{
     width: 75%;
 /*     background-color: green; */
 }
-ul#user_review_summery li{
+ul#user_review_summery>li{
     box-sizing: border-box;
     border-bottom: 0.5px solid #717171;
 }
 ul#user_review_summery li:last-child{
     border: 0px;
+    margin-bottom: -100px;
 }
 p.user_review_summery_title{
     margin-bottom: 30px;
@@ -361,13 +371,61 @@ span.highlight{
     color: #FFB000;
     font-weight: 500;
 }
-img#graph{
+/* img#graph{
     position: relative;
     width: 75%;
     left: 50%;
     transform: translateX(-50%);
-/*     background-color: skyblue; */
-}
+} */
+#status_graph{
+    position: relative;
+    top: -75px;
+    margin: 0 auto;
+    height: 100%;
+    width: 45%;
+    list-style: none;
+    transform: rotate(-90deg);
+/*     background-color: green; */
+/*     bottom: 0px; */
+  }
+#status_graph li{
+    width: 100%;
+    position: relative;
+/*     padding: 1px 0; */
+    margin-bottom: 25%;
+/*     white-space:nowrap; */
+    text-align: left;
+/*     background-color: blue;
+    border: solid 1px red; */
+    box-sizing: border-box;
+  }
+#status_graph li:last-child{
+    margin-bottom: 0;
+  }
+.status{
+    display: inline-block;
+    position: relative;
+    height: 27px;
+    line-height: 27px;
+    background: #FFB000;
+    left: -5px;
+    top: 1px;
+  }
+.flavor{
+    position: relative;
+    left: -5px;
+    top: -7px;
+    display: inline-block;
+    transform: rotate(90deg);
+/*     background-color: hotpink; */
+    font-size: 0.7em;
+  }
+#status_graph li:last-child .flavor{
+    left: -11px;
+  }
+#status_graph li:last-child .status{
+    left: -17px;
+  }
 section#detail_review{
     position: relative;
     width: 100%;
@@ -404,13 +462,20 @@ span#detail_review_subtitle_description:before{
     content: "|";
     position: relative;
 }
-ul#best_review_list{
+#best_review_list_wrapper{
     width: 100%;
+    position: relative;
+    float: left;
+    scroll-behavior: smooth;
+/*     background-color: red; */
+    overflow: hidden;
+}
+ul#best_review_list{
+    min-width: 100%;
     position: relative;
     float: left;
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
 /*     background-color: hotpink; */
 }
 ul#best_review_list li{
@@ -440,6 +505,7 @@ button#review_btn{
     background-color: #FFB000;
     border: none;
     border-radius: 6px;
+    margin-top: 30px;
 }
 span#wrtie_review{
     position: relative;
@@ -521,13 +587,13 @@ p.detail_ninkname{
 }
 p.detail_star{
     position: absolute;
-    top: 29%;
+    top: 0;
     right: 0px;
     width: 50%;
     text-align: left;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #FFB000;
-/*     background-color: orange; */
+/*     background-color: hotpink; */
 }
 p.detail_text{
     position: absolute;
@@ -714,3 +780,10 @@ span.recommend:before{
     top: 0px;
     background: url(../images/icon/recommend.png) no-repeat;
 }
+
+/* @media screen and (max-width:380px){
+    p.detail_text{
+        height: 70%;
+        overflow: hidden;
+    }
+} */

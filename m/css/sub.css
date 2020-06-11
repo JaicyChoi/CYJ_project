@@ -9,10 +9,8 @@ section#most_popular_beers{
     margin: 40px 0px;
 }
 ul#most_popular_beers_list{
-    width: 300%;
     position: relative;
     float: left;
-/*     background-color: skyblue; */
 }
 li.most_popular_beers_preview{
     position: relative;
@@ -24,7 +22,6 @@ li.most_popular_beers_preview{
     border: 1px solid rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
     float: left;
-    margin-right: 20px;
 }
 span#most_popular_beers_abv{
     font-size: 0.75em;

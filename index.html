@@ -13,13 +13,11 @@
     <link rel="stylesheet" href="css/media_screen.css">
     <script src="js/data.js"></script>
     <script>
-        // let ratio = window.devicePixelRatio;
-        // if ( ratio > 1 )
-        //     window.location.href = 'm/index.html';
-        let mobilePhones = new Array('iphone', 'ipod', 'ipad', 'android', 'blackberry', 'windows ce','nokia', 'webos', 'opera mini', 'sonyericsson', 'opera mobi', 'iemobile');
-        for ( let i = 0 ; i < mobilePhones.length ; i++ )
-            if ( uAgent.indexOf(mobilePhones[i]) != -1 )
-                location.href="m/index.html";
+        //mobile check
+        let filter = 'win16|win32|win64|mac|macintel';
+
+        if( filter.indexOf(navigator.platform.toLowerCase()) < 0 )
+            location.href='m/index.html';
     </script>
 </head>
 <body>
