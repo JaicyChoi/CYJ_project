@@ -7,7 +7,7 @@ for( let i = 0 ; i < Beer_Detail_Description.length ; i++ ){
 
     beer_detail_text.innerHTML = Beer_Detail_Description[i];
     beer_detail_text.classList.add('beer_detail_text');
-    slide_list[i].style.cssText = 'background: url(../images/' + slide_list[i].childNodes[0].id + 
+    slide_list[i].style.cssText = 'background: url(/images/' + slide_list[i].childNodes[0].id + 
         '_bg.png) no-repeat; background-size: cover; position: relative;';
     slide_list[i].appendChild(beer_detail_text);
 }
@@ -270,7 +270,7 @@ for( let i = 0 ; i < User_Comment.length ; i++ ){
     recommend.classList.add('recommend');
     date.classList.add('date');
 
-    div.style.cssText = 'background:url(../images/user_profile' + ( i + 1 ) + '.jpg) no-repeat;';
+    div.style.cssText = 'background:url(/images/user_profile' + ( i + 1 ) + '.jpg) no-repeat;';
     comment.innerHTML = User_Comment[i].comment;
     nickname.innerHTML = 'by.' + User_Comment[i].nickname;
     recommend.innerHTML = User_Comment[i].recommend;
