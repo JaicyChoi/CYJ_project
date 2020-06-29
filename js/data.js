@@ -190,7 +190,7 @@ let DATA = {
             abv: '5.0%',
             country: 'usa',
             country_alt: '프랑스',
-            beer: 'Kronenberg 1664 Blanc',
+            beer: 'Kronenberg_1664_Blanc',
             beer_alt: '크로넨버그 1164 블랑',
             title: '크로넨버그 1164 블랑'
         },

@@ -1,3 +1,10 @@
+let swiper = new Swiper('#most_popular_beers', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    GrabCursor: true
+  });
+
+  //just random number of preview boxes
 for( let i = 0 ; i < 13 ; i++ )
 {
     let preview_list = document.createElement('li');
@@ -12,9 +19,3 @@ for( let i = 0 ; i < 13 ; i++ )
     preview_link.setAttribute('href', '#');
     preview_link.appendChild(preview_list_text);
 }
-
-let swiper = new Swiper('#most_popular_beers', {
-    slidesPerView: 'auto',
-    spaceBetween: 20,
-    GrabCursor: true
-  });

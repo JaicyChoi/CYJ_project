@@ -1,4 +1,11 @@
 let DATA = {
+    Submenu_List: [
+        [ '<a href="beer_search.html">맥주 검색 하기</a>', 'submenu2', 'submenu3' ],
+        [ 'submenu4', 'submenu5', 'submenu6' ],
+        [ 'submenu7', 'submenu8', 'submenu9' ],
+        [ 'submenu10', 'submenu11', 'submenu12' ],
+        [ 'submenu13', 'submenu14', 'submenu15' ]
+    ],
     Main_Visual: [
         '오늘도 수고했어. 맥주 한 잔 어때? 취향 저격 맥주 추천 받기 Go',
         '지금 Craft Zone 방문하면 페일 에일 한 잔이 무료',

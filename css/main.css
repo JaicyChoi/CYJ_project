@@ -120,6 +120,9 @@ section#search_bar button{
     border: 0px;
     font-size: 1.125em;
 }
+section#search_bar input:focus, section#search_bar button:focus{
+    outline: none;
+}
 section#search_bar button:hover{
     cursor: pointer;
 }

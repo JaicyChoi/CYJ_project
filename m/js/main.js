@@ -67,6 +67,14 @@ let new_beer_arrivals_swiper = new Swiper('#new_beer_arrivals', {
     GrabCursor: true
 });
 
+//magazine
+const magazine_text = document.querySelector('#magazine_text');
+
+let text_length = 145; // 표시할 글자수 기준
+if( screen.width <= 360 )
+    if( magazine_text.innerText.length > text_length )
+        magazine_text.innerText = magazine_text.innerText.substr(0, text_length - 2) + '...';
+
 //beer of the month
 const beer_of_the_month_list = document.querySelector('#beer_of_the_month_list');
 const list_wrapper = document.querySelector('#list_wrapper');
@@ -115,6 +123,7 @@ for( item in Beer_of_the_Month ){
     beer_of_the_month_list.appendChild(outer_li);
 }
 
+//beer of the month list
 const beer_list =  document.querySelectorAll('#beer_of_the_month_list>li')
 const prev_arrow = document.querySelector('#prev_arrow');
 const next_arrow = document.querySelector('#next_arrow');
