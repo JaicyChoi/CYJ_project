@@ -1,4 +1,5 @@
-ul#main_menu_list li:first-child{
+.swiper-slide:first-child{
+    box-sizing: border-box;
     border-bottom: 3px solid #FFB000;
 }
 section#most_popular_beers{
@@ -6,7 +7,7 @@ section#most_popular_beers{
     position: relative;
     float: left;
 /*     background-color: blue; */
-    margin: 40px 0px;
+    margin: 120px 0px 40px 0px;
 }
 ul#most_popular_beers_list{
     position: relative;

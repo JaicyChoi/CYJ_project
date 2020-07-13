@@ -9,7 +9,7 @@ for ( let item in Main_Visual ){
     li.classList.add('swiper-slide');
     img.classList.add('visual_img');
 
-    img.src = '../../images/main_visual' + ( Number(item) + 1 ) + '.png';
+    img.src = '../images/main_visual' + ( Number(item) + 1 ) + '.png';
     img.alt = Main_Visual[item];
 
     li.appendChild(img);

@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="css/media_screen.css">
     <link rel="stylesheet" href="css/detail_media_screen.css">
     <script src="js/data.js"></script>
+    <script>
+        //mobile check
+        let filter = 'win16|win32|win64|mac|macintel';
+
+        if( filter.indexOf(navigator.platform.toLowerCase()) < 0 )
+            location.href='m/pilsner_urquell.html';
+    </script>
 </head>
 <body>
      <!--Header-->
