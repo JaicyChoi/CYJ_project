@@ -135,8 +135,9 @@ ul.submenu_list{
     margin-top: 10px;
     text-align: center;
     line-height: 3.3em;
+    opacity: 0;
     color: rgb(255, 255, 255, 0.75);
-    display: none;
+/*     display: none; */
 /*     background-color: red; */
 }
 ul.submenu_list li{
@@ -145,13 +146,14 @@ ul.submenu_list li{
 ul.submenu_list li:hover{
     transform: scale(1.1);
     color: rgb(255, 255, 255, 1);
+    cursor: pointer;
 }
 div#main_menu_bg{
     position: relative;
     height: 300px;
     top: 222px;
     background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1;
+    z-index: 0;
     display: none;
 }
 /* div#main_menu_bg{

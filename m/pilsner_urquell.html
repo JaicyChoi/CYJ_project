@@ -4,48 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover">
     <title>Welcome Tobe</title>
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="../css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/detail.css">
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#tab_menu li').click(function(){
-                let tab_menu_id = $(this).attr('data-tab');
-
-                $('#tab_menu li').removeClass('current');
-                $('.tab_content').removeClass('current');
-
-                $(this).addClass('current');
-                $('#' + tab_menu_id).addClass('current');
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="js/m_data.js"></script>
 </head>
 <body>
     <!--header-->
     <header>
         <section id="header_top">
-            <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1>
-            <input id="search_box" type="text" placeholder="Search">
-            <p id="user_icon"><img src="images/icon/user_icon.png" alt="사용자 메뉴 아이콘"></p>
+            <ul id="header_top_list">
+                <li><h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1></li>
+                <li><input id="search_box" type="text" placeholder="Search"></li>
+                <li><p id="user_icon"><img src="images/icon/user_icon.png" alt="사용자 메뉴 아이콘"></p></li>
+            </ul>
         </section>
         <nav id="main_menu">
             <h2 class="hidden">메인 메뉴</h2>
-            <ul id="main_menu_list">
-                <li><a href="beer_search.html">내게 맞는 맥주 찾기</a></li>
+            <ul class="main_menu_list">
+                <li>내게 맞는 맥주 찾기</li>
                 <li>나만의 레시피 자랑</li>
                 <li>커뮤니티</li>
                 <li>함께 마셔요 BeTo</li>
                 <li>이벤트</li>
             </ul>
         </nav>
+        <div id="sub_menu_bg"></div>
     </header>
     <!--End of header-->
     <!--Contents-->
+    <div id="blur_box">
     <section id="beer_detail_view">
         <h2 class="contents_title">Pilsner Urquell</h2>
         <p id="beer_detail_title">필스너 우르켈</p>
@@ -120,23 +113,25 @@
                 </li>
             </ul>
             <p id="recipe" class="subtitle">이 요리와 찰떡궁합이에요!</p>
-            <ul id="match_recipe">
-                <li>
-                    <img class="recipe_img" src="images/recipe1.png" alt="빨간 어묵 레시피">
-                    <p class="recipe_nickname"><span class="nickname_color">민달팽이</span> 님</p>
-                    <p class="recipe_title">빨간 어묵</p>
-                </li>
-                <li>
-                    <img class="recipe_img" src="images/recipe2.png" alt="베이컨 갈릭 콘치즈 레시피">
-                    <p class="recipe_nickname"><span class="nickname_color">램블</span> 님</p>
-                    <p class="recipe_title">베이컨 갈릭 콘치즈</p>
-                </li>
-                <li>
-                    <img class="recipe_img" src="images/recipe3.png" alt="옥수수 피자 레시피">
-                    <p class="recipe_nickname"><span class="nickname_color">루프트</span> 님</p>
-                    <p class="recipe_title">옥수수 피자</p>
-                </li>
-            </ul>
+            <div id="match_recipe_wrapper">
+                <ul id="match_recipe">
+                    <li>
+                        <img class="recipe_img" src="images/recipe1.png" alt="빨간 어묵 레시피">
+                        <p class="recipe_nickname"><span class="nickname_color">민달팽이</span> 님</p>
+                        <p class="recipe_title">빨간 어묵</p>
+                    </li>
+                    <li>
+                        <img class="recipe_img" src="images/recipe2.png" alt="베이컨 갈릭 콘치즈 레시피">
+                        <p class="recipe_nickname"><span class="nickname_color">램블</span> 님</p>
+                        <p class="recipe_title">베이컨 갈릭 콘치즈</p>
+                    </li>
+                    <li>
+                        <img class="recipe_img" src="images/recipe3.png" alt="옥수수 피자 레시피">
+                        <p class="recipe_nickname"><span class="nickname_color">루프트</span> 님</p>
+                        <p class="recipe_title">옥수수 피자</p>
+                    </li>
+                </ul>
+            </div>
             <button id="more_recipe_btn"><span id="more_recipe_text">더 많은 레시피 보러 가기</span></button>
        </section>
        <section id="user_review" class="tab_content">
@@ -155,7 +150,28 @@
                     </li>
                     <li>
                         <p class="user_review_summery_title">이런 맛/향이 나요</p>
-                        <img id="graph" src="images/icon/graph.png" alt="그래프">
+                        <ul id="status_graph">
+                            <li>
+                                <span class="flavor">달달</span>
+                                <span class="status" style="width: 10%;"></span>
+                            </li>
+                            <li>
+                                <span class="flavor">쌉쌀</span>
+                                <span class="status" style="width: 70%;"></span>
+                            </li>
+                            <li>
+                                <span class="flavor">구수</span>
+                                <span class="status" style="width: 30%;"></span>
+                            </li>
+                            <li>
+                                <span class="flavor">시큼</span>
+                                <span class="status" style="width: 55%;"></span>
+                            </li>
+                            <li>
+                                <span class="flavor">과일향</span>
+                                <span class="status" style="width: 20%;"></span>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </section>
@@ -163,24 +179,22 @@
                 <h3 class="contents_title">포토 / 상세 리뷰</h3>
                 <section id="best_review">
                     <h4 class="detail_review_subtitle">베스트 리뷰&nbsp;&nbsp;<span id="detail_review_subtitle_description">&nbsp;&nbsp;최다 추천을 받은 리뷰 Top 3</span></h4>
-                    <ul id="best_review_list">
-                        <li>
-                            <img class="best_review_img" src="images/best_review1.png" alt="베스트 리뷰1">
-                            <p class="best_review_text">최근 들어 본의 아니게 논란의 중심에 선 맥주가 있다.
-                            평소 맥주에 관심 있는 삶을 살다 보니 많은 지인들이 내게 묻는다. ‘필스너 우르켈은 왜 일본 맥주냐’고. 
-                            필스너 우르켈은 체코에서 가...</p>
-                        </li>
-                        <li>
-                            <img class="best_review_img" src="images/best_review2.png" alt="베스트 리뷰2">
-                            <p class="best_review_text">저번에 병맥주로 먹었던 필스너 우르켈이다! 지금은 밀러 회사의 소유지만... 
-                            아무튼 굉장히 이 맥주를 좋아하는 사람도 많고 맛있는 맥주로 유명하다!!!! 이 맥주는 병맥주보다는 캔맥주...</p>
-                        </li>
-                        <li>
-                            <img class="best_review_img" src="images/best_review3.png" alt="베스트 리뷰3">
-                            <p class="best_review_text">체코를 대표하는 맥주는 플젠 지방의 '필스너 우르켈'과 체스키 부데요비치의 
-                            '부드바르'라고 할 수 있는데요. 그 중에서도 필스너 우르켈은 국내로도 차츰 수입되어 매니아들 사이에선 인기...</p>
-                        </li>
-                    </ul>
+                    <div id="best_review_list_wrapper">
+                        <ul id="best_review_list">
+                            <li>
+                                <img class="best_review_img" src="images/best_review1.png" alt="베스트 리뷰1">
+                                <p class="best_review_text">최근 들어 본의 아니게 논란의 중심에 선 맥주가 있다. 평소 맥주에 관심 있는 삶을 살다 보니 많은 지인들이 내게 묻는다. ‘필스너 우르켈은 왜 일본 맥주냐’고. 필스너 우르켈은 체코에서 가...</p>
+                            </li>
+                            <li>
+                                <img class="best_review_img" src="images/best_review2.png" alt="베스트 리뷰2">
+                                <p class="best_review_text">저번에 병맥주로 먹었던 필스너 우르켈이다! 지금은 밀러 회사의 소유지만... 아무튼 굉장히 이 맥주를 좋아하는 사람도 많고 맛있는 맥주로 유명하다!!!! 이 맥주는 병맥주보다는 캔맥주...</p>
+                            </li>
+                            <li>
+                                <img class="best_review_img" src="images/best_review3.png" alt="베스트 리뷰3">
+                                <p class="best_review_text">체코를 대표하는 맥주는 플젠 지방의 '필스너 우르켈'과 체스키 부데요비치의 '부드바르'라고 할 수 있는데요. 그 중에서도 필스너 우르켈은 국내로도 차츰 수입되어 매니아들 사이에선 인기...</p>
+                            </li>
+                        </ul>
+                    </div>
                     <button id="review_btn"><span id="wrtie_review">리뷰 더하기</span></button>
                 </section>
                 <section id="other_detail">
@@ -194,29 +208,25 @@
                             <img class="detail_img" src="images/detail_review1.png" alt="상세 리뷰1">
                             <p class="detail_ninkname">Unterschied</p>
                             <p class="detail_star">★★★★★</p>
-                            <p class="detail_text">처음 마시고 "이 풀냄새와 쓴맛은 뭐냐? 맥주 잘 못 샀다." 했는데 다시 사서 마시게 되는 맥주. 
-                            이젠 마트 행사 때마다 매번 챙길 정도로 좋아하게 되었다. 특유의 쌉쌀함...</p>
+                            <p class="detail_text">처음 마시고 "이 풀냄새와 쓴맛은 뭐냐? 맥주 잘 못 샀다." 했는데 다시 사서 마시게 되는 맥주. 이젠 마트 행사 때마다 매번 챙길 정도로 좋아하게 되었다. 특유의 쌉쌀함...</p>
                         </li>
                         <li>
                             <img class="detail_img" src="images/detail_review2.png" alt="상세 리뷰2">
                             <p class="detail_ninkname">바보새</p>
                             <p class="detail_star">★★★★☆</p>
-                            <p class="detail_text">적당한 쌉쌀함과 적당한 홉향과 적당한 청량감이 좋은 필스너이고, 
-                            주위에도 추천하기 좋다고 생각하지만 쿰쿰한 냄새와 다소 독특햔 향으로 처음 접하는 사람은...</p>
+                            <p class="detail_text">적당한 쌉쌀함과 적당한 홉향과 적당한 청량감이 좋은 필스너이고, 주위에도 추천하기 좋다고 생각하지만 쿰쿰한 냄새와 다소 독특햔 향으로 처음 접하는 사람은...</p>
                         </li>
                         <li>
                             <img class="detail_img" src="images/detail_review3.png" alt="상세 리뷰3">
                             <p class="detail_ninkname">이크루</p>
                             <p class="detail_star">★★★★★</p>
-                            <p class="detail_text">전용잔이 예쁘고(구하기도 쉽고!), 맛도 좋고, 가격도 탁월하다. 구하기도 쉽다. 
-                            행사하면 언제나 집어오게 되는 맥주인데 어째서인지 주위에 필스너를 좋아하는 사람...</p>
+                            <p class="detail_text">전용잔이 예쁘고(구하기도 쉽고!), 맛도 좋고, 가격도 탁월하다. 구하기도 쉽다. 행사하면 언제나 집어오게 되는 맥주인데 어째서인지 주위에 필스너를 좋아하는 사람...</p>
                         </li>
                         <li>
                             <img class="detail_img" src="images/detail_review4.png" alt="상세 리뷰4">
                             <p class="detail_ninkname">펍원장</p>
                             <p class="detail_star">★★★☆☆</p>
-                            <p class="detail_text">늦은 퇴근길 허기진 배를 채우고자 국밥집을 들렀습니다. 
-                            밥을 먹고 나왔는데 헤드라이트를 켜논 채 차가 방치되어 밧데리가 방전되어버렸네요ㅠㅠ 보험회사에 전..</p>
+                            <p class="detail_text">늦은 퇴근길 허기진 배를 채우고자 국밥집을 들렀습니다. 밥을 먹고 나왔는데 헤드라이트를 켜논 채 차가 방치되어 밧데리가 방전되어버렸네요ㅠㅠ 보험회사에 전..</p>
                         </li>
                     </ul>
                     <button class="more_view_btn"><span class="more_view_text">리뷰 더 보기 </span></button>
@@ -289,6 +299,7 @@
        </section>
     </section>
     <!--End of contents-->
+    </div>
     <!--Footer-->
     <footer>
         <ul id="footer_menu">
@@ -324,5 +335,8 @@
         <p id="copyright">Copyright © 2020 Today’s Beer All right reserved.</p>
     </footer>
     <!--End of footer-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src='js/detail.js'></script>
 </body>
 </html>

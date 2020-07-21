@@ -25,7 +25,7 @@ let DATA = {
             abv: '5.0%',
             country: 'france',
             country_alt: '프랑스',
-            beer: 'Kronenberg 1664 Blanc',
+            beer: 'Kronenberg_1664_Blanc',
             beer_alt: '크로넨버그 1164 블랑',
             title: '크로넨버그 1164 블랑'
         },
@@ -190,7 +190,7 @@ let DATA = {
             abv: '5.0%',
             country: 'usa',
             country_alt: '프랑스',
-            beer: 'Kronenberg 1664 Blanc',
+            beer: 'Kronenberg_1664_Blanc',
             beer_alt: '크로넨버그 1164 블랑',
             title: '크로넨버그 1164 블랑'
         },
@@ -314,7 +314,7 @@ let DATA = {
         }
     ],
     Drink_Count: [ '127' ],
-    Flavor_Graph: [ 'graph' ],
+    Flavor_Graph: [ 10, 75, 30, 55, 20 ],
     Best_Review: [
         {
             img_alt: '베스트 리뷰1',

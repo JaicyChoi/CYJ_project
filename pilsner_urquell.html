@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=2.0">
     <title>Welcome Tobe</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/media_screen.css">
     <link rel="stylesheet" href="css/detail_media_screen.css">
     <script src="js/data.js"></script>
+    <script>
+        //mobile check
+        let filter = 'win16|win32|win64|mac|macintel';
+
+        if( filter.indexOf(navigator.platform.toLowerCase()) < 0 )
+            location.href='m/pilsner_urquell.html';
+    </script>
 </head>
 <body>
      <!--Header-->
+     <div id="wrap">
      <header id="header_wrap">
         <div id="header_inner">
             <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1>
@@ -25,7 +30,7 @@
                     <li>
                         <a class="main_menu_title" href="beer_search.html">내게 맞는 맥주 찾기</a>
                         <ul class="submenu_list">
-                            <li>submenu1</li>
+                            <li><a href="beer_search.html">맥주 검색 하기</a></li>
                             <li>submenu2</li>
                             <li>submenu3</li>
                         </ul>
@@ -87,8 +92,8 @@
                 <img src="images/beer/Pilsner_Urquell.png" alt="필스너 우르켈">
                 <div id="beer_detail_button">
                     <button id="sample">샘플 신청</button>
-                    <button id="bookmark">★ 754</button>
-                    <button id="share">Share</button>
+                    <button id="bookmark"><span>754</span></button>
+                    <button id="share"><span>Share</span></button>
                 </div>
             </section>
             <section id="beer_detail_description">
@@ -142,7 +147,10 @@
                     <div id="user_review_inner_box">
                         <div id="average"><p class="subtitle">평균 평점</p></div>
                         <div id="count"><p class="subtitle">이 맥주를 마셔 본 사람</p></div>
-                        <div id="graph"><p class="subtitle">이런 맛 / 향이 나요</p></div>
+                        <div id="graph">
+                            <p class="subtitle">이런 맛 / 향이 나요</p>
+                            <ul id="status_graph"></ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -155,14 +163,20 @@
             </section>
             <section id="detail_review">
                 <h3 id="detail_review_subtitle">상세리뷰 총 12건</h3>
-                <a href="#"><p class="review_view_option"><span class="view_option">최신순&nbsp;&nbsp;</span>&nbsp;&nbsp;추천순</p></a>
+                <p class="review_view_option">
+                    <a class="view_option" href="#">최신순</a>
+                    <a class="view_option" href="#">추천순</a>
+                </p> 
                 <ul id="detail_review_list"></ul>
                 <ul class="page_number"></ul>
                 <button id="write_review">리뷰 더하기</button>
             </section>
             <section id="comment">
                 <h2 class="review_title">한 줄 평가</h2>
-                <a href="#"><p class="review_view_option"><span class="view_option">최신순&nbsp;&nbsp;</span>&nbsp;&nbsp;추천순</p></a>
+                <p class="review_view_option">
+                    <a class="view_option" href="#">최신순</a>
+                    <a class="view_option" href="#">추천순</a>
+                </p>                   
                 <div id="my_comment">
                     <div id="my_profile_img"></div>
                     <input type="text" placeholder="나만의 시음평을 남겨주세요. (최대 100자)">
@@ -230,6 +244,7 @@
         </footer>
     </div>
     <!--End of footer-->
+    </div>
     </body>
     <script src="js/common.js"></script>
     <script src="js/detail.js"></script>

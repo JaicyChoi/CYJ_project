@@ -59,7 +59,7 @@ section#beer_detail_view img{
 }
 div#beer_detail_button{
     position:absolute;
-    width: 100%;
+    width: 275px;
     height: 30px;
     bottom: 70px;
     left: 50%;
@@ -68,25 +68,56 @@ div#beer_detail_button{
 /*     background-color: green; */
 }
 button#sample{
+    position: relative;
+    display: inline-block;
+    float: left;
     width: 100px;
     height: 100%;
     border: none;
-    margin-right: 3px;
+    margin-right: 5px;
     background-color: #FFB000;
 }
 button#bookmark{
+    position: relative;
+    display: inline-block;
+    float: left;
     width: 65px;
     height: 100%;
     border: none;
-    margin-right: 3px;
+    margin-right: 5px;
     background-color: #FFB000;
 }
+button#bookmark span:before{
+    content: '★ '
+}
 button#share{
-    width: 90px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 100px;
     height: 100%;
     border: none;
-    margin-top: 5px;
     background-color: #FFB000;
+}
+button#share span{
+    position: relative;
+    top: -2px;
+    padding-right: 10px;
+/*     background-color: red; */
+}
+button#share span:after{
+    content: '';
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    width: 15px;
+    height: 17px;
+    bottom: -5px;
+/*     border: 1px solid black; */
+    background: url(../images/icon/share_icon.png) no-repeat;
+}
+button#sample:focus, button#bookmark:focus, button#share:focus{
+    outline: none;
 }
 section#beer_detail_description{
     width: 60%;
@@ -114,21 +145,6 @@ div#slide ul li{
     float: left;
     width: 25%;
     height: 100%;
-}
-div#slide ul li:nth-child(1){
-    background: url(../images/style_bg.png) no-repeat;
-    background-size: cover;
-    position: relative;
-    /* background-color: rgb(255, 206, 50); */
-}
-div#slide ul li:nth-child(2){
-    background-color: orange;
-}
-div#slide ul li:nth-child(3){
-    background-color: pink;
-}
-div#slide ul li:nth-child(4){
-    background-color: gray;
 }
 div#slide input{
     display: none;
@@ -165,8 +181,8 @@ input#beer_price:checked~ul{
 }
 input#beer_style:checked~p#beer_label>label:nth-child(1), 
 input#beer_taste:checked~p#beer_label>label:nth-child(2), 
-input#beer_taste:checked~p#beer_label>label:nth-child(3), 
-input#beer_taste:checked~p#beer_label>label:nth-child(4){
+input#beer_country:checked~p#beer_label>label:nth-child(3), 
+input#beer_price:checked~p#beer_label>label:nth-child(4){
     background-color: white;
 }
 p.beer_detail_title{
@@ -434,7 +450,7 @@ div#user_review_inner_box{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-/*     background-color: green; */
+/*     background-color: skyblue; */
 }
 div#average{
     position: relative;
@@ -481,15 +497,59 @@ p#count_text{
     text-align: center;
 /*     background-color: gray; */
 }
-div#graph{
-    width: 264px;
+#graph{
+    position:relative;
+    width: 260px;
     height: 100%;
-/*     background-color: cornflowerblue; */
+/*     background-color: red; */
 }
-div#graph img{
+#status_graph{
     position: absolute;
-    bottom: 0px;
-}
+    height: 100%;
+    width: 50%;
+    list-style: none;
+    transform: rotate(-90deg);
+/*     background-color: green; */
+    right: 35%;
+/*     bottom: 0px; */
+  }
+#status_graph li{
+    width: 100%;
+    position: relative;
+    padding: 1px 0;
+    margin-bottom: 20%;
+/*     white-space:nowrap; */
+    text-align: left;
+/*     background-color: blue;
+    border: solid 1px red; */
+    box-sizing: border-box;
+  }
+#status_graph li:last-child{
+    margin-bottom: 0;
+  }
+.status{
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    background: #FFB000;
+    left: -5px;
+    top: 4px;
+  }
+.flavor{
+    position: relative;
+    left: -5px;
+    display: inline-block;
+    transform: rotate(90deg);
+/*     background-color: hotpink; */
+    font-size: 0.875em;
+  }
+#status_graph li:last-child .flavor{
+    left: -11px;
+  }
+#status_graph li:last-child .status{
+    left: -17px;
+  }
 span.highlight{
     font-weight: 500;
     color: #FFB000;
@@ -646,12 +706,16 @@ p.review_view_option{
     text-align: right;
     font-size: 0.75em;
     margin: -5px 0px 20px 0px;
-/*     background-color: green; */
 }
-span.view_option:after{
+.view_option:first-child:after{
     content: "|";
-    position: absolute;
+    padding-left: 15px;
+    bottom: 2px;
+    position: relative;
     font-size: 0.75em;
+}
+.view_option:nth-child(2){
+    margin-left: 10px;
 }
 ul#detail_review_list{
     position: relative;

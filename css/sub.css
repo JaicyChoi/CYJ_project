@@ -342,6 +342,7 @@ p.category_title{
 /*     background-color: red; */
     margin-top: 15px;
     margin-bottom: 11px;
+    cursor: pointer;
 }
 p.category_title:after{
     content: "\25b8";
