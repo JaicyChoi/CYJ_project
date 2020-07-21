@@ -51,6 +51,10 @@ div#visual_button {
     opacity: 0;
     display: flex;
 }
+#visual_button.show{
+    opacity: 1;
+    transition: all .5s ease-in;
+}
 #next_btn, #prev_btn {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
@@ -272,7 +276,7 @@ p#view_detail{
     font-weight: 300;
 }
 p#view_detail:after{
-    content: " ▶";
+    content: " â–¶";
     position: relative;
 }
 div#contents2_wrap{
@@ -393,6 +397,7 @@ ul#beer_select li{
     height: 250px;
     text-align: center;
     border-radius: 15px;
+    cursor: pointer;
 }
 ul#beer_select li img{
     width: 55px;
@@ -521,6 +526,7 @@ p.review_text{
     font-weight: 300;
     opacity: 0.8;
     line-height: 1.3em;
+    cursor: pointer;
 /*     background-color: tomato; */
 }
 section#weekly_best_recipe{
@@ -574,7 +580,7 @@ p#view_more{
 /*     background-color: red; */
 }
 p#view_more:after{
-    content: " ▶";
+    content: " â–¶";
     position: relative;
 }
 div.event_preview_box{

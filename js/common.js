@@ -49,23 +49,22 @@ function window_scroll(){
     }
 }
 
-main_menu_list.forEach(main_menu_list => 
-    main_menu_list.addEventListener('mouseenter', show_menu));
+main_menu_list.forEach(main_menu_list => main_menu_list.addEventListener('mouseenter', show_menu));
 main_menu_bg.addEventListener('mouseleave', hide_menu);
 
 function show_menu(){
     main_menu_bg.style.cssText = 'top:' + ( scroll_value + 60 ) + 'px;' + 
-        'opacity:1; transition: .3s ease-in; display:block;';
+        'opacity:1; transition: .3s ease-in; display:block; z-index: 1;';
     submenu_list.forEach(submenu_list => 
-        submenu_list.style.cssText = 'top: 0px; opacity:1; transition: .5s ease-in; display:block;');
+        submenu_list.style.cssText = 'top: 0px; opacity:1; transition: .5s ease-in;');
     main_menu_bg_highlight.style.cssText = 'top:'+ ( scroll_value + 60 ) + 'px;' + 
         'opacity:1; transition: .2s ease-in; display:block;'
     main_menu_bg_highlight.style.left = main_menu_bg_highlight.offsetWidth * getNodeindex(this) + 'px';
 }
 
 function hide_menu(){
-    main_menu_bg.style.cssText = 'top:' + scroll_value + 'px;' + 'opacity:0; transition: .3s ease-out; display: block;';
+    main_menu_bg.style.cssText = 'top:' + scroll_value + 'px;' + 'opacity:0; transition: .3s ease-out; display: block; z-index: 0;';
     submenu_list.forEach(submenu_list => 
-        submenu_list.style.cssText = 'opacity:0; transition: .5s ease-out; display: none;');
+        submenu_list.style.cssText = 'opacity:0; transition: .5s ease-out;');
     main_menu_bg_highlight.style.cssText = 'opacity:0; transition: .2s ease-in; display:none;'
 }
