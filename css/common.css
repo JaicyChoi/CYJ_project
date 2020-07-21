@@ -142,10 +142,8 @@ ul.submenu_list{
     display: none;
     color: rgb(255, 255, 255, 0.75);
 /*     display: none; */
-border: 1px solid black;
 }
 ul.submenu_list li{
-    background-color: red;
     transition: all 0.2s ease-in;
 }
 ul.submenu_list li:hover{
