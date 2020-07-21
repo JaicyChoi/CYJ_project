@@ -99,13 +99,13 @@ nav#main_menu{
     position: relative;
     top: 162px;
     height: 60px;
-/*     background-color: blue; */
     font-size: 1.125em;
     font-weight: 300;
     float: left;
     /* transition: .2s ease-out; */
 }
 ul#main_menu_list{
+    position: absolute;
     /* float: left; */
     display: flex;
     color: black;
@@ -119,6 +119,9 @@ ul#main_menu_list{
 ul#main_menu_list>li{
     width: 20%;
 /*     border: 1px solid white; */
+}
+ul#main_menu_list>li.height{
+    height: 360px;
 }
 a.main_menu_title{
     display: block;
@@ -136,11 +139,13 @@ ul.submenu_list{
     text-align: center;
     line-height: 3.3em;
     opacity: 0;
+    display: none;
     color: rgb(255, 255, 255, 0.75);
 /*     display: none; */
-/*     background-color: red; */
+border: 1px solid black;
 }
 ul.submenu_list li{
+    background-color: red;
     transition: all 0.2s ease-in;
 }
 ul.submenu_list li:hover{
@@ -149,11 +154,12 @@ ul.submenu_list li:hover{
     cursor: pointer;
 }
 div#main_menu_bg{
-    position: relative;
+    position: absolute;
     height: 300px;
-    top: 222px;
+    width: 100%;
+    top: 60px;
     background-color: rgba(0, 0, 0, 0.75);
-    z-index: 0;
+    z-index: -1;
     display: none;
 }
 /* div#main_menu_bg{
@@ -165,9 +171,9 @@ div#main_menu_bg{
     display: none;
 } */
 div#main_menu_bg_highlight{
-    position:absolute;
-    top: 222px;
-    left: 0px;
+    position: absolute;
+    top: 55px;
+    left: 0;
     width: 20%;
     height: 5px;
     z-index: -1;
