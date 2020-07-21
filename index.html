@@ -22,9 +22,9 @@
     <div id="wrap">
      <!--Quick menu-->
     <ul class="skip_menu">
-        <li><a href="#">메뉴 이동</a></li>
-        <li><a href="#">본문 영역 이동</a></li>
-        <li><a href="#">하단 영역 이동</a></li>
+        <li><a href="#main_menu_list">메뉴 이동</a></li>
+        <li><a href="#main_visual">본문 영역 이동</a></li>
+        <li><a href="#footer_menu">하단 영역 이동</a></li>
     </ul>
     <!--End of quick menu-->
     <!--Header-->
@@ -102,7 +102,9 @@
         <section id="search_bar">
             <h2 class="hidden">검색창</h2>
             <p>Search for Beers, Flavor or Country...</p>
-            <input type="text" placeholder="Search">
+            <label for="searh_input">
+                <input id="searh_input" type="text" placeholder="Search">
+            </label>
             <button>Go!</button>
         </section>
     </div>
@@ -146,7 +148,7 @@
                         <a href="#">
                             <h2 class="contents_title contents3_title">Weekly Best Reviewer</h2>
                             <div class="preview_box">
-                                <img class="review_preview" id="best_review_img" src="images/weekly_best_review.png">
+                                <img class="review_preview" id="best_review_img" src="images/weekly_best_review.png" alt="벨스 스페셜 더블 크림 스타우트 리뷰">
                             </div>
                         </a>
                     </section>
@@ -154,7 +156,7 @@
                         <a href="#">
                             <h2 class="contents_title contents3_title">Weekly Best Recipe</h2>
                             <div class="preview_box">
-                                <img class ="review_preview" src="images/weekly_best_recipe.png">
+                                <img class ="review_preview" src="images/weekly_best_recipe.png" alt="몬테크리스토 샌드위치 레시피">
                             </div>
                         </a>
                     </section>
@@ -162,14 +164,14 @@
                         <a href="#">
                             <h2 class="contents_title contents3_title">Hottest Pub / Store</h2>
                             <div class="preview_box">
-                                <img class="review_preview" src="images/hottest_pub.png">
+                                <img class="review_preview" src="images/hottest_pub.png" alt="THE8LOW 리뷰">
                             </div>
                         </a>
                     </section>
                     <section id="view_latest_event">
                         <h2 class="contents_title contents3_title">View Latest Event</h2>
                         <div id="view_latest_event_box">
-                            <a href="#""><p id="view_more">View more</p></a>
+                            <a href="#"><p id="view_more">View more</p></a>
                         </div>
                     </section>
                 </div>
@@ -183,22 +185,22 @@
             <nav id="footer_menu">
                 <h2 class="hidden">하단 메뉴</h2>
                 <ul id="footer_menu_list">
-                    <a href="#"><li>회사소개</li></a>
-                    <a href="#"><li>이용약관</li></a>
-                    <a href="#"><li>개인정보처리방침</li></a>
-                    <a href="#"><li>Today's beer 정책</li></a>
-                    <a href="#"><li>고객센터</li></a>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">Today's beer 정책</a></li>
+                    <li><a href="#">고객센터</a></li>
                 </ul>
             </nav>
             <img id="footer_logo" src="images/logo.png" alt="Tobe">
             <section id="customer_guide">
                 <h2 class="hidden">고객 안내 사항</h2>
-                <p id="guide" class="guide_text">Tobe 이용 중 궁금하신 점이 있으신가요?</br>메일 또는 플러스친구 `Tobe`로 연락해주세요.</br>최선을 다해 도와드리겠습니다.</p>
-                <p id="contect" class="guide_text">고객센터 (주 5일, 오전 10시 ~ 저녁 7시까지)</br>
-                카카오톡 ToBe</br>
-                대표번호 1234-5678</br>
-                메일 support@tobe.kr</br>
-                제휴문의 biz@tobe.kr</br>
+                <p id="guide" class="guide_text">Tobe 이용 중 궁금하신 점이 있으신가요?<br/>메일 또는 플러스친구 `Tobe`로 연락해주세요.<br/>최선을 다해 도와드리겠습니다.</p>
+                <p id="contect" class="guide_text">고객센터 (주 5일, 오전 10시 ~ 저녁 7시까지)<br/>
+                카카오톡 ToBe<br/>
+                대표번호 1234-5678<br/>
+                메일 support@tobe.kr<br/>
+                제휴문의 biz@tobe.kr<br/>
                 </p>
             </section>
             <div id="app_icons">
