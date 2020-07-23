@@ -276,7 +276,7 @@ p#view_detail{
     font-weight: 300;
 }
 p#view_detail:after{
-    content: " â–¶";
+    content: " ▶";
     position: relative;
 }
 div#contents2_wrap{
@@ -580,7 +580,7 @@ p#view_more{
 /*     background-color: red; */
 }
 p#view_more:after{
-    content: " â–¶";
+    content: " ▶";
     position: relative;
 }
 div.event_preview_box{
