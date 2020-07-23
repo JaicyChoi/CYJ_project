@@ -1,0 +1,290 @@
+section#visual{
+    position: relative;
+    float: left;
+    top: 0px;
+    left: 0px;
+/*     background-color: red; */
+    margin: 105px 0 40px 0;
+}
+.swiper-container{
+    width: 100%;
+}
+ul#visual_list li{
+/*     float: left; */
+}
+.visual_img{
+    width: 100%;
+    display: block;
+}
+/* .swiper-button-next, .swiper-button-prev{
+    background: transparent;
+    border: none;
+} */
+section#new_beer_arrivals{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    float: left;
+    height: auto;
+    color: white;
+    margin-bottom: 40px;
+    /* background-color: red; */
+}
+ul#new_beer_arrivals_list{
+    height: 300px;
+    position: relative;
+    float: left;
+/*     background-color: blue; */
+}
+li.new_beer_arrivals_preview{
+    position: relative;
+    width: 218px;
+    height: 100%;
+    bottom: 0px;
+    background-color: #45433E;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    float: left;
+    /* margin-right: 20px; */
+}
+.new_beer_arrivals_abv{
+    font-size: 0.75em;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.new_beer_arrivals_country{
+    width: 45px;
+    height: 27px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+}
+.new_beer_img{
+    bottom: 45px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.new_beer_arrivals_title{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 0.875em;
+    text-align: center;
+}
+section#magazine{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    float: left;
+    color:white;
+    margin-bottom: 40px;
+/*     background-color: blue; */
+}
+img#magazine_img{
+    position: relative;
+    width: 45%;
+    left: 3%;
+    float: left;
+    margin-right: 15px;
+/*     background-color: red; */
+}
+p#magazine_text{
+    position: absolute;
+    top: 44px;
+    font-size: 0.75em;
+    right: 3%;
+    width: 45%;
+    line-height: 1.35em;
+    text-align: justify;
+/*     background-color: green; */
+}
+div#detail_view{
+    position: absolute;
+    right: 3%;
+    bottom: 0px;
+    width: 45%;
+    height: 40px;
+    border: 1px solid #FFB000;
+    border-radius: 5px;
+    line-height:40px; 
+    font-size: 0.75em;
+    text-align: center;
+}
+span#detail_view_text:after{
+    content: " →";
+    position: relative';
+}
+section#beer_of_the_month{
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-bottom: 40px;
+    /* overflow: hidden; */
+/*     background-color: blue; */
+}
+img.beer_img{
+    position: relative;
+    float: left;
+    width: 17%;
+    left: 11%;
+/*     background-color: red; */
+}
+#list_wrapper{
+    position: relative;
+    float: left;
+    background-color: #FFB000;
+        overflow: hidden;
+}
+ul#beer_of_the_month_list{
+    position: relative;
+    width: 100%;
+    float: left;
+    padding: 4% 0 6% 0;
+    display: flex;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+ul#beer_of_the_month_list>li{
+   position: relative;
+   min-width: 100%;
+/*    background-color: green;
+   border: 1px solid blue; */
+   box-sizing: border-box;
+   left: 0;
+}
+.beer_description{
+    position: relative;
+    top: 15px;
+    width: 56%;
+    right: 11%;
+    float: right;
+/*     background-color: green; */
+}
+.beer_description li{
+/*     background-color: hotpink; */
+}
+p.eng_title{
+    font-size: 1.25em;
+    margin-bottom: 1.25em;
+    font-weight: 400;
+}
+span.kor_title{
+    font-size: 0.5em;
+    font-weight: 300;
+}
+span.bold{
+    font-weight: 500;
+}
+.beer_description_country{
+    width: 63px;
+    height: 38px;
+    margin-bottom: 1.25em;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+p.beer_description_text{
+    line-height: 1.3em;
+    font-size: 0.75em;
+    margin-bottom: 1.25em;
+    text-align: justify;
+}
+img#prev_arrow, img#next_arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+img#prev_arrow{
+    left: 15px;
+}
+img#next_arrow{
+    right: 15px;
+}
+section#weekly_best_reviewer{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    float: left;
+    color: white;
+    margin-bottom: 40px;
+/*     background-color: blue; */
+}
+p.user_id{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+    font-size: 0.75em;
+/*     background-color: red; */
+}
+span.highlight{
+    position: relative;
+    color: #FFB000;
+    font-weight: 400;
+    padding-left: 20px;
+/*     background-color: green; */
+}
+span.highlight:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    background: url(../images/icon/crown.png) no-repeat;
+    width: 100%;
+    height: 100%;
+}
+img.review_preview{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    float: left;
+    width: 80%;
+    height: auto;
+    margin: 10px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+}
+p.review_title{
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+/*     background-color: green; */
+}
+p.review_text{
+    float: left;
+    position: relative;
+    width: 100%;
+    font-size: 0.75em;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: justify;
+    opacity: 0.55;
+    line-height: 1.35em;
+/*     background-color: red; */
+}
+section#weekly_best_recipe{
+    position: relative;
+    float: left;
+    top: 0px;
+    left: 0px;
+    color: white;
+/*     background-color: red; */
+    margin-bottom: 40px;
+}
+section#hottest_pub{
+    position: relative;
+    float: left;
+    color: white;
+    margin-bottom: 70px;
+/*     background-color: green; */
+}
