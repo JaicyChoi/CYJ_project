@@ -12,6 +12,7 @@ const move_top = document.querySelector('#move_top');
 let last_scroll_top = 162;
 let scroll_value;
 
+window.onbeforeunload = () => { window.scrollTo(0, 0); }
 window.addEventListener('scroll', window_scroll);
 
 main_menu_list.forEach(main_menu_list => 
