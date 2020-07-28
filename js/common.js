@@ -72,9 +72,9 @@ main_menu.addEventListener('mouseleave', hide_menu);
 function show_menu(){
     // main_menu_list.forEach(list => list.classList.add('height'));
     main_menu_bg.style.cssText = 'opacity:1; transition: .3s ease-in; display:block;';
-        submenu_list.forEach(submenu_list => 
-            submenu_list.style.cssText = 'top: 0px; opacity:1; transition: .5s ease-in; display: block;');
-        main_menu_bg_highlight.style.cssText = 'opacity:1; transition: .2s ease-in; display:block;'
+    submenu_list.forEach(submenu_list => 
+        submenu_list.style.cssText = 'top: 0px; opacity:1; transition: .5s ease-in; display: block;');
+    main_menu_bg_highlight.style.cssText = 'opacity:1; transition: .2s ease-in; display:block;'
 
     main_menu_bg_highlight.style.width = main_menu_list[0].offsetWidth + 'px';
     main_menu_bg_highlight.style.left = main_menu_list[getNodeindex(this.parentNode)].getBoundingClientRect().left + 'px';
@@ -87,3 +87,7 @@ function hide_menu(){
         submenu_list.style.cssText = 'opacity:0; transition: .5s ease-out; display: none;');
     main_menu_bg_highlight.style.cssText = 'opacity:0; transition: .2s ease-in; display:none;'
 }
+
+submenu_list.forEach(submenu_list => submenu_list.addEventListener('mouseenter', () => {
+    main_menu_bg_highlight.style.left = main_menu_list[getNodeindex(submenu_list.parentNode)].getBoundingClientRect().left + 'px';
+}));
