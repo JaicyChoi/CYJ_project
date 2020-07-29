@@ -1,3 +1,8 @@
+if( isIE === true ){
+    document.body.classList.add('ie');
+    document.querySelector('#dark_bg').classList.add('ie');
+}
+
 let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
 
 const main_menu = document.querySelector('#main_menu');
@@ -67,7 +72,10 @@ move_top.addEventListener('click', () => {
 });
 
 main_menu_title.forEach(main_menu_title => main_menu_title.addEventListener('mouseenter', show_menu));
+main_menu_title.forEach(main_menu_title => main_menu_title.addEventListener('focus', show_menu));
 main_menu.addEventListener('mouseleave', hide_menu);
+let last_submenu = submenu_list[submenu_list.length-1].children;
+last_submenu[last_submenu.length-1].addEventListener('focusout', hide_menu);
 
 function show_menu(){
     // main_menu_list.forEach(list => list.classList.add('height'));

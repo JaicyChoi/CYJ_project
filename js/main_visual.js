@@ -9,15 +9,18 @@ const interval = 2000;
 for( let i = 0 ; i <= main_visual_img.length - 1; i++ ){
     let main_visual_li = document.createElement('li');
     let main_visual_li_img = document.createElement('img');
+    let a = document.createElement('a');
 
     main_visual_li.classList.add('slide');
     main_visual_li_img.src = 'images/main_visual' + ( i + 1 ) + '.png';
     main_visual_li_img.alt = main_visual_img[i];
-    main_visual_li.appendChild(main_visual_li_img);
+    a.setAttribute('href', '#');
+    a.appendChild(main_visual_li_img);
+    main_visual_li.appendChild(a);
     main_visual_list.appendChild(main_visual_li);
 }
 
-let slides = document.querySelectorAll('.slide');
+let slides = document.querySelectorAll('.slide'); //5 slides
 let index = 1;
 let slide_id;
 
@@ -38,7 +41,7 @@ const start_slide = () => {
   visual_button.style.cssText = 'opacity:0; transition: .5s ease-out;'
 };
 
-const get_slide = () => document.querySelectorAll('.slide');
+const get_slide = () => document.querySelectorAll('.slide'); //7 slides
 
 main_visual_list.addEventListener('transitionend', () => {
   slides = get_slide();

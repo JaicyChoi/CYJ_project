@@ -122,6 +122,9 @@
     nav#mobile_menu, section#mobile_login{
         display: block;
     } */
+    #browser_guide{
+        width: 280px;
+    }
     div#search_bar_wrap{
         height: 120px;
     }
