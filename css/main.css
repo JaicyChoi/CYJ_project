@@ -12,10 +12,17 @@ div#main_visual {
 ul#main_visual_list {
     position: relative;
     display: flex;
+    display: -ms-flexbox; 
     width: 100%;
 }
 ul#main_visual_list li{
     min-width: 100%;
+    position: relative;
+    display: block;
+}
+ul#main_visual_list li a{
+    width: 100%;
+    display: block;
     position: relative;
 }
 ul#main_visual_list li:nth-child(2){
@@ -125,7 +132,7 @@ section#search_bar button{
     font-size: 1.125em;
 }
 section#search_bar input:focus, section#search_bar button:focus{
-    outline: none;
+/*     outline: none; */
 }
 section#search_bar button:hover{
     cursor: pointer;

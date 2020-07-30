@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media_screen.css">
+    <link rel="shortcut icon" href="ico/favicon.ico">
     <script src="js/data.js"></script>
     <script>
         //mobile check
@@ -16,6 +17,26 @@
 
         if( filter.indexOf(navigator.platform.toLowerCase()) < 0 )
             location.href='m/index.html';
+        
+        //ie check
+        let agent = navigator.userAgent.toLowerCase();
+        let isIE = false;
+
+        if( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ){
+            alert('Internet Exploer로 접속하셨습니다.\n이 사이트는 모던 브라우저(MS Edge/Chrome/FIrefox)에 최적화 되어있습니다.\n\n모던 브라우저로 접속해주세요.');
+            isIE = true;
+            console.log(navigator.userAgent);
+        }
+        else
+            console.log('not ie');
+
+        window.addEventListener('DOMContentLoaded', function(){
+            if( isIE === true ){
+                document.body.classList.add('ie');
+                document.querySelector('#dark_bg').classList.add('ie');
+                document.querySelector('#browser_guide').classList.add('ie');
+            }
+        });
     </script>
 </head>
 <body>
@@ -26,6 +47,11 @@
         <li><a href="#footer_menu" title="하단으로 이동">하단 영역 이동</a></li>
     </ul>
     <!--End of quick menu-->
+    <!--browser guide-->
+    <div id="browser_guide">
+        <span>이 사이트는 모던 브라우저(MS Edge/Chrome/Firefox)에 최적화되어 있습니다.</span>
+    </div>
+    <!--End of brower guide-->
     <!--Header-->
     <header id="header_wrap">
         <div id="header_inner">
@@ -37,40 +63,40 @@
                         <a class="main_menu_title" href="beer_search.html" title="내게 맞는 맥주 찾기">내게 맞는 맥주 찾기</a>
                         <ul class="submenu_list">
                             <li><a href="beer_search.html"  title="맥주 검색 하기">맥주 검색 하기</a></li>
-                            <li>submenu2</li>
-                            <li>submenu3</li>
+                            <li><a href="#" title="서브 메뉴 2">submenu2</a></li>
+                            <li><a href="#" title="서브 메뉴 3">submenu3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="main_menu_title" href="#" title="나만의 레시피 자랑">나만의 레시피 자랑</a>
                         <ul class="submenu_list">
-                            <li>submenu1</li>
-                            <li>submenu2</li>
-                            <li>submenu3</li>
+                            <li><a href="#" title="서브 메뉴 1">submenu1</a></li>
+                            <li><a href="#" title="서브 메뉴 2">submenu2</a></li>
+                            <li><a href="#" title="서브 메뉴 3">submenu3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="main_menu_title" href="#" title="커뮤니티">커뮤니티</a>
                         <ul class="submenu_list">
-                            <li>submenu1</li>
-                            <li>submenu2</li>
-                            <li>submenu3</li>
+                            <li><a href="#" title="서브 메뉴 1">submenu1</a></li>
+                            <li><a href="#" title="서브 메뉴 2">submenu2</a></li>
+                            <li><a href="#" title="서브 메뉴 3">submenu3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="main_menu_title" href="#" title="함께 마셔요">함께 마셔요 BeTo</a>
                         <ul class="submenu_list">
-                            <li>submenu1</li>
-                            <li>submenu2</li>
-                            <li>submenu3</li>
+                            <li><a href="#" title="서브 메뉴 1">submenu1</a></li>
+                            <li><a href="#" title="서브 메뉴 2">submenu2</a></li>
+                            <li><a href="#" title="서브 메뉴 3">submenu3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="main_menu_title" href="#" title="이벤트">이벤트</a>
                         <ul class="submenu_list">
-                            <li>submenu1</li>
-                            <li>submenu2</li>
-                            <li>submenu3</li>
+                            <li><a href="#" title="서브 메뉴 1">submenu1</a></li>
+                            <li><a href="#" title="서브 메뉴 2">submenu2</a></li>
+                            <li><a href="#" title="서브 메뉴 3">submenu3</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -169,7 +195,7 @@
                     <section id="view_latest_event">
                         <h2 class="contents_title contents3_title">View Latest Event</h2>
                         <div id="view_latest_event_box">
-                            <a href="#" title="이벤트 더 보기"><p id="view_more">View more</p></a>
+                           <p id="view_more"><a href="#" title="이벤트 더 보기">View more</a></p>
                         </div>
                     </section>
                 </div>
@@ -233,10 +259,10 @@
             <p id="copyright">Copyright © 2020 Today’s Beer All right reserved.</p>
         </footer>
     </div>
+    <div id="dark_bg"></div>
     <!--End of footer-->
     <script src="js/common.js"></script>
     <script src="js/main_visual.js"></script>
     <script src="js/main_contents.js"></script>
-    </div>
 </body>
 </html>

@@ -13,11 +13,12 @@ for( let i = 0 ; i <= main_visual_img.length - 1; i++ ){
     main_visual_li.classList.add('slide');
     main_visual_li_img.src = 'images/main_visual' + ( i + 1 ) + '.png';
     main_visual_li_img.alt = main_visual_img[i];
+    main_visual_li_img.setAttribute('tabindex', '0');
     main_visual_li.appendChild(main_visual_li_img);
     main_visual_list.appendChild(main_visual_li);
 }
 
-let slides = document.querySelectorAll('.slide');
+let slides = document.querySelectorAll('.slide'); //5 slides
 let index = 1;
 let slide_id;
 
@@ -38,7 +39,7 @@ const start_slide = () => {
   visual_button.style.cssText = 'opacity:0; transition: .5s ease-out;'
 };
 
-const get_slide = () => document.querySelectorAll('.slide');
+const get_slide = () => document.querySelectorAll('.slide'); //7 slides
 
 main_visual_list.addEventListener('transitionend', () => {
   slides = get_slide();
@@ -74,8 +75,13 @@ main_visual.addEventListener('mouseenter', () => {
   clearInterval(slide_id);
   visual_button.style.cssText = 'opacity:1; transition: .5s ease-in;'
 });
+main_visual.addEventListener('focusin', () => {
+  clearInterval(slide_id);
+  visual_button.style.cssText = 'opacity:1; transition: .5s ease-in;'
+});
 
 main_visual.addEventListener('mouseleave', start_slide);
+main_visual.addEventListener('focusout', start_slide);
 next_btn.addEventListener('click', move_next);
 prev_btn.addEventListener('click', move_prev);
 

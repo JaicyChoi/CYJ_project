@@ -9,7 +9,7 @@ for( let i = 0 ; i < New_Beer_Arrivals.length - 1; i++ ){
     new_beer_list.appendChild(new_beer_li);
 }
 
-const new_beer_list_all = document.querySelectorAll('#new_beer_list li');
+const new_beer_list_li = document.querySelectorAll('#new_beer_list li');
 let new_beer_arrivals_abv = document.createElement('span');
 let new_beer_arrivals_country = document.createElement('img');
 let new_beer_arrivals_beer = document.createElement('img');
@@ -34,8 +34,10 @@ new_beer_preview.appendChild(new_beer_arrivals_title);
     new_beer_arrivals_title.innerHTML = New_Beer_Arrivals[0].title;
 }());
 
-new_beer_list_all.forEach(new_beer_list =>
-    new_beer_list.addEventListener('mouseenter', show_beer_preview));
+new_beer_list_li.forEach(li =>
+    li.addEventListener('mouseenter', show_beer_preview));
+new_beer_list_li.forEach(li =>
+    li.addEventListener('focusin', show_beer_preview));
 
 function show_beer_preview(){
     new_beer_arrivals_abv.innerHTML = New_Beer_Arrivals[getNodeindex(this)].abv;
