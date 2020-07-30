@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media_screen.css">
+    <link rel="shortcut icon" href="ico/favicon.ico">
     <script src="js/data.js"></script>
     <script>
         //mobile check
@@ -24,9 +25,18 @@
         if( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ){
             alert('Internet Exploer로 접속하셨습니다.\n이 사이트는 모던 브라우저(MS Edge/Chrome/FIrefox)에 최적화 되어있습니다.\n\n모던 브라우저로 접속해주세요.');
             isIE = true;
+            console.log(navigator.userAgent);
         }
         else
             console.log('not ie');
+
+        window.addEventListener('DOMContentLoaded', function(){
+            if( isIE === true ){
+                document.body.classList.add('ie');
+                document.querySelector('#dark_bg').classList.add('ie');
+                document.querySelector('#browser_guide').classList.add('ie');
+            }
+        });
     </script>
 </head>
 <body>
@@ -37,12 +47,14 @@
         <li><a href="#footer_menu" title="하단으로 이동">하단 영역 이동</a></li>
     </ul>
     <!--End of quick menu-->
+    <!--browser guide-->
+    <div id="browser_guide">
+        <span>이 사이트는 모던 브라우저(MS Edge/Chrome/Firefox)에 최적화되어 있습니다.</span>
+    </div>
+    <!--End of brower guide-->
     <!--Header-->
     <header id="header_wrap">
         <div id="header_inner">
-            <div id="browser_guide">
-                <span>이 사이트는 모던 브라우저(MS Edge/Chrome/Firefox)에 최적화되어 있습니다.</span>
-            </div>
             <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ToBe"></a></h1>
             <nav id="main_menu">
                 <h2 class="hidden">메인 메뉴</h2>
@@ -252,6 +264,5 @@
     <script src="js/common.js"></script>
     <script src="js/main_visual.js"></script>
     <script src="js/main_contents.js"></script>
-    </div>
 </body>
 </html>

@@ -9,14 +9,12 @@ const interval = 2000;
 for( let i = 0 ; i <= main_visual_img.length - 1; i++ ){
     let main_visual_li = document.createElement('li');
     let main_visual_li_img = document.createElement('img');
-    let a = document.createElement('a');
 
     main_visual_li.classList.add('slide');
     main_visual_li_img.src = 'images/main_visual' + ( i + 1 ) + '.png';
     main_visual_li_img.alt = main_visual_img[i];
-    a.setAttribute('href', '#');
-    a.appendChild(main_visual_li_img);
-    main_visual_li.appendChild(a);
+    main_visual_li_img.setAttribute('tabindex', '0');
+    main_visual_li.appendChild(main_visual_li_img);
     main_visual_list.appendChild(main_visual_li);
 }
 

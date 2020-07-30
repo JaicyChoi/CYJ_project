@@ -3,7 +3,7 @@ body.ie{
     overflow: hidden;
 }
 #dark_bg.ie{
-    background-color: rgba(0, 0, 0, .85);
+    background-color: rgba(0, 0, 0, .75);
     position: absolute;
     top: 0;
     left: 0;
@@ -23,6 +23,16 @@ body.ie{
     opacity: .75;
     z-index: 3;
 }
+#browser_guide.ie{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 1.4em;
+    width: 500px;
+    opacity: .95;
+    height: 150px;
+}
 #browser_guide span{
     width: 90%;
     left: 50%;
@@ -31,6 +41,10 @@ body.ie{
     position: absolute;
     top: 7px;
     text-align: center;
+}
+#browser_guide.ie span{
+    display: block;
+    top: 27px;
 }
 #browser_guide span:after{
     content: '';
@@ -41,6 +55,18 @@ body.ie{
     width: 100px;
     height: 25px;
     margin-top: 5px;
+    background: url(../images/icon/browser.png) no-repeat center;
+    background-size: contain;
+}
+#browser_guide.ie span:after{
+    content: '';
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 40px;
+    margin-top: 13px;
     background: url(../images/icon/browser.png) no-repeat center;
     background-size: contain;
 }

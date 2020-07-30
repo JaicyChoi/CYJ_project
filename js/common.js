@@ -1,8 +1,3 @@
-if( isIE === true ){
-    document.body.classList.add('ie');
-    document.querySelector('#dark_bg').classList.add('ie');
-}
-
 let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
 
 const main_menu = document.querySelector('#main_menu');
