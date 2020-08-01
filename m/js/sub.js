@@ -5,7 +5,7 @@ let swiper = new Swiper('#most_popular_beers', {
   });
 
   //just random number of preview boxes
-for( let i = 0 ; i < 13 ; i++ )
+for( let i = 0 ; i < 17 ; i++ )
 {
     let preview_list = document.createElement('li');
     let preview_link = document.createElement('a');
