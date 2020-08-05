@@ -1,4 +1,5 @@
 //beer detail description
+const slide = document.querySelector('#slide_list');
 const slide_list = document.querySelectorAll('#slide_list li');
 const Beer_Detail_Description = DATA.Beer_Detail_Description;
 
@@ -11,6 +12,27 @@ for( let i = 0 ; i < Beer_Detail_Description.length ; i++ ){
         '_bg.png) no-repeat; background-size: cover; position: relative;';
     slide_list[i].appendChild(beer_detail_text);
 }
+
+const dot_list = document.createElement('ul');
+dot_list.id = 'dot_list';
+
+for( let i = 0 ; i < slide_list.length ; i++ ){
+    let li = document.createElement('li');
+
+    dot_list.append(li);
+}
+document.querySelector('#slide').append(dot_list);
+const dot_li = document.querySelectorAll('#dot_list li');
+let index = 0;
+dot_li[0].classList.add('selected');
+
+dot_li.forEach(li => li.addEventListener('click', () => {
+    dot_li[index].classList.remove('selected');
+    index = getNodeindex(li);
+    dot_li[index].classList.add('selected');
+    slide.style.transition = 'all .5s ease-out';
+    slide.style.transform = `translateX(${-100 * index}%)`;
+}));
 
 //more_info
 const glass = document.querySelector('#glass');

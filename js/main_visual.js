@@ -61,7 +61,7 @@ const move_next = () => {
   if (index >= slides.length - 1) return;
   index++;
   main_visual_list.style.transition = '.7s ease-out';
-  main_visual_list.style.transform = `translateX(${-100 * index}%`;
+  main_visual_list.style.transform = `translateX(${-100 * index}%)`;
 };
 
 const move_prev = () => {
