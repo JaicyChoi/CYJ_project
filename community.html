@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=2.0">
-    <title>Welcome Tobe</title>
+    <title>Community</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sub.css">
     <link rel="stylesheet" href="css/media_screen.css">
+    <link rel="stylesheet" href="css/sub_media_screen.css">
     <link rel="shortcut icon" href="ico/favicon.ico">
     <script src="js/data.js"></script>
     <script>
@@ -16,8 +17,8 @@
         let filter = 'win16|win32|win64|mac|macintel';
 
         if( filter.indexOf(navigator.platform.toLowerCase()) < 0 )
-            location.href='m/index.html';
-        
+            location.href='m/community.html';
+
         //ie check
         let agent = navigator.userAgent.toLowerCase();
         let isIE = false;
@@ -40,18 +41,13 @@
     </script>
 </head>
 <body>
-     <!--Quick menu-->
+    <!--Quick menu-->
     <ul class="skip_menu">
         <li><a href="#main_menu_list" title="메뉴로 이동">메뉴 이동</a></li>
-        <li><a href="#main_visual" title="본문으로 이동">본문 영역 이동</a></li>
+        <li><a href="#contents1_wrap" title="본문으로 이동">본문 영역 이동</a></li>
         <li><a href="#footer_menu" title="하단으로 이동">하단 영역 이동</a></li>
     </ul>
     <!--End of quick menu-->
-    <!--browser guide-->
-    <div id="browser_guide">
-        <span>이 사이트는 모던 브라우저(MS Edge/Chrome/Firefox)에 최적화되어 있습니다.</span>
-    </div>
-    <!--End of brower guide-->
     <!--Header-->
     <header id="header_wrap">
         <div id="header_inner">
@@ -114,93 +110,15 @@
     </header>
     <div id="main_menu_wrap"></div>
     <!--End of header-->
-    <!--Main visual-->
-    <div id="main_visual">
-        <ul id="main_visual_list"></ul>
-        <div id="visual_button">
-          <button id="prev_btn"><i class="fas fa-chevron-left"></i></button>
-          <button id="next_btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
+    <!--Sub visual-->
+    <div id="sub_visual3">
+        <div id="brightness"></div>
+        <div id="sub_visual_typo"><p>커뮤니티</p></div>
     </div>
-    <div id="search_bar_wrap">
-        <section id="search_bar">
-            <h2 class="hidden">검색창</h2>
-            <p>Search for Beers, Flavor or Country...</p>
-            <label for="searh_input">
-                <input id="searh_input" type="text" placeholder="Search">
-            </label>
-            <button>Go!</button>
-        </section>
-    </div>
-    <!--End of main visual-->
+    <!--End of sub visual-->
     <!--Contents-->
-    <div id="contents_wrap">
-        <div id="contents1_wrap">
-            <section id="contents1_inner">
-                <div id="contents1_wrapping_box">
-                    <section id="new_beer_arrivals">
-                        <h2 class="contents_title">NEW BEER ARRIVALS</h2>
-                        <div id="new_beer_preview" class="contents_preview"></div>
-                        <ul id="new_beer_list" class="contents_text"></ul>
-                    </section>
-                    <section id="magazine">
-                        <h2 class="contents_title">Magazine: About Rager</h2>
-                        <a href="#" title="magazine">
-                            <img class="contents_preview" id="magazine_preview" src="images/magazine.png" alt="magazine">
-                            <p id="magazine_text" class="contents_text"></p>
-                            <p id="view_detail">view detail</p>
-                        </a>
-                    </section>
-                </div>
-            </section>
-        </div>
-        <div id="contents2_wrap">
-            <div id="contents2_bg"></div>
-            <section id="contents2_inner">
-                <div id="contents2_wrapping_box">
-                    <h2 class="contents_title">Editor’s Pick! Beer of the Month</h2>
-                    <img id="beer_preview">
-                    <div id="beer_description"></div>
-                    <ul id="beer_select"></ul>
-                </div>
-            </section>
-        </div>
-        <div id="contents3_wrap">
-            <section id="contents3_inner">
-                <div id="contents3_wrapping_box">
-                    <section id="weekly_best_reviewer">
-                        <a href="#" title="weekly bests reviewer">
-                            <h2 class="contents_title contents3_title">Weekly Best Reviewer</h2>
-                            <div class="preview_box">
-                                <img class="review_preview" id="best_review_img" src="images/weekly_best_review.png" alt="벨스 스페셜 더블 크림 스타우트 리뷰">
-                            </div>
-                        </a>
-                    </section>
-                    <section id="weekly_best_recipe">
-                        <a href="#" title="weekly best recipe">
-                            <h2 class="contents_title contents3_title">Weekly Best Recipe</h2>
-                            <div class="preview_box">
-                                <img class ="review_preview" src="images/weekly_best_recipe.png" alt="몬테크리스토 샌드위치 레시피">
-                            </div>
-                        </a>
-                    </section>
-                    <section id="hottest_pub_store">
-                        <a href="#" title="hottest pub and store">
-                            <h2 class="contents_title contents3_title">Hottest Pub / Store</h2>
-                            <div class="preview_box">
-                                <img class="review_preview" src="images/hottest_pub.png" alt="THE8LOW 리뷰">
-                            </div>
-                        </a>
-                    </section>
-                    <section id="view_latest_event">
-                        <h2 class="contents_title contents3_title">View Latest Event</h2>
-                        <div id="view_latest_event_box">
-                           <p id="view_more"><a href="#" title="이벤트 더 보기">View more</a></p>
-                        </div>
-                    </section>
-                </div>
-            </section>
-        </div>
+    <div id="sub_page_contents">
+        <span>...Oops!<br/>페이지 준비 중입니다.</span>
     </div>
     <div id="move_top"></div>
     <!--End of contents-->
@@ -210,35 +128,35 @@
             <nav id="footer_menu">
                 <h2 class="hidden">하단 메뉴</h2>
                 <ul id="footer_menu_list">
-                    <li><a href="#" title="회사소개">회사소개</a></li>
-                    <li><a href="#" title="이용약관">이용약관</a></li>
-                    <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
-                    <li><a href="#" title="Today's beer 정책">Today's beer 정책</a></li>
-                    <li><a href="#" title="고객센터">고객센터</a></li>
+                    <a href="#"><li>회사소개</li></a>
+                    <a href="#"><li>이용약관</li></a>
+                    <a href="#"><li>개인정보처리방침</li></a>
+                    <a href="#"><li>Today's beer 정책</li></a>
+                    <a href="#"><li>고객센터</li></a>
                 </ul>
             </nav>
             <img id="footer_logo" src="images/logo.png" alt="Tobe">
             <section id="customer_guide">
                 <h2 class="hidden">고객 안내 사항</h2>
-                <p id="guide" class="guide_text">Tobe 이용 중 궁금하신 점이 있으신가요?<br/>메일 또는 플러스친구 `Tobe`로 연락해주세요.<br/>최선을 다해 도와드리겠습니다.</p>
-                <p id="contect" class="guide_text">고객센터 (주 5일, 오전 10시 ~ 저녁 7시까지)<br/>
-                카카오톡 ToBe<br/>
-                대표번호 1234-5678<br/>
-                메일 support@tobe.kr<br/>
-                제휴문의 biz@tobe.kr<br/>
+                <p id="guide" class="guide_text">Tobe 이용 중 궁금하신 점이 있으신가요?</br>메일 또는 플러스친구 `Tobe`로 연락해주세요.</br>최선을 다해 도와드리겠습니다.</p>
+                <p id="contect" class="guide_text">고객센터 (주 5일, 오전 10시 ~ 저녁 7시까지)</br>
+                카카오톡 ToBe</br>
+                대표번호 1234-5678</br>
+                메일 support@tobe.kr</br>
+                제휴문의 biz@tobe.kr</br>
                 </p>
             </section>
             <div id="app_icons">
                 <section id="get_app">
                     <h2 class="footer_title">Get the ToBe App</h2>
-                    <a href="#" title="앱 스토어 바로가기">
+                    <a href="#">
                         <div id="app_store">
                             <img class="app_icon" src="images/icon/app_store.png" alt="앱 스토어 바로가기">
                             <p class="download">Download on</p>
                             <p class="store_name">App Store</p>
                         </div>
                     </a>
-                    <a href="#" title="구글 플레이 스토어 바로가기">
+                    <a href="#">
                         <div id="google_play_store">
                             <img class="app_icon" src="images/icon/google_play_store.png" alt="구글 플레이 스토어 바로가기">
                             <p class="download">Download on</p>
@@ -249,20 +167,17 @@
                 <section id="social">
                     <h2 class="footer_title">Follow Us</h2>
                     <div id="social_icons">
-                        <a href="#"><img src="images/icon/kakaotalk.png" alt="카카오톡 바로가기" title="카카오톡 바로가기"></a>
-                        <a href="#"><img src="images/icon/facebook.png" alt="페이스북 바로가기" title="페이스북 바로가기"></a>
-                        <a href="#"><img src="images/icon/instagram.png" alt="인스타그램 바로가기" title="인스타그램 바로가기"></a>
-                        <a href="#"><img src="images/icon/twitter.png" alt="트위터 바로가기" title="트위터 바로가기"></a>
+                        <a href="#"><img src="images/icon/kakaotalk.png" alt="카카오톡 바로가기"></a>
+                        <a href="#"><img src="images/icon/facebook.png" alt=" 페이스북 바로가기"></a>
+                        <a href="#"><img src="images/icon/instagram.png" alt="인스타그램 바로가기"></a>
+                        <a href="#"><img src="images/icon/twitter.png" alt="트위터 바로가기"></a>
                     </div>
                 </section>
             </div>
             <p id="copyright">Copyright © 2020 Today’s Beer All right reserved.</p>
         </footer>
     </div>
-    <div id="dark_bg"></div>
     <!--End of footer-->
     <script src="js/common.js"></script>
-    <script src="js/main_visual.js"></script>
-    <script src="js/main_contents.js"></script>
 </body>
 </html>
