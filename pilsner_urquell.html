@@ -29,14 +29,6 @@
         }
         else
             console.log('not ie');
-
-        window.addEventListener('DOMContentLoaded', function(){
-            if( isIE === true ){
-                document.body.classList.add('ie');
-                document.querySelector('#dark_bg').classList.add('ie');
-                document.querySelector('#browser_guide').classList.add('ie');
-            }
-        });
     </script>
 </head>
 <body>
@@ -94,9 +86,9 @@
                             <li><a href="#" title="서브 메뉴 3">submenu3</a></li>
                         </ul>
                     </li>
+                    <div id="main_menu_bg_highlight"></div>
                 </ul>
                 <div id="main_menu_bg"></div>
-                <div id="main_menu_bg_highlight"></div>
             </nav>
             <section id="login_menu">
                 <h2 class="hidden">로그인 메뉴</h2>

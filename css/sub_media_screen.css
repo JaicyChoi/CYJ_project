@@ -6,6 +6,9 @@
     div#result_preview_wrap{
         width: 76%;
     }
+    .total{
+        width: 85%;
+    }
 }
 @media screen and (max-width: 980px){
 /*     div#sub_visual{
@@ -23,6 +26,9 @@
     }
     ul#result_preview li{
         width: 25%;
+    }
+    .total{
+        width: 90%;
     }
 }
 @media screen and (max-width: 768px){
@@ -47,5 +53,8 @@
     }
     ul#result_preview li{
         width: 32.5%;
+    }
+    .total{
+        width: 87%;
     }
 }

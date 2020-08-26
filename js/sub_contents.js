@@ -69,52 +69,24 @@ const category_title = document.querySelectorAll('.category_title');
 const category_detail = document.querySelectorAll('.category_detail');
 
 view_all.addEventListener('click', function(){
-    category_title.forEach(category_title => category_title.classList.remove(('category_title_active')));
-    category_detail.forEach(category_detail => category_detail.classList.remove('category_detail_active'));
+    category_title.forEach(function(category_title){
+        category_title.classList.remove(('category_title_active'));
+    });
+    category_detail.forEach(function(category_detail){
+        category_detail.classList.remove('category_detail_active')
+    });
 });
 
-category_title.forEach(category_title => category_title.addEventListener('click', function(){
-    category_title.classList.toggle('category_title_active');
-    this.nextElementSibling.classList.toggle('category_detail_active');
-
-    // if( category_title.classList.contains('category_title_active'))
-    //     this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px';
-    // else
-    //     this.nextElementSibling.maxHeight = 0;
-}));
+category_title.forEach(function(category_title){
+    category_title.addEventListener('click', function(){
+        category_title.classList.toggle('category_title_active');
+        this.nextElementSibling.classList.toggle('category_detail_active');
+    });
+});
 
 //search result
 const result_preview = document.querySelector('#result_preview');
 const Search_Result = DATA.Search_Result;
-
-// for( let i = 0 ; i < Search_Result.length ; i++ ){
-//     let li = document.createElement('li');
-//     let a  = document.createElement('a');
-//     let result_preview_abv = document.createElement('span');
-//     let result_preview_country = document.createElement('img');
-//     let result_preview_beer = document.createElement('img');
-//     let result_preview_title = document.createElement('p');
-
-//     result_preview_abv.classList.add('result_preview_abv');
-//     result_preview_country.classList.add('result_preview_country');
-//     result_preview_beer.classList.add('result_preview_beer');
-//     result_preview_title.classList.add('result_preview_title');
-
-//     a.href = Search_Result[i].href;
-//     result_preview_abv.innerHTML = Search_Result[i].abv;
-//     result_preview_country.src = 'images/country/' + Search_Result[i].country + '.png';
-//     result_preview_country.alt = Search_Result[i].country_alt;
-//     result_preview_beer.src = 'images/beer/' + Search_Result[i].beer + '.png';
-//     result_preview_beer.alt = Search_Result[i].beer_alt;
-//     result_preview_title.innerHTML = Search_Result[i].title;
-
-//     a.appendChild(result_preview_abv);
-//     a.appendChild(result_preview_country);
-//     a.appendChild(result_preview_beer);
-//     a.appendChild(result_preview_title);
-//     li.appendChild(a);
-//     result_preview.appendChild(li);
-// }
 
 let li = document.createElement('li');
 let a  = document.createElement('a');
@@ -122,6 +94,7 @@ let result_preview_abv = document.createElement('span');
 let result_preview_country = document.createElement('img');
 let result_preview_beer = document.createElement('img');
 let result_preview_title = document.createElement('p');
+let total = document.querySelector('.total');
 
 result_preview_abv.classList.add('result_preview_abv');
 result_preview_country.classList.add('result_preview_country');
@@ -157,3 +130,5 @@ for( let i = 0 ; i < 17 ; i++ ){
     preview_link.setAttribute('href', '#');
     preview_link.appendChild(preview_list_text);
 }
+
+total.innerText = 'total : ' + result_preview.childElementCount;

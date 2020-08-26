@@ -30,14 +30,6 @@
         }
         else
             console.log('not ie');
-
-        window.addEventListener('DOMContentLoaded', function(){
-            if( isIE === true ){
-                document.body.classList.add('ie');
-                document.querySelector('#dark_bg').classList.add('ie');
-                document.querySelector('#browser_guide').classList.add('ie');
-            }
-        });
     </script>
 </head>
 <body>
@@ -95,9 +87,9 @@
                             <li><a href="#" title="서브 메뉴 3">submenu3</a></li>
                         </ul>
                     </li>
+                    <div id="main_menu_bg_highlight"></div>
                 </ul>
                 <div id="main_menu_bg"></div>
-                <div id="main_menu_bg_highlight"></div>
             </nav>
             <section id="login_menu">
                 <h2 class="hidden">로그인 메뉴</h2>
@@ -113,12 +105,15 @@
     <!--Sub visual-->
     <div id="sub_visual4">
         <div id="brightness"></div>
-        <div id="sub_visual_typo"><p>커뮤니티</p></div>
+        <div id="sub_visual_typo"><p>함께 마셔요 BeTo</p></div>
     </div>
     <!--End of sub visual-->
     <!--Contents-->
     <div id="sub_page_contents">
-        <span>...Oops!<br/>페이지 준비 중입니다.</span>
+        <p>
+            <span>...Oops!</span>
+            <span>페이지 준비 중입니다.</span>
+        </p>
     </div>
     <div id="move_top"></div>
     <!--End of contents-->

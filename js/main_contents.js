@@ -34,10 +34,12 @@ new_beer_preview.appendChild(new_beer_arrivals_title);
     new_beer_arrivals_title.innerHTML = New_Beer_Arrivals[0].title;
 }());
 
-new_beer_list_li.forEach(li =>
-    li.addEventListener('mouseenter', show_beer_preview));
-new_beer_list_li.forEach(li =>
-    li.addEventListener('focusin', show_beer_preview));
+new_beer_list_li.forEach(function(li){
+    li.addEventListener('mouseenter', show_beer_preview)
+});
+new_beer_list_li.forEach(function(li){
+    li.addEventListener('focusin', show_beer_preview)}
+);
 
 function show_beer_preview(){
     new_beer_arrivals_abv.innerHTML = New_Beer_Arrivals[getNodeindex(this)].abv;
@@ -108,12 +110,14 @@ beer_description.appendChild(beer_description_text);
     beer_description_text.innerHTML = Beer_of_the_Month[0].text;
 }());
 
-selected_beer.forEach(selected_beer => 
-    selected_beer.addEventListener('mouseenter', show_description));
+selected_beer.forEach(function(selected_beer){ 
+    selected_beer.addEventListener('mouseenter', show_description)
+});
 
 function show_description(){
-    selected_beer.forEach(selected_beer => 
-        selected_beer.classList.remove('mouseover'));
+    selected_beer.forEach(function(selected_beer){ 
+        selected_beer.classList.remove('mouseover')
+    });
     this.classList.add('mouseover');
     
     beer_preview.src = 'images/beer/' + Beer_of_the_Month[getNodeindex(this)].beer_img + '.png';
@@ -156,10 +160,12 @@ user_count.appendChild(view_count);
 user_count.appendChild(recommend_count);
 user_count.appendChild(preview_title);
 
-preview_box.forEach(preview_box => 
-    preview_box.parentNode.parentNode.addEventListener('mouseenter', show_info));
-preview_box.forEach(preview_box => 
-    preview_box.parentNode.parentNode.addEventListener('mouseleave', hide_info));
+preview_box.forEach(function(preview_box){ 
+    preview_box.parentNode.parentNode.addEventListener('mouseenter', show_info)
+});
+preview_box.forEach(function(preview_box){ 
+    preview_box.parentNode.parentNode.addEventListener('mouseleave', hide_info)
+});
 
 function show_info(){
     this.childNodes[1].childNodes[3].appendChild(user_count);

@@ -19,20 +19,22 @@ dot_list.id = 'dot_list';
 for( let i = 0 ; i < slide_list.length ; i++ ){
     let li = document.createElement('li');
 
-    dot_list.append(li);
+    dot_list.appendChild(li);
 }
-document.querySelector('#slide').append(dot_list);
+document.querySelector('#slide').appendChild(dot_list);
 const dot_li = document.querySelectorAll('#dot_list li');
 let index = 0;
 dot_li[0].classList.add('selected');
 
-dot_li.forEach(li => li.addEventListener('click', () => {
-    dot_li[index].classList.remove('selected');
-    index = getNodeindex(li);
-    dot_li[index].classList.add('selected');
-    slide.style.transition = 'all .5s ease-out';
-    slide.style.transform = `translateX(${-100 * index}%)`;
-}));
+dot_li.forEach(function(li){
+    li.addEventListener('click', function(){
+        dot_li[index].classList.remove('selected');
+        index = getNodeindex(li);
+        dot_li[index].classList.add('selected');
+        slide.style.transition = 'all .5s ease-out';
+        slide.style.transform = 'translateX(' + -100 * index + '%)';
+    });
+});
 
 //more_info
 const glass = document.querySelector('#glass');
@@ -93,20 +95,24 @@ for( let i = 0 ; i < Recipe.length ; i++ ){
 
 const recipe_list = document.querySelectorAll('#match_recipe li');
 
-recipe_list.forEach(recipe_list => recipe_list.addEventListener('mouseenter', function(){
-    let div = document.createElement('div');
-    let p = document.createElement('p');
+recipe_list.forEach(function(recipe_list){
+    recipe_list.addEventListener('mouseenter', function(){
+        let div = document.createElement('div');
+        let p = document.createElement('p');
 
-    div.classList.add('match_recipe_preview');
+        div.classList.add('match_recipe_preview');
 
-    p.innerHTML = Recipe[getNodeindex(this)].text;
-    div.appendChild(p);
-    this.appendChild(div);
-}));
+        p.innerHTML = Recipe[getNodeindex(this)].text;
+        div.appendChild(p);
+        this.appendChild(div);
+    });
+});
 
-recipe_list.forEach(recipe_list => recipe_list.addEventListener('mouseleave', function(){
-    this.removeChild(this.lastChild);
-}));
+recipe_list.forEach(function(recipe_list){
+    recipe_list.addEventListener('mouseleave', function(){
+        this.removeChild(this.lastChild);
+    });
+});
 
 //total user review
 const average = document.querySelector('#average');
@@ -130,7 +136,7 @@ average_highlight.classList.add('highlight');
 average_highlight.innerHTML = Average_Grade.grade;
 
 average_text.innerHTML = '/ 5.0';
-average_text.prepend(average_highlight);
+average_text.insertBefore(average_highlight, average_text.lastChild);
 average.appendChild(grade);
 average.appendChild(average_text);
 
@@ -143,7 +149,7 @@ count_highlight.classList.add('highlight');
 
 count_text.innerHTML = ' 명';
 count_highlight.innerHTML = Drink_Count;
-count_text.prepend(count_highlight);
+count_text.insertBefore(count_highlight, count_text.lastChild);
 count.appendChild(count_text);
 
 const status_graph = document.querySelector('#status_graph');
@@ -192,29 +198,33 @@ for( let i = 0 ; i < Best_Review.length; i++ ){
 
 const best_review_list = document.querySelectorAll('#best_review_top3 li');
 
-best_review_list.forEach(best_review_list => best_review_list.addEventListener('mouseenter', function(){
-    let user_count = document.createElement('p');
-    let view_count = document.createElement('span');
-    let recommend_count = document.createElement('span');
+best_review_list.forEach(function(best_review_list){
+    best_review_list.addEventListener('mouseenter', function(){
+        let user_count = document.createElement('p');
+        let view_count = document.createElement('span');
+        let recommend_count = document.createElement('span');
 
-    user_count.classList.add('user_count');
-    view_count.classList.add('view_count');
-    recommend_count.classList.add('recommend_count');
+        user_count.classList.add('user_count');
+        view_count.classList.add('view_count');
+        recommend_count.classList.add('recommend_count');
 
-    view_count.innerHTML = Best_Review[getNodeindex(this)].view_count;
-    recommend_count.innerHTML = Best_Review[getNodeindex(this)].recommend_count;
-    
-    user_count.appendChild(view_count);
-    user_count.appendChild(recommend_count);
-    this.childNodes[0].firstChild.appendChild(user_count);
+        view_count.innerHTML = Best_Review[getNodeindex(this)].view_count;
+        recommend_count.innerHTML = Best_Review[getNodeindex(this)].recommend_count;
+        
+        user_count.appendChild(view_count);
+        user_count.appendChild(recommend_count);
+        this.childNodes[0].firstChild.appendChild(user_count);
 
-    this.childNodes[0].lastChild.style.cssText = 'text-decoration:underline; opacity:1;'
-}));
+        this.childNodes[0].lastChild.style.cssText = 'text-decoration:underline; opacity:1;';
+    });
+});
 
-best_review_list.forEach(best_review_list => best_review_list.addEventListener('mouseleave', function(){
-    (this.childNodes[0].firstChild).removeChild(this.childNodes[0].firstChild.lastChild);
-    this.childNodes[0].lastChild.style.cssText = 'text-decoration:none; opacity:0.8;'
-}));
+best_review_list.forEach(function(best_review_list){
+    best_review_list.addEventListener('mouseleave', function(){
+        (this.childNodes[0].firstChild).removeChild(this.childNodes[0].firstChild.lastChild);
+        this.childNodes[0].lastChild.style.cssText = 'text-decoration:none; opacity:0.8;';
+    })
+});
 
 //detail review
 const detail_reviews = document.querySelector('#detail_review_list');
@@ -252,15 +262,19 @@ for( let i = 0 ; i < Detail_Review.length; i++ ){
 
 const detail_review_list = document.querySelectorAll('#detail_review_list li');
 
-detail_review_list.forEach(detail_review_list => detail_review_list.addEventListener('mouseenter', function(){
-    this.childNodes[0].firstChild.style.cssText = 'opacity: 0.4';
-    this.childNodes[0].lastChild.lastChild.style.cssText = 'text-decoration:underline; opacity:1;'
-}));
+detail_review_list.forEach(function(detail_review_list){
+    detail_review_list.addEventListener('mouseenter', function(){
+        this.childNodes[0].firstChild.style.cssText = 'opacity: 0.4';
+        this.childNodes[0].lastChild.lastChild.style.cssText = 'text-decoration:underline; opacity:1;';
+    });
+});
 
-detail_review_list.forEach(detail_review_list => detail_review_list.addEventListener('mouseleave', function(){
-    this.childNodes[0].firstChild.style.cssText = 'opacity:1';
-    this.childNodes[0].lastChild.lastChild.style.cssText = 'text-decoration:none; opacity:0.8;'
-}));
+detail_review_list.forEach(function(detail_review_list){
+    detail_review_list.addEventListener('mouseleave', function(){
+        this.childNodes[0].firstChild.style.cssText = 'opacity:1';
+        this.childNodes[0].lastChild.lastChild.style.cssText = 'text-decoration:none; opacity:0.8;';
+    });
+});
 
 const user_review_page_number = detail_reviews.nextElementSibling;
 

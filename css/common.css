@@ -211,12 +211,17 @@ ul.submenu_list li a{
 div#main_menu_bg_highlight{
     position: absolute;
     top: 55px;
-    left: 0;
-    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 13%;
     height: 5px;
     z-index: -1;
-    display: none;
+    opacity: 0;
+    transition: all .3s ease;
     background-color: #ffb000;
+}
+div#main_menu_bg_highlight.show{
+    opacity: 1;
 }
 ul.submenu_list li a{
     transition: all 0.2s ease-in;

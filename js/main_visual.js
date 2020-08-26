@@ -28,54 +28,50 @@ const last_clone = slides[slides.length - 1].cloneNode(true);
 first_clone.id = 'first_clone';
 last_clone.id = 'last_clone';
 
-main_visual_list.append(first_clone);
-main_visual_list.prepend(last_clone);
-main_visual_list.style.transform = `translateX(${-100 * index}%)`;
+main_visual_list.appendChild(first_clone);
+main_visual_list.insertBefore(last_clone, slides[0]);
+main_visual_list.style.transform = 'translateX(' + -100 * index + '%)';
 
-const start_slide = () => {
-  slide_id = setInterval(() => {
-    move_next();
-  }, interval);
-  visual_button.style.cssText = 'opacity:0; transition: .5s ease-out;'
-};
+function start_slide(){
+  slide_id = setInterval(move_next, interval);
+  visual_button.style.cssText = 'opacity:0; transition: .5s ease-out;';
+}
 
-const get_slide = () => document.querySelectorAll('.slide'); //7 slides
-
-main_visual_list.addEventListener('transitionend', () => {
-  slides = get_slide();
+main_visual_list.addEventListener('transitionend', function(){
+  slides = document.querySelectorAll('.slide');
   if (slides[index].id === first_clone.id) {
     main_visual_list.style.transition = 'none';
     index = 1;
-    main_visual_list.style.transform = `translateX(${-100 * index}%)`;
+    main_visual_list.style.transform = 'translateX(' + -100 * index + '%)';
   }
 
   if (slides[index].id === last_clone.id) {
     main_visual_list.style.transition = 'none';
     index = slides.length - 2;
-    main_visual_list.style.transform = `translateX(${-100 * index}%)`;
+    main_visual_list.style.transform = 'translateX(' + -100 * index + '%)';
   }
 });
 
-const move_next = () => {
-  slides = get_slide();
+function move_next(){
+  slides = document.querySelectorAll('.slide');
   if (index >= slides.length - 1) return;
   index++;
   main_visual_list.style.transition = '.7s ease-out';
-  main_visual_list.style.transform = `translateX(${-100 * index}%)`;
+  main_visual_list.style.transform = 'translateX(' + -100 * index + '%)';
 };
 
-const move_prev = () => {
+function move_prev(){
   if (index <= 0) return;
   index--;
   main_visual_list.style.transition = '.7s ease-out';
-  main_visual_list.style.transform = `translateX(${-100 * index}%)`;
+  main_visual_list.style.transform = 'translateX(' + -100 * index + '%)';
 };
 
-main_visual.addEventListener('mouseenter', () => {
+main_visual.addEventListener('mouseenter', function(){
   clearInterval(slide_id);
   visual_button.style.cssText = 'opacity:1; transition: .5s ease-in;'
 });
-main_visual.addEventListener('focusin', () => {
+main_visual.addEventListener('focusin', function(){
   clearInterval(slide_id);
   visual_button.style.cssText = 'opacity:1; transition: .5s ease-in;'
 });
