@@ -62,7 +62,8 @@ div#visual_button {
     opacity: 1;
     transition: all .5s ease-in;
 }
-#next_btn, #prev_btn {
+#next_btn, #prev_btn{
+    position: relative;
     cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
     font-size: 45px;
@@ -72,6 +73,30 @@ div#visual_button {
     line-height: 45px;
     color: white;
     border-radius: 50%;
+}
+#next_btn:after{
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    width: 27px;
+    height: 27px;
+    box-sizing: border-box;
+    border-top: 7px solid white;
+    border-right: 7px solid white;
+    transform: rotate(45deg);
+}
+#prev_btn:after{
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    width: 27px;
+    height: 27px;
+    box-sizing: border-box;
+    border-bottom: 7px solid white;
+    border-left: 7px solid white;
+    transform: rotate(45deg);
 }
 #next_btn:focus, #prev_btn:focus {
     outline: none;
