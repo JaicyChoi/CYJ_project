@@ -166,8 +166,11 @@ nav#main_menu{
     float: left;
     /* transition: .2s ease-out; */
 }
-ul#main_menu_list{
+.main_menu_list_wrapper{
     width: 1200px;
+}
+ul#main_menu_list{
+    width: 100%;
     /* float: left; */
     display: flex;
     color: black;

@@ -4,7 +4,7 @@
         max-width: 1200px;
         min-width: 768px;
     }
-    div#main_visual, div#header_inner, div#main_menu_bg, section#search_bar, footer#footer_inner, section#login_menu, ul#main_menu_list{
+    div#main_visual, div#header_inner, div#main_menu_bg, section#search_bar, footer#footer_inner, section#login_menu, ul#main_menu_list_wrapper{
         width: 100%;
 /*         height: 100%; */
         /* overflow: hidden; */
