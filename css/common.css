@@ -428,6 +428,16 @@ p#copyright{
     font-size: 0.625em;
 /*     background-color: blue; */
 }
+.validator_mark{
+    position: absolute;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    top: 10px;
+}
+.validator_mark p:nth-child(1){
+    margin-right: 5px;
+}
 /*End of footer*/
 #move_top{
     position: fixed;
