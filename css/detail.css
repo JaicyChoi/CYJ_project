@@ -360,7 +360,7 @@ ul#match_recipe li:last-child{
     margin-right: 0px;
 }
 ul#match_recipe img{
-    border: 1px solid rgba(0, 0, 0, 15);
+    border: 1px solid rgba(0, 0, 0, .15);
     box-sizing: border-box;
     width: 100%;
 }
