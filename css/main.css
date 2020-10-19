@@ -12,7 +12,6 @@ div#main_visual {
 ul#main_visual_list {
     position: relative;
     display: flex;
-    display: -ms-flexbox; 
     width: 100%;
 }
 ul#main_visual_list li{
