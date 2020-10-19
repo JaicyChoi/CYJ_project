@@ -16,7 +16,7 @@ div#beer_detail_wrap{
     margin-bottom: 300px;
 /*     background-color: rgb(62, 62, 255, 0.3); */
 }
-section#beer_detail_inner{
+div#beer_detail_inner{
     width: 1200px;
     height: 790px;
     position: relative;
