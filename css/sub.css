@@ -378,15 +378,19 @@ ul#view_option li:last-child:after{
     content: "";
     padding-left: 0px;
 }
-ul#category{
+.category_wrapper{
     position: relative;
+    float: left;
+    width: 130px;
     top: 30px;
     left: 4%;
-    width: 130px;
+    margin-right: 6.3%;
+}
+ul#category{
+    position: relative;
+    width: 100%;
 /*     height: 300px; */
 /*     background-color: orange; */
-    float: left;
-    margin-right: 6.3%;
 }
 ul#category:first-child{
     font-weight: 500;

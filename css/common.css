@@ -167,9 +167,14 @@ nav#main_menu{
     /* transition: .2s ease-out; */
 }
 .main_menu_list_wrapper{
+    position: relative;
     width: 1200px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 ul#main_menu_list{
+    position: absolute;
     width: 100%;
     /* float: left; */
     display: flex;
@@ -177,7 +182,6 @@ ul#main_menu_list{
     left: 50%;
     flex-direction: row;
     justify-content: space-around;
-    position: absolute;
     top: 50%;
     height: 100%;
     transform: translate(-50%, -50%);
